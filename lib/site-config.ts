@@ -54,6 +54,11 @@ export const siteConfig = {
     region: "Québec",
     locale: "fr" as const,
   },
+  logo: {
+    official: "/images/agence-distinction/Logo_Officiel.png",
+    signature: "/images/agence-distinction/Logo_Signature.png",
+    alt: "Agence Distinction",
+  },
   seo: {
     title: "Agence Distinction | Spectacles et animations pour résidences et événements",
     description:
@@ -61,33 +66,34 @@ export const siteConfig = {
     openGraphLocale: "fr_CA",
   },
   cta: {
-    label: "Demander une soumission",
+    label: "Planifiez votre agenda de spectacles",
     href: "/soumission",
   },
   secondaryCta: {
     label: "Trouver une thématique",
     href: "/thematiques",
   },
+  calendly: {
+    label: "Prendre rendez-vous avec Marie-Josée",
+    href: "https://calendly.com/info-8d6k/rencontre-google-meet",
+  },
   contact: {
     goal: "formulaire" as ContactGoal,
-    phone: "1-888-555-1234",
+    phone: "514-260-1569",
     email: "info@agencedistinction.ca",
-    address: "Québec, Canada",
-    bookingUrl: "/soumission",
+    address: "Québec — Montréal, Montérégie, Estrie, Lanaudière, Laurentides, Capitale-Nationale, Mauricie",
+    bookingUrl: "https://calendly.com/info-8d6k/rencontre-google-meet",
     formFields: [
       "name",
-      "organization",
-      "establishmentType",
-      "email",
       "phone",
-      "city",
-      "eventType",
+      "email",
+      "serviceType",
       "eventDate",
-      "participants",
-      "ambiance",
-      "theme",
+      "cityAddress",
       "budget",
+      "theme",
       "needsRecommendation",
+      "annualProgramming",
       "message",
     ] as const,
     recipientEmail: process.env.CONTACT_RECIPIENT_EMAIL ?? "",
@@ -107,21 +113,42 @@ export const siteConfig = {
   ] satisfies NavLink[],
   enabledSections: [
     "services",
+    "promo",
     "process",
     "testimonials",
     "faq",
   ] satisfies SiteSection[],
+  credibility: {
+    line:
+      "Bientôt 10 ans d'expérience · Partenaire du RQRA · Plus de 10 000 représentations",
+    specialty:
+      "Spécialisée auprès des aînés autonomes et en perte d'autonomie",
+  },
+  rqraAdvantage:
+    "Avantage membre RQRA : 5 % de rabais à la signature d'un contrat admissible, selon les modalités applicables.",
+  regions: {
+    title: "Des spectacles offerts dans plusieurs régions du Québec.",
+    items: [
+      "Montréal",
+      "Montérégie",
+      "Estrie",
+      "Lanaudière",
+      "Laurentides",
+      "Capitale-Nationale",
+      "Mauricie",
+    ],
+  },
   hero: {
     headline:
       "Des spectacles et animations qui transforment vos événements en moments inoubliables",
     subtitle:
-      "L'Agence Distinction accompagne les résidences, organisations et partenaires avec des expériences artistiques chaleureuses, thématiques et adaptées à leur public.",
+      "Pour les techniciennes et responsables loisirs des RPA, CHSLD et résidences — l'Agence Distinction vous aide à planifier votre agenda de spectacles, choisir les bonnes thématiques et trouver les artistes adaptés à vos résidents.",
     reassurance:
-      "Spectacles, animations et expériences sur mesure pour résidences, organisations et événements humains.",
+      "Partenaire de programmation pour les milieux de vie — spectacles fiables, thématiques clés en main et accompagnement humain.",
     badges: [
-      "Résidences & RPA",
-      "Thématiques clés en main",
-      "Artistes sélectionnés avec soin",
+      "Bientôt 10 ans d'expérience",
+      "Partenaire du RQRA",
+      "Plus de 10 000 représentations",
     ],
     video: "/images/agence-distinction/agence-distinction-promo-01-ed.mp4",
     image: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Melane_Et_Michel_2400x1350_9.jpg",
@@ -129,44 +156,50 @@ export const siteConfig = {
   services: {
     title: "Des expériences pensées pour votre public",
     subtitle:
-      "Que vous planifiez une fête, une saison ou une programmation annuelle, on vous aide à trouver la formule idéale.",
+      "L'Agence Distinction aide les responsables loisirs à planifier leur agenda de spectacles, choisir les bonnes thématiques et trouver les artistes adaptés à leur public.",
     items: [
       {
-        title: "Spectacles musicaux",
+        title: "Spectacles pour RPA et résidences",
         description:
-          "Des prestations live qui font chanter, sourire et rassembler vos résidents ou invités.",
+          "Des prestations live fiables et chaleureuses, pensées pour les aînés autonomes en milieu de vie.",
         featured: true,
-        icon: "music",
-      },
-      {
-        title: "Animations thématiques",
-        description:
-          "Fêtes, saisons, ambiances — des activités prêtes à réserver ou à personnaliser.",
-        icon: "sparkles",
-      },
-      {
-        title: "Programmation RPA / CHSLD",
-        description:
-          "Un accompagnement adapté aux responsables loisirs et aux milieux de vie.",
         icon: "home",
       },
       {
-        title: "Événements saisonniers",
+        title: "Troubadours en unités de soins",
         description:
-          "Cabane à sucre, carnaval, Noël… Des moments qui suivent le rythme de l'année.",
-        icon: "leaf",
+          "Des animations musicales en chambre, adaptées aux résidents en perte d'autonomie.",
+        icon: "heart",
       },
       {
-        title: "Expériences sur mesure",
+        title: "Soirées dansantes",
         description:
-          "Une vision particulière? On crée l'événement qui correspond à votre occasion.",
-        icon: "wand",
+          "Des prestations énergiques qui font bouger, sourire et rassembler vos résidents.",
+        icon: "music",
+      },
+      {
+        title: "Spectacles thématiques",
+        description:
+          "Fêtes, saisons et ambiances — des activités prêtes à réserver ou à personnaliser.",
+        icon: "sparkles",
       },
       {
         title: "Cérémonies commémoratives",
         description:
-          "Un accompagnement respectueux et sensible pour des moments importants.",
+          "Représentation d'artistes avec respect et sensibilité pour des moments importants.",
         icon: "flower",
+      },
+      {
+        title: "Spectacles corporatifs",
+        description:
+          "Pour entreprises, villes et organisations qui souhaitent créer un moment humain et mémorable.",
+        icon: "building",
+      },
+      {
+        title: "Programmation annuelle ou mensuelle",
+        description:
+          "Bâtissez votre calendrier de spectacles avec un accompagnement simple et structuré.",
+        icon: "calendar",
       },
     ] satisfies Service[],
   },
@@ -178,7 +211,7 @@ export const siteConfig = {
   themes: {
     title: "Thématiques populaires",
     subtitle:
-      "Trouvez la thématique parfaite pour votre prochain événement et laissez-nous donner vie à l'ambiance.",
+      "Trouvez la thématique parfaite pour votre prochain spectacle — on vous aide à choisir l'ambiance adaptée à vos résidents et à votre calendrier d'activités.",
     viewAllLabel: "Voir toutes les thématiques",
     viewAllHref: "/thematiques",
   },
@@ -192,13 +225,27 @@ export const siteConfig = {
   benefits: {
     title: "Une agence qui comprend autant les artistes que les milieux de vie",
     subtitle:
-      "Plus qu'une banque d'artistes — un partenaire humain qui crée des moments mémorables.",
+      "Techniciennes et responsables loisirs — on connaît votre réalité : remplir un calendrier, trouver des idées fiables et offrir des moments stimulants à vos résidents.",
   },
   promo: {
-    title: "Planifiez votre programmation annuelle",
+    title: "Planifiez votre programmation de spectacles, un mois à la fois.",
     description:
-      "Simplifiez l'organisation de vos activités pour l'année entière avec un accompagnement personnalisé.",
+      "Marie-Josée vous accompagne dans le choix des artistes, des thématiques et des moments clés de l'année pour bâtir une programmation variée, adaptée et simple à organiser — idéalement avec 1 spectacle par mois.",
+    benefits: [
+      "Moins de recherche à faire",
+      "Une programmation plus variée",
+      "Des spectacles adaptés aux résidents",
+      "Des thématiques alignées avec les saisons",
+      "Une coordination plus simple",
+      "Un accompagnement humain",
+    ],
     ctaLabel: "Bâtir ma programmation",
+    ctaHref: "/soumission",
+  },
+  musicofolie: {
+    title: "Un volet spécialisé pour les unités de soins",
+    description:
+      "L'Agence Distinction développe également un volet thérapeutique, orchestré par Musicofolie, pour offrir des animations musicales adaptées aux aînés en perte d'autonomie dans les unités de soins.",
   },
   about: {
     title: "Une agence née d'une passion pour les artistes, les gens et les moments qui rassemblent",
@@ -211,21 +258,21 @@ export const siteConfig = {
     image: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Melane_Et_Michel_2400x1350_3.jpg",
   },
   process: {
-    title: "Organiser votre prochain événement devient simple",
+    title: "Organiser votre prochain spectacle devient simple",
     subtitle:
-      "Un processus clair et humain, de la première conversation au moment magique sur scène.",
+      "Un processus clair pour les responsables loisirs — de la planification de votre agenda au moment magique sur scène.",
     steps: [
       {
         step: "01",
-        title: "Vous nous parlez de votre événement",
+        title: "Vous nous parlez de votre calendrier",
         description:
-          "Décrivez votre occasion, votre public, l'ambiance recherchée ou laissez-nous vous guider.",
+          "Décrivez votre établissement, vos résidents, vos dates ou laissez-nous vous guider vers une programmation.",
       },
       {
         step: "02",
         title: "On vous recommande la bonne formule",
         description:
-          "Thématique, artiste ou prestation sur mesure — on trouve l'expérience qui convient.",
+          "Thématique, artiste ou prestation sur mesure — adaptée à votre public et à votre budget.",
       },
       {
         step: "03",
@@ -235,9 +282,9 @@ export const siteConfig = {
       },
       {
         step: "04",
-        title: "Vous profitez du moment",
+        title: "Vos résidents profitent du moment",
         description:
-          "Un événement mémorable avec vos résidents, invités ou participants.",
+          "Un spectacle stimulant, humain et chaleureux qui fait du bien à tous.",
       },
     ] satisfies ProcessStep[],
   },
@@ -281,67 +328,93 @@ export const siteConfig = {
   },
   faq: {
     title: "Questions fréquentes",
-    subtitle: "Tout ce que vous devez savoir avant de planifier votre événement",
+    subtitle:
+      "Réponses courtes pour les responsables loisirs qui planifient des spectacles en milieu de vie.",
     items: [
       {
-        question: "Comment choisir la bonne thématique pour mon événement?",
+        question: "Quels types de spectacles offrez-vous en résidence pour aînés?",
         answer:
-          "Décrivez-nous votre occasion, votre public et l'ambiance recherchée. Si vous n'êtes pas certain, cochez l'option « J'aimerais une recommandation » dans le formulaire — on vous guidera vers la formule idéale.",
+          "Spectacles musicaux, thématiques, soirées dansantes, troubadours en unités de soins, programmation annuelle et prestations corporatives. Chaque formule est adaptée à votre public.",
       },
       {
-        question: "Est-ce que vous vous déplacez partout au Québec?",
+        question: "Est-ce que les spectacles sont adaptés aux personnes en perte d'autonomie?",
         answer:
-          "Oui, nous desservons les résidences, RPA, CHSLD et organisations partout au Québec. Contactez-nous pour confirmer la disponibilité dans votre région.",
+          "Oui. Nos artistes sont sélectionnés pour ce public et nous offrons des prestations adaptées, incluant un volet thérapeutique en développement avec Musicofolie pour les unités de soins.",
       },
       {
-        question: "Puis-je planifier une programmation pour toute l'année?",
+        question: "Pouvez-vous nous aider à choisir une thématique?",
         answer:
-          "Absolument! Nous offrons un accompagnement pour bâtir votre calendrier d'activités annuel. C'est simple, structuré et adapté à votre budget.",
+          "Absolument. Décrivez-nous votre occasion ou cochez « J'aimerais une recommandation » dans le formulaire — on vous guidera vers la formule idéale.",
       },
       {
-        question: "Comment fonctionne le processus de réservation?",
+        question: "Est-il possible de réserver une programmation complète pour l'année?",
         answer:
-          "Envoyez-nous une demande de soumission, on échange sur vos besoins, on vous recommande la bonne formule, puis on coordonne tous les détails. Vous n'avez qu'à profiter du moment.",
+          "Oui! Marie-Josée peut vous accompagner pour bâtir un calendrier de spectacles, idéalement avec 1 prestation par mois, alignée sur les saisons et les fêtes.",
       },
       {
-        question: "Les artistes sont-ils habitués au public aîné?",
+        question: "Dans quelles régions vous déplacez-vous?",
         answer:
-          "Oui, notre réseau d'artistes est sélectionné avec soin pour sa capacité à créer des liens authentiques avec les résidents et à s'adapter à chaque milieu de vie.",
+          "Montréal, Montérégie, Estrie, Lanaudière, Laurentides, Capitale-Nationale et Mauricie. Contactez-nous pour confirmer la disponibilité dans votre secteur.",
+      },
+      {
+        question: "Offrez-vous des spectacles pour les unités de soins?",
+        answer:
+          "Oui, notamment avec nos troubadours et le volet Musicofolie en développement pour des animations musicales adaptées aux aînés en perte d'autonomie.",
+      },
+      {
+        question: "Est-ce que vous offrez des spectacles corporatifs ou pour les villes?",
+        answer:
+          "Oui, nous offrons des prestations pour entreprises, villes et organisations qui souhaitent créer un moment humain et mémorable.",
+      },
+      {
+        question: "Comment fonctionne une demande de soumission?",
+        answer:
+          "Remplissez le formulaire en ligne, décrivez votre besoin et on vous répond rapidement avec des recommandations adaptées. Vous pouvez aussi prendre rendez-vous avec Marie-Josée.",
+      },
+      {
+        question: "Quel budget prévoir pour un spectacle?",
+        answer:
+          "Le budget varie selon l'artiste, la durée et le type de prestation. Indiquez une fourchette dans le formulaire et on vous proposera des options adaptées.",
+      },
+      {
+        question: "Est-ce que les membres du RQRA ont droit à un avantage?",
+        answer:
+          "Oui. Avantage membre RQRA : 5 % de rabais à la signature d'un contrat admissible, selon les modalités applicables.",
       },
     ] satisfies FaqItem[],
   },
   finalCta: {
-    title: "Prêt à créer votre prochain moment Distinction?",
+    title: "Prêt à planifier votre agenda de spectacles?",
     subtitle:
-      "Parlez-nous de votre événement, de votre public ou de l'ambiance que vous aimeriez créer. On vous aidera à trouver la formule qui convient.",
-    primaryLabel: "Demander une soumission",
+      "Parlez-nous de votre établissement, de vos résidents ou de votre calendrier d'activités. On vous aidera à trouver les thématiques et les artistes qui conviennent.",
+    primaryLabel: "Planifiez votre agenda de spectacles",
     primaryHref: "/soumission",
-    secondaryLabel: "Obtenir une recommandation",
-    secondaryHref: "/soumission",
+    secondaryLabel: "Prendre rendez-vous avec Marie-Josée",
+    secondaryHref: "https://calendly.com/info-8d6k/rencontre-google-meet",
   },
   contactSection: {
-    title: "Demandez une soumission",
+    title: "Planifiez votre agenda de spectacles",
     subtitle:
-      "Décrivez votre événement et on vous répond rapidement avec des recommandations adaptées.",
+      "Décrivez votre besoin et on vous répond rapidement avec des recommandations adaptées à votre milieu de vie.",
   },
   footer: {
     copyright: `© ${new Date().getFullYear()} Agence Distinction. Tous droits réservés.`,
   },
   pages: {
     thematiques: {
-      title: "Trouvez la thématique parfaite pour votre prochain événement",
+      title: "Trouvez la thématique parfaite pour votre prochain spectacle",
       subtitle:
-        "Fêtes, saisons, ambiances musicales — choisissez un moment et on vous aide à créer l'expérience.",
+        "Fêtes, saisons, ambiances musicales — choisissez un moment et on vous aide à créer l'expérience adaptée à vos résidents.",
     },
     services: {
       title: "Nos services",
       subtitle:
-        "Spectacles, animations et accompagnement pour créer des moments qui rassemblent.",
+        "L'Agence Distinction aide les responsables loisirs à planifier leur agenda de spectacles, choisir les bonnes thématiques et trouver les artistes adaptés à leur public.",
     },
     rpaChsld: {
       title: "Des spectacles et animations pensés pour les milieux de vie",
       subtitle:
-        "Un accompagnement humain, simple et adapté aux responsables loisirs des résidences, RPA et CHSLD.",
+        "Un accompagnement humain pour les techniciennes et responsables loisirs des résidences, RPA et CHSLD — spectacles fiables, thématiques et programmation simplifiée.",
     },
     artistes: {
       title: "Les visages et les voix qui donnent vie à vos expériences",
@@ -353,9 +426,9 @@ export const siteConfig = {
       subtitle: "Découvrez l'histoire et la mission de l'Agence Distinction.",
     },
     soumission: {
-      title: "Demandez une soumission",
+      title: "Planifiez votre agenda de spectacles",
       subtitle:
-        "Décrivez votre événement et on vous aide à trouver la thématique, l'artiste et la formule qui conviennent.",
+        "Décrivez votre besoin et on vous aide à trouver la thématique, l'artiste et la formule adaptées à vos résidents.",
     },
   },
 } as const

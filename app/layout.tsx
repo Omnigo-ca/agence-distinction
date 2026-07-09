@@ -20,11 +20,16 @@ const cormorant = Cormorant_Garamond({
 export const metadata: Metadata = {
   title: siteConfig.seo.title,
   description: siteConfig.seo.description,
+  icons: {
+    icon: siteConfig.logo.official,
+    apple: siteConfig.logo.official,
+  },
   openGraph: {
     title: siteConfig.seo.title,
     description: siteConfig.seo.description,
     locale: siteConfig.seo.openGraphLocale,
     type: "website",
+    images: [siteConfig.logo.official],
   },
 }
 

@@ -1,6 +1,9 @@
 import Link from "next/link"
 import {
+  Building2Icon,
+  CalendarIcon,
   Flower2Icon,
+  HeartIcon,
   HomeIcon,
   LeafIcon,
   MusicIcon,
@@ -28,6 +31,9 @@ const serviceIcons = {
   leaf: LeafIcon,
   wand: Wand2Icon,
   flower: Flower2Icon,
+  heart: HeartIcon,
+  building: Building2Icon,
+  calendar: CalendarIcon,
 } as const
 
 export function ServicesSection() {

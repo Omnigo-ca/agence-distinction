@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button"
 import { SectionWrapper } from "@/components/section-wrapper"
 import { siteConfig } from "@/lib/site-config"
 
+const isExternal = (href: string) => href.startsWith("http")
+
 export function FinalCtaSection() {
   const { finalCta } = siteConfig
 
@@ -34,7 +36,17 @@ export function FinalCtaSection() {
             variant="outline"
             className="border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground hover:bg-primary-foreground/20"
           >
-            <Link href={finalCta.secondaryHref}>{finalCta.secondaryLabel}</Link>
+            {isExternal(finalCta.secondaryHref) ? (
+              <a
+                href={finalCta.secondaryHref}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {finalCta.secondaryLabel}
+              </a>
+            ) : (
+              <Link href={finalCta.secondaryHref}>{finalCta.secondaryLabel}</Link>
+            )}
           </Button>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { ArrowRightIcon } from "lucide-react"
 
+import { BrandLogo } from "@/components/brand-logo"
 import { Button } from "@/components/ui/button"
 import { siteConfig } from "@/lib/site-config"
 
@@ -31,9 +32,9 @@ export function HeroSection() {
 
       <div className="relative mx-auto flex min-h-[85vh] max-w-6xl items-center px-4 py-20 md:px-6 md:py-32">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="mb-4 text-sm font-medium uppercase tracking-widest text-primary-foreground/70">
-            {siteConfig.business.name}
-          </p>
+          <div className="mb-6 flex justify-center">
+            <BrandLogo variant="signature" height="lg" linked={false} />
+          </div>
           <h1 className="text-balance text-4xl font-semibold tracking-tight md:text-5xl lg:text-6xl">
             {hero.headline}
           </h1>

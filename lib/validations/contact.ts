@@ -5,30 +5,15 @@ export const submissionFormSchema = z.object({
     .string()
     .min(2, "Le nom doit contenir au moins 2 caractères")
     .max(100, "Le nom est trop long"),
-  organization: z
-    .string()
-    .max(150, "Le nom de l'organisation est trop long")
-    .optional()
-    .or(z.literal("")),
-  establishmentType: z
-    .string()
-    .max(100, "Le type d'établissement est trop long")
-    .optional()
-    .or(z.literal("")),
   email: z.email("Courriel invalide"),
   phone: z
     .string()
     .max(20, "Le numéro de téléphone est trop long")
     .optional()
     .or(z.literal("")),
-  city: z
+  serviceType: z
     .string()
-    .max(100, "La ville est trop longue")
-    .optional()
-    .or(z.literal("")),
-  eventType: z
-    .string()
-    .max(150, "Le type d'événement est trop long")
+    .max(150, "Le type de service est trop long")
     .optional()
     .or(z.literal("")),
   eventDate: z
@@ -36,14 +21,9 @@ export const submissionFormSchema = z.object({
     .max(50, "La date est trop longue")
     .optional()
     .or(z.literal("")),
-  participants: z
+  cityAddress: z
     .string()
-    .max(50, "Le nombre de participants est trop long")
-    .optional()
-    .or(z.literal("")),
-  ambiance: z
-    .string()
-    .max(200, "L'ambiance est trop longue")
+    .max(200, "L'adresse est trop longue")
     .optional()
     .or(z.literal("")),
   theme: z
@@ -57,6 +37,7 @@ export const submissionFormSchema = z.object({
     .optional()
     .or(z.literal("")),
   needsRecommendation: z.boolean().optional(),
+  annualProgramming: z.boolean().optional(),
   message: z
     .string()
     .min(10, "Le message doit contenir au moins 10 caractères")

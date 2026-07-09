@@ -4,6 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import { MenuIcon } from "lucide-react"
 
+import { BrandLogo } from "@/components/brand-logo"
 import { Button } from "@/components/ui/button"
 import {
   Sheet,
@@ -25,13 +26,7 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/90 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 md:px-6">
-        <Link
-          href="/"
-          className="shrink-0 font-heading text-lg font-semibold tracking-tight text-foreground"
-          aria-label={`${siteConfig.business.name} — accueil`}
-        >
-          {siteConfig.business.name}
-        </Link>
+        <BrandLogo variant="official" height="md" />
 
         <nav
           className="hidden items-center gap-5 lg:flex xl:gap-6"
@@ -66,9 +61,8 @@ export function Navbar() {
             </SheetTrigger>
             <SheetContent side="right" className="w-full max-w-xs">
               <SheetHeader>
-                <SheetTitle className="font-heading">
-                  {siteConfig.business.name}
-                </SheetTitle>
+                <SheetTitle className="sr-only">{siteConfig.business.name}</SheetTitle>
+                <BrandLogo variant="official" height="md" linked={false} />
               </SheetHeader>
               <nav
                 className="mt-8 flex flex-col gap-2"

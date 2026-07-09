@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { MailIcon, MapPinIcon, PhoneIcon } from "lucide-react"
 
+import { BrandLogo } from "@/components/brand-logo"
 import { siteConfig } from "@/lib/site-config"
 
 const socialLinks = [
@@ -19,14 +20,15 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-12 md:px-6">
         <div className="grid gap-8 md:grid-cols-3">
           <div>
-            <p className="font-heading text-lg font-semibold">
-              {siteConfig.business.name}
-            </p>
-            <p className="mt-2 text-sm text-primary-foreground/70">
+            <BrandLogo variant="signature" height="lg" linked={false} />
+            <p className="mt-3 text-sm text-primary-foreground/70">
               {siteConfig.business.tagline}
             </p>
             <p className="mt-3 text-sm text-primary-foreground/60">
               {siteConfig.business.description}
+            </p>
+            <p className="mt-4 text-xs text-primary-foreground/50">
+              {siteConfig.rqraAdvantage}
             </p>
           </div>
 
@@ -45,11 +47,21 @@ export function Footer() {
               ))}
               <li>
                 <Link
-                  href="/soumission"
+                  href={siteConfig.cta.href}
                   className="text-sm font-medium text-accent transition-colors hover:text-accent/80"
                 >
-                  Demander une soumission
+                  {siteConfig.cta.label}
                 </Link>
+              </li>
+              <li>
+                <a
+                  href={siteConfig.calendly.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-primary-foreground/70 transition-colors hover:text-primary-foreground"
+                >
+                  {siteConfig.calendly.label}
+                </a>
               </li>
             </ul>
           </nav>
@@ -80,6 +92,14 @@ export function Footer() {
                 </a>
               </li>
             </ul>
+
+            <p className="mt-6 text-sm font-medium">Régions desservies</p>
+            <p className="mt-2 text-xs text-primary-foreground/60">
+              {siteConfig.regions.title}
+            </p>
+            <p className="mt-2 text-sm text-primary-foreground/70">
+              {siteConfig.regions.items.join(" · ")}
+            </p>
 
             {activeSocials.length > 0 ? (
               <div className="mt-4 flex flex-wrap gap-3">

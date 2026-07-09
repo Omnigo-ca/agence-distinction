@@ -30,8 +30,8 @@ export type Artist = {
   description: string
   image: string
   slug: string
-  /** false = conserve le cadrage d'origine (ex. photo paysage) */
-  imageFill?: boolean
+  /** Ajustement du cadrage (ex. "center 80%") */
+  imagePosition?: string
 }
 
 export type Benefit = {
@@ -455,7 +455,6 @@ export const artists: Artist[] = [
       "430962312_1356782161655710_3526931209767677816_n.jpg"
     ),
     slug: "samba-jeri",
-    imageFill: false,
   },
   {
     name: "Danse Orientale Samaya Baladi",
@@ -538,24 +537,24 @@ export const benefits: Benefit[] = [
 
 export const stats: Stat[] = [
   {
-    value: "X",
-    label: "événements réalisés",
-    note: "À VALIDER",
+    value: "~10 ans",
+    label: "d'expérience",
+    note: "",
   },
   {
-    value: "35+",
-    label: "artistes dans le réseau",
-    note: "Basé sur les dossiers médias — à confirmer",
+    value: "RQRA",
+    label: "Partenaire reconnu",
+    note: "",
   },
   {
-    value: "X",
-    label: "années d'expérience",
-    note: "À VALIDER",
+    value: "10 000+",
+    label: "représentations",
+    note: "",
   },
   {
-    value: "X",
-    label: "partenaires accompagnés",
-    note: "À VALIDER",
+    value: "Aînés",
+    label: "Autonomes et en perte d'autonomie",
+    note: "",
   },
 ]
 
@@ -627,60 +626,51 @@ export const agencyVideos: AgencyVideo[] = [
 
 export const detailedServices = [
   {
-    title: "Spectacles musicaux",
+    title: "Spectacles pour RPA et résidences",
     description:
-      "Des prestations live adaptées à votre public, votre espace et l'ambiance recherchée.",
+      "Des prestations live fiables et chaleureuses, pensées pour les aînés autonomes en milieu de vie.",
     image: media("Mélane et Michel", "Melane_Et_Michel_2400x1350_6.jpg"),
   },
   {
-    title: "Animations pour résidences",
+    title: "Troubadours en unités de soins",
     description:
-      "Des activités pensées pour les résidents : participation, nostalgie et moments de joie.",
+      "Des animations musicales en chambre, adaptées aux résidents en perte d'autonomie.",
     image: media("Mélane et Michel", "IMG_20230126_194117[7853].jpg"),
   },
   {
-    title: "Programmation thématique",
+    title: "Soirées dansantes",
     description:
-      "Fêtes, saisons, ambiances musicales — des formules prêtes à réserver ou à personnaliser.",
+      "Des prestations énergiques qui font bouger, sourire et rassembler vos résidents.",
     image: media("Trio Java", "Trio_Java_2400x1350_7.jpg"),
   },
   {
-    title: "Événements saisonniers",
+    title: "Spectacles thématiques",
     description:
-      "Cabane à sucre, carnaval, Noël… Des activités qui suivent le calendrier de l'année.",
+      "Fêtes, saisons et ambiances — des activités prêtes à réserver ou à personnaliser.",
     image: themeImages.noel,
-  },
-  {
-    title: "Prestations sur mesure",
-    description:
-      "Une vision particulière? On crée l'expérience qui correspond à votre événement.",
-    image: media(
-      "Haché, Mélanie",
-      "Agence_Distinction_Melanie_Hache_2400x1350_9.jpg"
-    ),
-  },
-  {
-    title: "Événements corporatifs",
-    description:
-      "Émerveillez vos collègues avec des animations professionnelles et mémorables.",
-    image: media(
-      "Daouni, Aziz",
-      "Agence_Distinction_Aziz_Daouni_2400x1350_1.jpg"
-    ),
   },
   {
     title: "Cérémonies commémoratives",
     description:
-      "Un accompagnement respectueux et sensible pour des moments importants.",
+      "Représentation d'artistes avec respect et sensibilité pour des moments importants.",
     image: media(
       "Reid, Myriam",
       "Agence_Distinction_Myriam_Reid_Harpiste-570x570.jpg"
     ),
   },
   {
-    title: "Accompagnement planification",
+    title: "Spectacles corporatifs",
     description:
-      "On vous aide à bâtir votre calendrier d'activités pour l'année entière.",
+      "Pour entreprises, villes et organisations qui souhaitent créer un moment humain et mémorable.",
+    image: media(
+      "Daouni, Aziz",
+      "Agence_Distinction_Aziz_Daouni_2400x1350_1.jpg"
+    ),
+  },
+  {
+    title: "Programmation annuelle ou mensuelle",
+    description:
+      "Bâtissez votre calendrier de spectacles avec un accompagnement simple et structuré — idéalement 1 spectacle par mois.",
     image: media("Mélane et Michel", "RPA Affiche concert M&M.png"),
   },
 ]

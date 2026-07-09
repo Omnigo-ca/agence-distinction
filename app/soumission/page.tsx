@@ -1,8 +1,10 @@
-import { MailIcon, MapPinIcon, PhoneIcon } from "lucide-react"
+import Link from "next/link"
+import { CalendarIcon, MailIcon, MapPinIcon, PhoneIcon } from "lucide-react"
 
 import { PageHero } from "@/components/page-hero"
 import { SiteLayout } from "@/components/site-layout"
 import { SubmissionForm } from "@/components/submission-form"
+import { Button } from "@/components/ui/button"
 import { SectionWrapper } from "@/components/section-wrapper"
 import { siteConfig } from "@/lib/site-config"
 
@@ -55,6 +57,16 @@ export default function SoumissionPage() {
                   </span>
                 </li>
               </ul>
+              <Button asChild variant="outline" className="mt-6 w-full">
+                <a
+                  href={siteConfig.calendly.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <CalendarIcon className="size-4" />
+                  {siteConfig.calendly.label}
+                </a>
+              </Button>
             </div>
 
             <div className="rounded-2xl border border-primary/20 bg-primary/5 p-6">
@@ -65,6 +77,10 @@ export default function SoumissionPage() {
                 et la formule qui conviennent.
               </p>
             </div>
+
+            <p className="text-xs text-muted-foreground">
+              {siteConfig.rqraAdvantage}
+            </p>
           </aside>
         </div>
       </SectionWrapper>

@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { ArrowRightIcon } from "lucide-react"
 
-import { ArtistCardImage } from "@/components/artist-card-image"
+import { ArtistCard } from "@/components/artist-card"
 import { PageHero } from "@/components/page-hero"
 import { SiteLayout } from "@/components/site-layout"
 import { Button } from "@/components/ui/button"
@@ -31,34 +31,7 @@ export default function ArtistesPage() {
 
         <div className="grid gap-8 md:grid-cols-2">
           {artists.map((artist) => (
-            <article
-              key={artist.slug}
-              className="overflow-hidden rounded-2xl border border-border bg-card transition-shadow hover:shadow-lg"
-            >
-              <div className="grid sm:grid-cols-2 sm:items-stretch">
-                <ArtistCardImage artist={artist} />
-                <div className="p-6">
-                  <p className="text-xs font-medium uppercase tracking-wide text-primary">
-                    {artist.intention}
-                  </p>
-                  <h2 className="mt-1 font-heading text-2xl font-semibold">
-                    {artist.name}
-                  </h2>
-                  <p className="mt-1 text-sm text-muted-foreground">
-                    {artist.style}
-                  </p>
-                  <p className="mt-1 text-xs text-muted-foreground">
-                    Public : {artist.audience}
-                  </p>
-                  <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                    {artist.description}
-                  </p>
-                  <Button asChild variant="link" className="mt-4 h-auto p-0">
-                    <Link href="/soumission">Réserver une prestation →</Link>
-                  </Button>
-                </div>
-              </div>
-            </article>
+            <ArtistCard key={artist.slug} artist={artist} />
           ))}
         </div>
 

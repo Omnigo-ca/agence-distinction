@@ -6,7 +6,9 @@ import { FaqSection } from "@/components/faq-section"
 import { FinalCtaSection } from "@/components/final-cta-section"
 import { HeroSection } from "@/components/hero-section"
 import { MomentsSection } from "@/components/moments-section"
+import { MusicofolieSection } from "@/components/musicofolie-section"
 import { ProcessSection } from "@/components/process-section"
+import { PromoSection } from "@/components/promo-section"
 import { ServicesSection } from "@/components/services-section"
 import { SiteLayout } from "@/components/site-layout"
 import { StatsSection } from "@/components/stats-section"
@@ -19,6 +21,7 @@ export default function Page() {
     <SiteLayout>
       <HeroSection />
       {isSectionEnabled("services") ? <ServicesSection /> : null}
+      {isSectionEnabled("promo") ? <PromoSection /> : null}
       <MomentsSection />
       <ThemesSection limit={6} />
       <ArtistsSection />
@@ -33,6 +36,7 @@ export default function Page() {
         </>
       ) : null}
       <FinalCtaSection />
+      <MusicofolieSection />
       {isSectionEnabled("faq") ? <FaqSection /> : null}
     </SiteLayout>
   )

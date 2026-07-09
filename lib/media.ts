@@ -23,6 +23,10 @@ export const themeImages = {
 } as const
 
 export const mediaAssets = {
+  logos: {
+    official: media("Logo_Officiel.png"),
+    signature: media("Logo_Signature.png"),
+  },
   hero: {
     video: media("agence-distinction-promo-01-ed.mp4"),
     poster: media("Mélane et Michel", "Melane_Et_Michel_2400x1350_9.jpg"),

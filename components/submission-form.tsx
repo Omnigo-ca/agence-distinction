@@ -26,18 +26,15 @@ export function SubmissionForm() {
     resolver: zodResolver(submissionFormSchema),
     defaultValues: {
       name: "",
-      organization: "",
-      establishmentType: "",
       email: "",
       phone: "",
-      city: "",
-      eventType: "",
+      serviceType: "",
       eventDate: "",
-      participants: "",
-      ambiance: "",
+      cityAddress: "",
       theme: "",
       budget: "",
       needsRecommendation: false,
+      annualProgramming: false,
       message: "",
     },
   })
@@ -84,68 +81,49 @@ export function SubmissionForm() {
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor="organization">Organisation</Label>
-          <Input id="organization" {...register("organization")} />
-        </div>
-      </div>
-
-      <div className="grid gap-5 sm:grid-cols-2">
-        <div className="space-y-2">
-          <Label htmlFor="establishmentType">Type d&apos;établissement</Label>
-          <Input
-            id="establishmentType"
-            placeholder="RPA, CHSLD, résidence, organisation…"
-            {...register("establishmentType")}
-          />
-        </div>
-
-        <div className="space-y-2">
-          <Label htmlFor="city">Ville / région</Label>
-          <Input id="city" {...register("city")} />
-        </div>
-      </div>
-
-      <div className="grid gap-5 sm:grid-cols-2">
-        <div className="space-y-2">
-          <Label htmlFor="email">Courriel *</Label>
-          <Input
-            id="email"
-            type="email"
-            autoComplete="email"
-            aria-invalid={!!errors.email}
-            {...register("email")}
-          />
-          {errors.email ? (
-            <p className="text-sm text-destructive">{errors.email.message}</p>
-          ) : null}
-        </div>
-
-        <div className="space-y-2">
           <Label htmlFor="phone">Téléphone</Label>
           <Input id="phone" type="tel" autoComplete="tel" {...register("phone")} />
         </div>
       </div>
 
+      <div className="space-y-2">
+        <Label htmlFor="email">Courriel *</Label>
+        <Input
+          id="email"
+          type="email"
+          autoComplete="email"
+          aria-invalid={!!errors.email}
+          {...register("email")}
+        />
+        {errors.email ? (
+          <p className="text-sm text-destructive">{errors.email.message}</p>
+        ) : null}
+      </div>
+
       <div className="grid gap-5 sm:grid-cols-2">
         <div className="space-y-2">
-          <Label htmlFor="eventType">Type d&apos;événement</Label>
+          <Label htmlFor="serviceType">Type de service</Label>
           <Input
-            id="eventType"
-            placeholder="Fête, spectacle, programmation annuelle…"
-            {...register("eventType")}
+            id="serviceType"
+            placeholder="Spectacle, troubadour, soirée dansante, programmation…"
+            {...register("serviceType")}
           />
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor="eventDate">Date souhaitée</Label>
+          <Label htmlFor="eventDate">Disponibilités / date souhaitée</Label>
           <Input id="eventDate" type="date" {...register("eventDate")} />
         </div>
       </div>
 
       <div className="grid gap-5 sm:grid-cols-2">
         <div className="space-y-2">
-          <Label htmlFor="participants">Nombre de participants</Label>
-          <Input id="participants" {...register("participants")} />
+          <Label htmlFor="cityAddress">Ville / adresse</Label>
+          <Input
+            id="cityAddress"
+            placeholder="RPA, CHSLD, résidence, ville…"
+            {...register("cityAddress")}
+          />
         </div>
 
         <div className="space-y-2">
@@ -154,36 +132,40 @@ export function SubmissionForm() {
         </div>
       </div>
 
-      <div className="grid gap-5 sm:grid-cols-2">
-        <div className="space-y-2">
-          <Label htmlFor="ambiance">Ambiance recherchée</Label>
-          <Input
-            id="ambiance"
-            placeholder="Nostalgique, festive, douce…"
-            {...register("ambiance")}
-          />
-        </div>
-
-        <div className="space-y-2">
-          <Label htmlFor="theme">Thème souhaité</Label>
-          <Input
-            id="theme"
-            placeholder="Noël, cabane à sucre, années rétro…"
-            {...register("theme")}
-          />
-        </div>
+      <div className="space-y-2">
+        <Label htmlFor="theme">Thématique souhaitée</Label>
+        <Input
+          id="theme"
+          placeholder="Noël, cabane à sucre, années rétro…"
+          {...register("theme")}
+        />
       </div>
 
-      <div className="flex items-start gap-3 rounded-xl border border-primary/20 bg-primary/5 p-4">
-        <input
-          type="checkbox"
-          id="needsRecommendation"
-          className="mt-1 size-4 rounded border-border accent-primary"
-          {...register("needsRecommendation")}
-        />
-        <Label htmlFor="needsRecommendation" className="cursor-pointer leading-relaxed">
-          Je ne suis pas certain du thème, j&apos;aimerais une recommandation.
-        </Label>
+      <div className="space-y-3">
+        <div className="flex items-start gap-3 rounded-xl border border-primary/20 bg-primary/5 p-4">
+          <input
+            type="checkbox"
+            id="needsRecommendation"
+            className="mt-1 size-4 rounded border-border accent-primary"
+            {...register("needsRecommendation")}
+          />
+          <Label htmlFor="needsRecommendation" className="cursor-pointer leading-relaxed">
+            Je ne sais pas encore quelle thématique choisir, j&apos;aimerais une
+            recommandation.
+          </Label>
+        </div>
+
+        <div className="flex items-start gap-3 rounded-xl border border-primary/20 bg-primary/5 p-4">
+          <input
+            type="checkbox"
+            id="annualProgramming"
+            className="mt-1 size-4 rounded border-border accent-primary"
+            {...register("annualProgramming")}
+          />
+          <Label htmlFor="annualProgramming" className="cursor-pointer leading-relaxed">
+            Je souhaite planifier plusieurs spectacles dans l&apos;année.
+          </Label>
+        </div>
       </div>
 
       <div className="space-y-2">
@@ -191,7 +173,7 @@ export function SubmissionForm() {
         <Textarea
           id="message"
           rows={5}
-          placeholder="Décrivez votre événement, votre public et ce que vous aimeriez créer…"
+          placeholder="Décrivez votre établissement, vos résidents et ce que vous aimeriez organiser…"
           aria-invalid={!!errors.message}
           {...register("message")}
         />

@@ -58,7 +58,7 @@ export function ImagePlaceholder({
         <img
           src={src}
           alt={alt ?? label}
-          className="size-full object-cover"
+          className="block size-full object-cover"
           style={{ objectPosition }}
           onError={() => setHasError(true)}
         />

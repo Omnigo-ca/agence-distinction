@@ -17,17 +17,14 @@ const buildEmailBody = (values: SubmissionFormValues) => {
     `Courriel : ${values.email}`,
   ]
 
-  if (values.organization) lines.push(`Organisation : ${values.organization}`)
-  if (values.establishmentType) lines.push(`Type d'établissement : ${values.establishmentType}`)
   if (values.phone) lines.push(`Téléphone : ${values.phone}`)
-  if (values.city) lines.push(`Ville / région : ${values.city}`)
-  if (values.eventType) lines.push(`Type d'événement : ${values.eventType}`)
-  if (values.eventDate) lines.push(`Date souhaitée : ${values.eventDate}`)
-  if (values.participants) lines.push(`Participants : ${values.participants}`)
-  if (values.ambiance) lines.push(`Ambiance recherchée : ${values.ambiance}`)
-  if (values.theme) lines.push(`Thème souhaité : ${values.theme}`)
+  if (values.serviceType) lines.push(`Type de service : ${values.serviceType}`)
+  if (values.eventDate) lines.push(`Disponibilités / date : ${values.eventDate}`)
+  if (values.cityAddress) lines.push(`Ville / adresse : ${values.cityAddress}`)
+  if (values.theme) lines.push(`Thématique souhaitée : ${values.theme}`)
   if (values.budget) lines.push(`Budget : ${values.budget}`)
-  if (values.needsRecommendation) lines.push(`Demande de recommandation : Oui`)
+  if (values.needsRecommendation) lines.push(`Demande de recommandation thématique : Oui`)
+  if (values.annualProgramming) lines.push(`Programmation annuelle souhaitée : Oui`)
 
   lines.push("", "Message :", values.message)
 

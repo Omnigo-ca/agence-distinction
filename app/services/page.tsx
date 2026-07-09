@@ -40,7 +40,7 @@ export default function ServicesPage() {
                   {service.description}
                 </p>
                 <Button asChild className="mt-6">
-                  <Link href="/soumission">Planifier un événement</Link>
+                  <Link href="/soumission">{siteConfig.cta.label}</Link>
                 </Button>
               </div>
             </article>
@@ -52,8 +52,8 @@ export default function ServicesPage() {
             Créez un moment qui restera dans les souvenirs
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-primary-foreground/80">
-            On vous aide à choisir l&apos;ambiance, l&apos;artiste et la formule
-            qui conviennent à votre public.
+            On vous aide à planifier votre agenda de spectacles, choisir les
+            thématiques et trouver les artistes adaptés à vos résidents.
           </p>
           <Button
             asChild
@@ -61,7 +61,7 @@ export default function ServicesPage() {
             className="mt-6 bg-accent text-accent-foreground hover:bg-accent/90"
           >
             <Link href="/soumission">
-              Demander une soumission
+              {siteConfig.cta.label}
               <ArrowRightIcon className="size-4" />
             </Link>
           </Button>
