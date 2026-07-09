@@ -1,14 +1,20 @@
+import { Cormorant_Garamond, DM_Sans } from "next/font/google"
 import type { Metadata } from "next"
-import { Geist } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 
 import "./globals.css"
 import { siteConfig } from "@/lib/site-config"
 import { cn } from "@/lib/utils"
 
-const geist = Geist({
+const dmSans = DM_Sans({
   subsets: ["latin"],
   variable: "--font-sans",
+})
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-heading",
 })
 
 export const metadata: Metadata = {
@@ -30,7 +36,12 @@ export default function RootLayout({
   return (
     <html
       lang={siteConfig.business.locale}
-      className={cn("antialiased", geist.variable, "font-sans")}
+      className={cn(
+        "antialiased",
+        dmSans.variable,
+        cormorant.variable,
+        "font-sans"
+      )}
     >
       <body>
         {children}

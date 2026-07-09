@@ -2,42 +2,86 @@ import Link from "next/link"
 import { ArrowRightIcon } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
-import { SectionWrapper } from "@/components/section-wrapper"
 import { siteConfig } from "@/lib/site-config"
 
 export function HeroSection() {
+  const { hero } = siteConfig
+
   return (
-    <SectionWrapper variant="dark" className="pt-20 md:pt-28">
-      <div className="mx-auto max-w-3xl text-center">
-        <h1 className="text-4xl font-semibold tracking-tight md:text-5xl lg:text-6xl">
-          {siteConfig.hero.headline}
-        </h1>
-        <p className="mt-6 text-lg text-primary-foreground/80 md:text-xl">
-          {siteConfig.hero.subtitle}
-        </p>
+    <section className="relative min-h-[85vh] overflow-hidden text-primary-foreground">
+      {hero.video ? (
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster={hero.image}
+          className="absolute inset-0 size-full object-cover"
+          aria-hidden="true"
+        >
+          <source src={hero.video} type="video/mp4" />
+        </video>
+      ) : null}
 
-        {siteConfig.hero.badges.length > 0 ? (
-          <ul className="mt-8 flex flex-wrap items-center justify-center gap-3">
-            {siteConfig.hero.badges.map((badge) => (
-              <li
-                key={badge}
-                className="rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-4 py-1.5 text-sm"
-              >
-                {badge}
-              </li>
-            ))}
-          </ul>
-        ) : null}
+      <div className="absolute inset-0 gradient-warm opacity-80" aria-hidden="true" />
+      <div
+        className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/40 to-transparent"
+        aria-hidden="true"
+      />
 
-        <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Button asChild size="lg" variant="secondary">
-            <Link href={siteConfig.cta.href}>
-              {siteConfig.cta.label}
-              <ArrowRightIcon className="size-4" />
-            </Link>
-          </Button>
+      <div className="relative mx-auto flex min-h-[85vh] max-w-6xl items-center px-4 py-20 md:px-6 md:py-32">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="mb-4 text-sm font-medium uppercase tracking-widest text-primary-foreground/70">
+            {siteConfig.business.name}
+          </p>
+          <h1 className="text-balance text-4xl font-semibold tracking-tight md:text-5xl lg:text-6xl">
+            {hero.headline}
+          </h1>
+          <p className="mt-6 text-lg text-primary-foreground/90 md:text-xl">
+            {hero.subtitle}
+          </p>
+
+          {hero.badges.length > 0 ? (
+            <ul className="mt-8 flex flex-wrap items-center justify-center gap-3">
+              {hero.badges.map((badge) => (
+                <li
+                  key={badge}
+                  className="rounded-full border border-primary-foreground/25 bg-primary-foreground/10 px-4 py-1.5 text-sm backdrop-blur-sm"
+                >
+                  {badge}
+                </li>
+              ))}
+            </ul>
+          ) : null}
+
+          <p className="mt-6 text-sm text-primary-foreground/75">
+            {hero.reassurance}
+          </p>
+
+          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <Button
+              asChild
+              size="lg"
+              className="bg-accent text-accent-foreground hover:bg-accent/90"
+            >
+              <Link href={siteConfig.cta.href}>
+                {siteConfig.cta.label}
+                <ArrowRightIcon className="size-4" />
+              </Link>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground hover:bg-primary-foreground/20"
+            >
+              <Link href={siteConfig.secondaryCta.href}>
+                {siteConfig.secondaryCta.label}
+              </Link>
+            </Button>
+          </div>
         </div>
       </div>
-    </SectionWrapper>
+    </section>
   )
 }

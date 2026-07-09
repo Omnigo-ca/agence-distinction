@@ -24,24 +24,24 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/90 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 md:px-6">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 md:px-6">
         <Link
           href="/"
-          className="text-lg font-semibold tracking-tight text-foreground"
+          className="shrink-0 font-heading text-lg font-semibold tracking-tight text-foreground"
           aria-label={`${siteConfig.business.name} — accueil`}
         >
           {siteConfig.business.name}
         </Link>
 
         <nav
-          className="hidden items-center gap-8 md:flex"
+          className="hidden items-center gap-5 lg:flex xl:gap-6"
           aria-label="Navigation principale"
         >
           {siteConfig.navigation.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              className="whitespace-nowrap text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
             >
               {link.label}
             </Link>
@@ -49,7 +49,7 @@ export function Navbar() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <Button asChild className="hidden md:inline-flex">
+          <Button asChild className="hidden sm:inline-flex" size="sm">
             <Link href={siteConfig.cta.href}>{siteConfig.cta.label}</Link>
           </Button>
 
@@ -58,7 +58,7 @@ export function Navbar() {
               <Button
                 variant="outline"
                 size="icon"
-                className="md:hidden"
+                className="lg:hidden"
                 aria-label="Ouvrir le menu de navigation"
               >
                 <MenuIcon className="size-5" />
@@ -66,10 +66,12 @@ export function Navbar() {
             </SheetTrigger>
             <SheetContent side="right" className="w-full max-w-xs">
               <SheetHeader>
-                <SheetTitle>{siteConfig.business.name}</SheetTitle>
+                <SheetTitle className="font-heading">
+                  {siteConfig.business.name}
+                </SheetTitle>
               </SheetHeader>
               <nav
-                className="mt-8 flex flex-col gap-4"
+                className="mt-8 flex flex-col gap-2"
                 aria-label="Navigation mobile"
               >
                 {siteConfig.navigation.map((link) => (
@@ -78,7 +80,7 @@ export function Navbar() {
                     href={link.href}
                     onClick={handleNavClick}
                     className={cn(
-                      "rounded-lg px-3 py-2 text-base font-medium text-foreground transition-colors hover:bg-muted"
+                      "rounded-lg px-3 py-2.5 text-base font-medium text-foreground transition-colors hover:bg-muted"
                     )}
                   >
                     {link.label}

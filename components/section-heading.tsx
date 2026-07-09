@@ -21,7 +21,7 @@ export function SectionHeading({
         className
       )}
     >
-      <h2 className="text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
+      <h2 className="font-heading text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
         {title}
       </h2>
       {subtitle ? (
