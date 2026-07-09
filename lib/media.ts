@@ -10,7 +10,7 @@ export const themeImages = {
   stJean: media("st_jean.jpg"),
   fetePeres: media("fete-des-peres.jpg"),
   feteMeres: media("fetes-des-meres.png"),
-  noel: media("noel.jpeg"),
+  noel: media("noel.jpg"),
   nouvelAn: media("nouvel_an.jpg"),
   saintValentin: media("fleurs-saint-valentin.jpg"),
   carnaval: media("carnaval.jpg"),

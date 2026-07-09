@@ -13,7 +13,7 @@ export function ArtistCard({ artist }: ArtistCardProps) {
     <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition-shadow hover:shadow-lg sm:flex-row sm:items-stretch">
       <div className="relative min-h-56 w-full shrink-0 self-stretch sm:w-[42%]">
         <ImagePlaceholder
-          label={`Photo — ${artist.name}`}
+          label={`Photo de ${artist.name}`}
           src={artist.image}
           alt={artist.name}
           fill

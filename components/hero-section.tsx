@@ -1,7 +1,6 @@
 import Link from "next/link"
 import { ArrowRightIcon } from "lucide-react"
 
-import { BrandLogo } from "@/components/brand-logo"
 import { Button } from "@/components/ui/button"
 import { siteConfig } from "@/lib/site-config"
 
@@ -9,7 +8,7 @@ export function HeroSection() {
   const { hero } = siteConfig
 
   return (
-    <section className="relative min-h-[85vh] overflow-hidden text-primary-foreground">
+    <section className="relative -mt-16 flex min-h-svh items-center justify-center overflow-hidden text-primary-foreground">
       {hero.video ? (
         <video
           autoPlay
@@ -30,11 +29,7 @@ export function HeroSection() {
         aria-hidden="true"
       />
 
-      <div className="relative mx-auto flex min-h-[85vh] max-w-6xl items-center px-4 py-20 md:px-6 md:py-32">
-        <div className="mx-auto max-w-3xl text-center">
-          <div className="mb-6 flex justify-center">
-            <BrandLogo variant="signature" height="lg" linked={false} />
-          </div>
+      <div className="relative z-10 mx-auto w-full max-w-3xl px-4 pt-16 text-center md:px-6">
           <h1 className="text-balance text-4xl font-semibold tracking-tight md:text-5xl lg:text-6xl">
             {hero.headline}
           </h1>
@@ -81,7 +76,6 @@ export function HeroSection() {
               </Link>
             </Button>
           </div>
-        </div>
       </div>
     </section>
   )

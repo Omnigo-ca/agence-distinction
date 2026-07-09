@@ -59,14 +59,14 @@ export type AgencyVideo = {
 }
 
 export const themeCategories = [
-  "Fêtes annuelles",
-  "Saisons",
-  "Ambiances musicales",
-  "Événements RPA",
-  "Hommages",
-  "Activités interactives",
-  "Soirées dansantes",
-  "Programmation annuelle",
+  "Fêtes et célébrations",
+  "Saisons et traditions",
+  "Événements thématiques",
+  "Spectacles musicaux",
+  "Animations interactives",
+  "Moments commémoratifs",
+  "Programmation RPA / CHSLD",
+  "Expériences sur mesure",
 ] as const
 
 export const themes: Theme[] = [
@@ -78,9 +78,9 @@ export const themes: Theme[] = [
     mood: "Festive · Québécoise · Rassembleuse",
     audience: "Résidences, RPA, CHSLD et événements communautaires",
     idealMoment: "Fin juin, activités extérieures ou salle commune",
-    cta: "Créer cette activité",
+    cta: "Demander une proposition",
     image: themeImages.stJean,
-    category: "Fêtes annuelles",
+    category: "Fêtes et célébrations",
     artists: ["Clément Courtois", "Miz Mia"],
   },
   {
@@ -91,10 +91,10 @@ export const themes: Theme[] = [
     mood: "Nostalgique · Chaleureuse · Émouvante",
     audience: "Résidences, familles et organisations",
     idealMoment: "Mi-juin, brunch ou activité après-midi",
-    cta: "Créer cette activité",
+    cta: "Demander une proposition",
     image: themeImages.fetePeres,
     imagePosition: "center 80%",
-    category: "Fêtes annuelles",
+    category: "Fêtes et célébrations",
     artists: ["Normand Meilleur", "Steve Barry"],
   },
   {
@@ -105,22 +105,22 @@ export const themes: Theme[] = [
     mood: "Douce · Émouvante · Intime",
     audience: "Résidences, RPA, CHSLD et événements familiaux",
     idealMoment: "Mi-mai, activité en salle commune",
-    cta: "Créer cette activité",
+    cta: "Demander une proposition",
     image: themeImages.feteMeres,
-    category: "Fêtes annuelles",
+    category: "Fêtes et célébrations",
     artists: ["France Bernard", "Mélanie Haché"],
   },
   {
     slug: "noel",
     title: "Noël",
     description:
-      "La magie des fêtes en musique — chants traditionnels, ambiance chaleureuse et esprit de partage.",
+      "La magie des fêtes en musique, chants traditionnels, ambiance chaleureuse et esprit de partage.",
     mood: "Magique · Chaleureuse · Traditionnelle",
     audience: "Tous les milieux de vie et événements corporatifs",
     idealMoment: "Décembre, programmation festive",
-    cta: "Créer cette activité",
+    cta: "Demander une proposition",
     image: themeImages.noel,
-    category: "Fêtes annuelles",
+    category: "Fêtes et célébrations",
     artists: ["Caroline Noel", "Mélane et Michel"],
   },
   {
@@ -131,9 +131,9 @@ export const themes: Theme[] = [
     mood: "Festive · Optimiste · Participative",
     audience: "Résidences, RPA et événements corporatifs",
     idealMoment: "Fin décembre, début janvier",
-    cta: "Créer cette activité",
+    cta: "Demander une proposition",
     image: themeImages.nouvelAn,
-    category: "Fêtes annuelles",
+    category: "Fêtes et célébrations",
     artists: ["Miz Mia", "Mélane et Michel"],
   },
   {
@@ -144,9 +144,9 @@ export const themes: Theme[] = [
     mood: "Romantique · Douce · Nostalgique",
     audience: "Résidences et milieux de vie",
     idealMoment: "Mi-février, activité intime en salle",
-    cta: "Créer cette activité",
+    cta: "Demander une proposition",
     image: themeImages.saintValentin,
-    category: "Fêtes annuelles",
+    category: "Fêtes et célébrations",
     artists: ["Stéphanie Roy", "André Lahaie"],
   },
   {
@@ -157,9 +157,9 @@ export const themes: Theme[] = [
     mood: "Festive · Hivernale · Participative",
     audience: "Résidences, RPA, CHSLD",
     idealMoment: "Février, activités hivernales",
-    cta: "Créer cette activité",
+    cta: "Demander une proposition",
     image: themeImages.carnaval,
-    category: "Saisons",
+    category: "Saisons et traditions",
     artists: ["Miz Mia", "Clément Courtois"],
   },
   {
@@ -170,9 +170,9 @@ export const themes: Theme[] = [
     mood: "Chaleureuse · Québécoise · Participative",
     audience: "Résidences, RPA, CHSLD et événements familiaux",
     idealMoment: "Printemps, activités saisonnières",
-    cta: "Créer cette activité",
+    cta: "Demander une proposition",
     image: themeImages.cabaneSucre,
-    category: "Saisons",
+    category: "Saisons et traditions",
     artists: ["Clément Courtois", "Olivier Morissette"],
   },
   {
@@ -183,9 +183,9 @@ export const themes: Theme[] = [
     mood: "Nostalgique · Énergique · Participative",
     audience: "Résidences, RPA, CHSLD",
     idealMoment: "Toute l'année, soirées thématiques",
-    cta: "Créer cette activité",
+    cta: "Demander une proposition",
     image: themeImages.anneesRetro,
-    category: "Ambiances musicales",
+    category: "Spectacles musicaux",
     artists: ["Trio Java", "Robby Bolduc"],
   },
   {
@@ -196,22 +196,22 @@ export const themes: Theme[] = [
     mood: "Énergique · Dansante · Conviviale",
     audience: "Résidences actives et événements corporatifs",
     idealMoment: "Soirées dansantes, activités spéciales",
-    cta: "Créer cette activité",
+    cta: "Demander une proposition",
     image: themeImages.soireeCountry,
-    category: "Soirées dansantes",
+    category: "Spectacles musicaux",
     artists: ["Julie Levac", "Anthony Lovison"],
   },
   {
     slug: "carnaval-de-rio",
-    title: "Carnaval de Rio",
+    title: "Thématique brésilienne / carnaval de Rio",
     description:
       "Couleurs, rythmes latins et ambiance festive pour transporter vos résidents sous le soleil.",
     mood: "Exotique · Festive · Colorée",
     audience: "Résidences et milieux de vie",
     idealMoment: "Activités spéciales, été",
-    cta: "Créer cette activité",
+    cta: "Demander une proposition",
     image: themeImages.carnavalRio,
-    category: "Activités interactives",
+    category: "Événements thématiques",
     artists: ["Samba Jeri", "Miz Mia"],
   },
   {
@@ -222,9 +222,9 @@ export const themes: Theme[] = [
     mood: "Nostalgique · Douce · Émouvante",
     audience: "Résidences, RPA, CHSLD",
     idealMoment: "Programmation régulière, hommages",
-    cta: "Créer cette activité",
+    cta: "Demander une proposition",
     image: themeImages.chansonsAutrefois,
-    category: "Ambiances musicales",
+    category: "Spectacles musicaux",
     artists: ["André Lahaie", "Olivier Morissette"],
   },
   {
@@ -235,10 +235,88 @@ export const themes: Theme[] = [
     mood: "Personnalisée · Chaleureuse · Joyeuse",
     audience: "Résidences, RPA, CHSLD",
     idealMoment: "Chaque mois, activité récurrente",
-    cta: "Créer cette activité",
+    cta: "Demander une proposition",
     image: themeImages.anniversairesMois,
-    category: "Événements RPA",
+    category: "Programmation RPA / CHSLD",
     artists: ["Mélane et Michel", "Mélanie Haché"],
+  },
+  {
+    slug: "thematique-mexicaine",
+    title: "Thématique mexicaine",
+    description:
+      "Une expérience musicale ensoleillée et conviviale pour transporter les résidents dans une ambiance chaleureuse.",
+    mood: "Ensoleillée · Festive · Dépaysante",
+    audience: "Résidences, activités estivales, événements thématiques",
+    idealMoment: "Été, Cinco de Mayo, repas thématique",
+    cta: "Demander une proposition",
+    image: media("thematiques", "mexicaine.png"),
+    category: "Événements thématiques",
+    artists: ["Miz Mia", "Samba Jeri"],
+  },
+  {
+    slug: "hommage-musical",
+    title: "Hommage musical",
+    description:
+      "Un moment délicat et sensible pour accompagner une cérémonie avec une prestation musicale adaptée et respectueuse.",
+    mood: "Respectueuse · Émotive · Sobre",
+    audience: "Familles, cérémonies commémoratives, hommages",
+    idealMoment: "Cérémonies, moments de recueillement, prestations personnalisées",
+    cta: "Demander une proposition",
+    image: media("Reid, Myriam", "Myriam_Reid_2400x1350_1.jpg"),
+    category: "Moments commémoratifs",
+    artists: ["Myriam Reid"],
+  },
+  {
+    slug: "danse-sociale",
+    title: "Danse sociale",
+    description:
+      "Une formule vivante pour faire bouger, sourire et rassembler les résidents autour d'une musique accessible.",
+    mood: "Dansante · Joyeuse · Participative",
+    audience: "Résidences, RPA, événements spéciaux",
+    idealMoment: "Soirées, fêtes, programmation mensuelle",
+    cta: "Demander une proposition",
+    image: media("Trio Java", "Trio_Java_2400x1350_7.jpg"),
+    category: "Animations interactives",
+    artists: ["Trio Java", "Mélane et Michel"],
+  },
+  {
+    slug: "journee-speciale-residents",
+    title: "Journée spéciale des résidents",
+    description:
+      "Une activité marquante pour mettre vos résidents à l'honneur et créer un moment collectif mémorable.",
+    mood: "Festive · Personnalisée · Rassembleuse",
+    audience: "Résidences, RPA, CHSLD",
+    idealMoment: "Journées thématiques, semaines spéciales, activités signature",
+    cta: "Demander une proposition",
+    image: media("Mélane et Michel", "Melane_Et_Michel_2400x1350_6.jpg"),
+    category: "Programmation RPA / CHSLD",
+    artists: ["Mélane et Michel", "Mélanie Haché"],
+  },
+  {
+    slug: "evenements-intergenerationnels",
+    title: "Événements intergénérationnels",
+    description:
+      "Des spectacles qui rapprochent les générations et créent des liens chaleureux entre résidents, familles et invités.",
+    mood: "Humaine · Chaleureuse · Inclusive",
+    audience: "Résidences, familles, événements intergénérationnels",
+    idealMoment: "Portes ouvertes, fêtes familiales, activités spéciales",
+    cta: "Demander une proposition",
+    image: media("Mélane et Michel", "Melane_Et_Michel_2400x1350_3.jpg"),
+    category: "Expériences sur mesure",
+    artists: ["Mélane et Michel", "France Bernard"],
+  },
+  {
+    slug: "moments-hommage-commemoration",
+    title: "Moments hommage / commémoration",
+    description:
+      "Des prestations pensées avec délicatesse pour honorer un être cher et créer un moment de recueillement humain.",
+    mood: "Recueillie · Sensible · Apaisante",
+    audience: "Familles, résidences, cérémonies et hommages",
+    idealMoment: "Commémorations, moments de mémoire, activités hommage",
+    cta: "Demander une proposition",
+    image: media("Reid, Myriam", "Myriam_Reid_2400x1350_2.jpg"),
+    category: "Moments commémoratifs",
+    artists: ["Myriam Reid", "André Lahaie"],
   },
 ]
 
@@ -511,7 +589,7 @@ export const benefits: Benefit[] = [
   {
     title: "Des thématiques faciles à réserver",
     description:
-      "Choisissez un moment, une ambiance ou une fête — on s'occupe du reste.",
+      "Choisissez un moment, une ambiance ou une fête, on s'occupe du reste.",
   },
   {
     title: "Une gestion simplifiée",
@@ -618,7 +696,7 @@ export const agencyVideos: AgencyVideo[] = [
   {
     title: "Mélane et Michel en prestation",
     description:
-      "Un aperçu d'une animation musicale en milieu de vie — joie, participation et souvenirs.",
+      "Un aperçu d'une animation musicale en milieu de vie, joie, participation et souvenirs.",
     src: media("Mélane et Michel", "VID_20230126_194016.mp4"),
     poster: media("Mélane et Michel", "IMG_20230126_194117[7853].jpg"),
   },
@@ -646,7 +724,7 @@ export const detailedServices = [
   {
     title: "Spectacles thématiques",
     description:
-      "Fêtes, saisons et ambiances — des activités prêtes à réserver ou à personnaliser.",
+      "Fêtes, saisons et ambiances, des activités prêtes à réserver ou à personnaliser.",
     image: themeImages.noel,
   },
   {
@@ -670,7 +748,7 @@ export const detailedServices = [
   {
     title: "Programmation annuelle ou mensuelle",
     description:
-      "Bâtissez votre calendrier de spectacles avec un accompagnement simple et structuré — idéalement 1 spectacle par mois.",
+      "Bâtissez votre calendrier de spectacles avec un accompagnement simple et structuré, idéalement 1 spectacle par mois.",
     image: media("Mélane et Michel", "RPA Affiche concert M&M.png"),
   },
 ]

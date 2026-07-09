@@ -1,5 +1,3 @@
-import { SectionWrapper } from "@/components/section-wrapper"
-
 type PageHeroProps = {
   title: string
   subtitle?: string
@@ -8,8 +6,8 @@ type PageHeroProps = {
 
 export function PageHero({ title, subtitle, children }: PageHeroProps) {
   return (
-    <SectionWrapper variant="dark" className="pt-16 md:pt-24">
-      <div className="mx-auto max-w-3xl text-center">
+    <section className="-mt-16 flex min-h-svh items-center justify-center bg-dark px-4 pt-16 text-primary-foreground md:px-6">
+      <div className="mx-auto w-full max-w-3xl text-center">
         <h1 className="text-balance text-4xl font-semibold tracking-tight md:text-5xl">
           {title}
         </h1>
@@ -20,6 +18,6 @@ export function PageHero({ title, subtitle, children }: PageHeroProps) {
         ) : null}
         {children ? <div className="mt-8">{children}</div> : null}
       </div>
-    </SectionWrapper>
+    </section>
   )
 }

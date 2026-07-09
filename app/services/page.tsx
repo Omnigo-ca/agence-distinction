@@ -27,7 +27,7 @@ export default function ServicesPage() {
               }`}
             >
               <ImagePlaceholder
-                label={`Visuel — ${service.title}`}
+                label={`Visuel, ${service.title}`}
                 src={service.image}
                 alt={service.title}
                 aspect="video"

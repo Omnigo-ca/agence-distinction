@@ -81,7 +81,7 @@ export const siteConfig = {
     goal: "formulaire" as ContactGoal,
     phone: "514-260-1569",
     email: "info@agencedistinction.ca",
-    address: "Québec — Montréal, Montérégie, Estrie, Lanaudière, Laurentides, Capitale-Nationale, Mauricie",
+    address: "Montréal, Montérégie, Estrie, Lanaudière, Laurentides, Capitale-Nationale, Mauricie",
     bookingUrl: "https://calendly.com/info-8d6k/rencontre-google-meet",
     formFields: [
       "name",
@@ -142,9 +142,9 @@ export const siteConfig = {
     headline:
       "Des spectacles et animations qui transforment vos événements en moments inoubliables",
     subtitle:
-      "Pour les techniciennes et responsables loisirs des RPA, CHSLD et résidences — l'Agence Distinction vous aide à planifier votre agenda de spectacles, choisir les bonnes thématiques et trouver les artistes adaptés à vos résidents.",
+      "Pour les RPA, CHSLD et résidences, l’Agence Distinction vous aide à planifier des spectacles chaleureux, thématiques et adaptés à vos résidents.",
     reassurance:
-      "Partenaire de programmation pour les milieux de vie — spectacles fiables, thématiques clés en main et accompagnement humain.",
+      "Partenaire de programmation pour les milieux de vie, spectacles fiables, thématiques clés en main et accompagnement humain.",
     badges: [
       "Bientôt 10 ans d'expérience",
       "Partenaire du RQRA",
@@ -180,7 +180,7 @@ export const siteConfig = {
       {
         title: "Spectacles thématiques",
         description:
-          "Fêtes, saisons et ambiances — des activités prêtes à réserver ou à personnaliser.",
+          "Fêtes, saisons et ambiances, des activités prêtes à réserver ou à personnaliser.",
         icon: "sparkles",
       },
       {
@@ -206,12 +206,12 @@ export const siteConfig = {
   moments: {
     title: "Choisissez le moment, on vous aide à créer l'ambiance",
     subtitle:
-      "Pas besoin de savoir quel artiste choisir — décrivez votre occasion et on vous guide vers la bonne expérience.",
+      "Pas besoin de savoir quel artiste choisir, décrivez votre occasion et on vous guide vers la bonne expérience.",
   },
   themes: {
     title: "Thématiques populaires",
     subtitle:
-      "Trouvez la thématique parfaite pour votre prochain spectacle — on vous aide à choisir l'ambiance adaptée à vos résidents et à votre calendrier d'activités.",
+      "Trouvez la thématique parfaite pour votre prochain spectacle, on vous aide à choisir l'ambiance adaptée à vos résidents et à votre calendrier d'activités.",
     viewAllLabel: "Voir toutes les thématiques",
     viewAllHref: "/thematiques",
   },
@@ -225,12 +225,12 @@ export const siteConfig = {
   benefits: {
     title: "Une agence qui comprend autant les artistes que les milieux de vie",
     subtitle:
-      "Techniciennes et responsables loisirs — on connaît votre réalité : remplir un calendrier, trouver des idées fiables et offrir des moments stimulants à vos résidents.",
+      "Techniciennes et responsables loisirs, on connaît votre réalité : remplir un calendrier, trouver des idées fiables et offrir des moments stimulants à vos résidents.",
   },
   promo: {
     title: "Planifiez votre programmation de spectacles, un mois à la fois.",
     description:
-      "Marie-Josée vous accompagne dans le choix des artistes, des thématiques et des moments clés de l'année pour bâtir une programmation variée, adaptée et simple à organiser — idéalement avec 1 spectacle par mois.",
+      "Marie-Josée vous accompagne dans le choix des artistes, des thématiques et des moments clés de l'année pour bâtir une programmation variée, adaptée et simple à organiser, idéalement avec 1 spectacle par mois.",
     benefits: [
       "Moins de recherche à faire",
       "Une programmation plus variée",
@@ -252,7 +252,7 @@ export const siteConfig = {
     subtitle: "L'histoire de Marie-Josée et de l'Agence Distinction",
     content: [
       "Bienvenue chez Agence Distinction, où la magie de la musique et des spectacles rencontre la sagesse et la joie de vivre des résidences pour retraités.",
-      "Nous sommes bien plus qu'une simple agence de spectacles — nous sommes les artisans de moments inoubliables, les créateurs de souvenirs chaleureux, et les partenaires de confiance des responsables des loisirs à travers le pays.",
+      "Nous sommes bien plus qu'une simple agence de spectacles, nous sommes les artisans de moments inoubliables, les créateurs de souvenirs chaleureux, et les partenaires de confiance des responsables des loisirs à travers le pays.",
       "Derrière chaque prestation, il y a du travail invisible : comprendre vos besoins, cerner l'ambiance, choisir le bon artiste, coordonner les détails. Notre rôle, c'est de faire en sorte que tout semble simple, fluide et agréable le jour de l'événement.",
     ],
     image: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Melane_Et_Michel_2400x1350_3.jpg",
@@ -260,7 +260,7 @@ export const siteConfig = {
   process: {
     title: "Organiser votre prochain spectacle devient simple",
     subtitle:
-      "Un processus clair pour les responsables loisirs — de la planification de votre agenda au moment magique sur scène.",
+      "Un processus clair pour les responsables loisirs, de la planification de votre agenda au moment magique sur scène.",
     steps: [
       {
         step: "01",
@@ -272,13 +272,13 @@ export const siteConfig = {
         step: "02",
         title: "On vous recommande la bonne formule",
         description:
-          "Thématique, artiste ou prestation sur mesure — adaptée à votre public et à votre budget.",
+          "Thématique, artiste ou prestation sur mesure, adaptée à votre public et à votre budget.",
       },
       {
         step: "03",
         title: "On coordonne la prestation",
         description:
-          "Contrats, horaires, confirmations — tout est géré pour vous simplifier la vie.",
+          "Contrats, horaires, confirmations, tout est géré pour vous simplifier la vie.",
       },
       {
         step: "04",
@@ -305,24 +305,24 @@ export const siteConfig = {
     items: [
       {
         quote:
-          "[Témoignage à intégrer — commentaire d'une résidence partenaire]",
+          "[Témoignage à intégrer, commentaire d'une résidence partenaire]",
         author: "[Nom à confirmer]",
         role: "Responsable des loisirs",
-        note: "À VALIDER — ne pas publier sans autorisation",
+        note: "À VALIDER, ne pas publier sans autorisation",
       },
       {
         quote:
-          "[Témoignage à intégrer — retour d'expérience client]",
+          "[Témoignage à intégrer, retour d'expérience client]",
         author: "[Nom à confirmer]",
         role: "Directrice générale, Résidence",
-        note: "À VALIDER — ne pas publier sans autorisation",
+        note: "À VALIDER, ne pas publier sans autorisation",
       },
       {
         quote:
-          "[Témoignage à intégrer — commentaire partenaire]",
+          "[Témoignage à intégrer, commentaire partenaire]",
         author: "[Nom à confirmer]",
         role: "Coordonnatrice activités",
-        note: "À VALIDER — ne pas publier sans autorisation",
+        note: "À VALIDER, ne pas publier sans autorisation",
       },
     ] satisfies Testimonial[],
   },
@@ -344,7 +344,7 @@ export const siteConfig = {
       {
         question: "Pouvez-vous nous aider à choisir une thématique?",
         answer:
-          "Absolument. Décrivez-nous votre occasion ou cochez « J'aimerais une recommandation » dans le formulaire — on vous guidera vers la formule idéale.",
+          "Absolument. Décrivez-nous votre occasion ou cochez « J'aimerais une recommandation » dans le formulaire, on vous guidera vers la formule idéale.",
       },
       {
         question: "Est-il possible de réserver une programmation complète pour l'année?",
@@ -404,7 +404,7 @@ export const siteConfig = {
     thematiques: {
       title: "Trouvez la thématique parfaite pour votre prochain spectacle",
       subtitle:
-        "Fêtes, saisons, ambiances musicales — choisissez un moment et on vous aide à créer l'expérience adaptée à vos résidents.",
+        "Explorez des idées de spectacles, d'animations et d'expériences musicales pensées pour les résidences, les RPA, les CHSLD et les milieux de vie.",
     },
     services: {
       title: "Nos services",
@@ -414,12 +414,12 @@ export const siteConfig = {
     rpaChsld: {
       title: "Des spectacles et animations pensés pour les milieux de vie",
       subtitle:
-        "Un accompagnement humain pour les techniciennes et responsables loisirs des résidences, RPA et CHSLD — spectacles fiables, thématiques et programmation simplifiée.",
+        "Un accompagnement humain pour les techniciennes et responsables loisirs des résidences, RPA et CHSLD, spectacles fiables, thématiques et programmation simplifiée.",
     },
     artistes: {
       title: "Les visages et les voix qui donnent vie à vos expériences",
       subtitle:
-        "Nos artistes ne sont pas un catalogue — ce sont les talents qui créent le bon moment pour votre public.",
+        "Nos artistes ne sont pas un catalogue, ce sont les talents qui créent le bon moment pour votre public.",
     },
     aPropos: {
       title: "Une agence née d'une passion pour les artistes, les gens et les moments qui rassemblent",

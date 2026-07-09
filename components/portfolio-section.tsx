@@ -18,7 +18,7 @@ export function PortfolioSection() {
           >
             <div
               className="flex aspect-square items-center justify-center bg-muted text-sm text-muted-foreground"
-              aria-label={`Photo du projet ${item.title} — à intégrer`}
+              aria-label={`Photo du projet ${item.title}, à intégrer`}
             >
               [Photo]
             </div>

@@ -40,7 +40,7 @@ export default function ArtistesPage() {
             Pas certain de l&apos;artiste?
           </h2>
           <p className="mt-2 text-muted-foreground">
-            Décrivez l&apos;ambiance recherchée — on vous recommande le talent
+            Décrivez l&apos;ambiance recherchée, on vous recommande le talent
             idéal pour votre événement.
           </p>
           <Button asChild className="mt-6">

@@ -23,7 +23,7 @@ export function ArtistsSection() {
             className="group overflow-hidden rounded-2xl border border-border bg-card transition-all hover:border-primary/30 hover:shadow-lg"
           >
             <ImagePlaceholder
-              label={`Photo artiste — ${artist.name}`}
+              label={`Photo artiste, ${artist.name}`}
               src={artist.image}
               alt={artist.name}
               aspect="video"

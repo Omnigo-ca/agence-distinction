@@ -21,7 +21,7 @@ const rpaBenefits = [
     icon: HeartIcon,
     title: "On comprend votre réalité",
     description:
-      "Horaires, budgets, publics variés — nous connaissons les défis des responsables loisirs.",
+      "Horaires, budgets, publics variés, nous connaissons les défis des responsables loisirs.",
   },
   {
     icon: CalendarIcon,
@@ -39,7 +39,7 @@ const rpaBenefits = [
     icon: MusicIcon,
     title: "Activités adaptées",
     description:
-      "Participation, nostalgie, danse — des prestations qui font du bien aux résidents.",
+      "Participation, nostalgie, danse, des prestations qui font du bien aux résidents.",
   },
   {
     icon: SparklesIcon,
@@ -82,7 +82,7 @@ export default function RpaChsldPage() {
             </p>
             <p className="mt-4 leading-relaxed text-muted-foreground">
               Des moments de joie, de souvenirs, de participation et de
-              bien-être — c&apos;est ce que nous créons ensemble, activité après
+              bien-être, c&apos;est ce que nous créons ensemble, activité après
               activité.
             </p>
           </div>

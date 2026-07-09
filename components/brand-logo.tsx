@@ -45,7 +45,7 @@ export function BrandLogo({
     <Link
       href="/"
       className="inline-flex shrink-0 items-center"
-      aria-label={`${siteConfig.business.name} — accueil`}
+      aria-label={`${siteConfig.business.name}, accueil`}
     >
       {image}
     </Link>

@@ -4,66 +4,49 @@ import { ArrowRightIcon } from "lucide-react"
 
 import { PageHero } from "@/components/page-hero"
 import { SiteLayout } from "@/components/site-layout"
-import { ThemeCard } from "@/components/theme-card"
+import { ThematiquesPageContent } from "@/components/thematiques-page-content"
 import { Button } from "@/components/ui/button"
-import { SectionWrapper } from "@/components/section-wrapper"
-import { themeCategories, themes } from "@/lib/agence-data"
 import { siteConfig } from "@/lib/site-config"
 
 export const metadata: Metadata = {
   title: `Thématiques | ${siteConfig.business.name}`,
-  description: siteConfig.pages.thematiques.subtitle,
+  description:
+    "Explorez des idées de spectacles, d'animations et d'expériences musicales pensées pour les résidences, les RPA, les CHSLD et les milieux de vie.",
 }
 
 export default function ThematiquesPage() {
   return (
     <SiteLayout>
       <PageHero
-        title={siteConfig.pages.thematiques.title}
-        subtitle={siteConfig.pages.thematiques.subtitle}
+        title="Trouvez la thématique parfaite pour votre prochain spectacle"
+        subtitle="Explorez des idées de spectacles, d'animations et d'expériences musicales pensées pour les résidences, les RPA, les CHSLD et les milieux de vie."
       >
-        <Button
-          asChild
-          size="lg"
-          className="bg-accent text-accent-foreground hover:bg-accent/90"
-        >
-          <Link href="/soumission">
-            Demander une soumission
-            <ArrowRightIcon className="size-4" />
-          </Link>
-        </Button>
-      </PageHero>
-
-      <SectionWrapper>
-        <div className="mb-10 flex flex-wrap justify-center gap-2">
-          {themeCategories.map((category) => (
-            <span
-              key={category}
-              className="rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground"
-            >
-              {category}
-            </span>
-          ))}
-        </div>
-
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {themes.map((theme) => (
-            <ThemeCard key={theme.slug} theme={theme} />
-          ))}
-        </div>
-
-        <div className="mt-12 rounded-2xl border border-primary/20 bg-primary/5 p-8 text-center">
-          <h2 className="font-heading text-2xl font-semibold">
-            Pas certain de la thématique?
-          </h2>
-          <p className="mt-2 text-muted-foreground">
-            Décrivez votre événement et on vous recommande la formule idéale.
-          </p>
-          <Button asChild className="mt-6">
-            <Link href="/soumission">Obtenir une recommandation</Link>
+        <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <Button
+            asChild
+            size="lg"
+            className="bg-accent text-accent-foreground hover:bg-accent/90"
+          >
+            <Link href={siteConfig.cta.href}>
+              {siteConfig.cta.label}
+              <ArrowRightIcon className="size-4" />
+            </Link>
+          </Button>
+          <Button
+            asChild
+            size="lg"
+            variant="outline"
+            className="border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground hover:bg-primary-foreground/20"
+          >
+            <Link href="/soumission">Demander une recommandation</Link>
           </Button>
         </div>
-      </SectionWrapper>
+        <p className="mt-6 text-sm text-primary-foreground/70">
+          {siteConfig.credibility.line}
+        </p>
+      </PageHero>
+
+      <ThematiquesPageContent />
     </SiteLayout>
   )
 }

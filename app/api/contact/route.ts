@@ -47,12 +47,12 @@ export async function POST(request: Request) {
       siteConfig.contact.recipientEmail || process.env.CONTACT_RECIPIENT_EMAIL
 
     if (!recipient) {
-      console.info("[contact] Destinataire non configuré — message simulé :", parsed.data)
+      console.info("[contact] Destinataire non configuré, message simulé :", parsed.data)
       return NextResponse.json({ success: true, simulated: true })
     }
 
     if (!resend) {
-      console.info("[contact] RESEND_API_KEY manquant — message simulé :", parsed.data)
+      console.info("[contact] RESEND_API_KEY manquant, message simulé :", parsed.data)
       return NextResponse.json({ success: true, simulated: true })
     }
 
@@ -60,7 +60,7 @@ export async function POST(request: Request) {
       from: process.env.RESEND_FROM_EMAIL ?? "onboarding@resend.dev",
       to: recipient,
       replyTo: parsed.data.email,
-      subject: `Nouvelle soumission — ${siteConfig.business.name}`,
+      subject: `Nouvelle soumission, ${siteConfig.business.name}`,
       text: buildEmailBody(parsed.data),
     })
 

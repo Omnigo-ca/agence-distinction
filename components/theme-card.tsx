@@ -13,7 +13,7 @@ export function ThemeCard({ theme, compact = false }: ThemeCardProps) {
   return (
     <article className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5">
       <ImagePlaceholder
-        label={`Visuel thématique — ${theme.title}`}
+        label={`Visuel thématique, ${theme.title}`}
         src={theme.image}
         alt={theme.title}
         aspect="video"

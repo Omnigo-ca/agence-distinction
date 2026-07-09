@@ -29,7 +29,7 @@ export default function SoumissionPage() {
               </h2>
               <p className="mt-2 text-sm text-muted-foreground">
                 Vous préférez échanger directement? Contactez-nous par téléphone
-                ou courriel — on vous répond rapidement.
+                ou courriel, on vous répond rapidement.
               </p>
               <ul className="mt-6 space-y-4 text-sm">
                 <li className="flex items-start gap-3">

@@ -86,9 +86,9 @@ export function ContactSection() {
 
         <div
           className="flex min-h-[300px] items-center justify-center rounded-2xl border border-dashed border-border bg-muted/30 text-sm text-muted-foreground"
-          aria-label="Carte Google Maps — à intégrer si pertinent"
+          aria-label="Carte Google Maps, à intégrer si pertinent"
         >
-          [Carte Google Maps — optionnel]
+          [Carte Google Maps, optionnel]
         </div>
       </div>
     </SectionWrapper>

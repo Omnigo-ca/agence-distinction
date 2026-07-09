@@ -24,7 +24,7 @@ export function AboutSection() {
 
         <div
           className="flex aspect-[4/3] items-center justify-center rounded-2xl border border-dashed border-border bg-background text-sm text-muted-foreground"
-          aria-label="Photo équipe ou entreprise — à intégrer depuis le Drive client"
+          aria-label="Photo équipe ou entreprise, à intégrer depuis le Drive client"
         >
           [Photo à intégrer]
         </div>
