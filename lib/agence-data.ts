@@ -301,7 +301,7 @@ export const themes: Theme[] = [
     audience: "Résidences, familles, événements intergénérationnels",
     idealMoment: "Portes ouvertes, fêtes familiales, activités spéciales",
     cta: "Demander une proposition",
-    image: media("Mélane et Michel", "Melane_Et_Michel_2400x1350_3.jpg"),
+    image: themeImages.intergenerationnel,
     category: "Expériences sur mesure",
     artists: ["Mélane et Michel", "France Bernard"],
   },

@@ -1,3 +1,5 @@
+import { mediaAssets } from "./media"
+
 export type ContactGoal =
   | "appeler"
   | "formulaire"
@@ -19,12 +21,18 @@ export type NavLink = {
   href: string
 }
 
+export type ServiceLink = {
+  label: string
+  href: string
+}
+
 export type Service = {
   title: string
   description: string
   price?: string
   featured?: boolean
   icon?: string
+  links?: ServiceLink[]
 }
 
 export type ProcessStep = {
@@ -123,6 +131,29 @@ export const siteConfig = {
       "Bientôt 10 ans d'expérience · Partenaire du RQRA · Plus de 10 000 représentations",
     specialty:
       "Spécialisée auprès des aînés autonomes et en perte d'autonomie",
+    cards: [
+      {
+        value: "~10 ans",
+        subtitle: "D'EXPÉRIENCE",
+        description:
+          "Une expertise reconnue auprès des milieux de vie pour aînés.",
+        icon: "award",
+      },
+      {
+        value: "RQRA",
+        subtitle: "PARTENAIRE RECONNU",
+        description:
+          "Fier partenaire du Réseau québécois des résidences pour aînés.",
+        icon: "handshake",
+      },
+      {
+        value: "10 000+",
+        subtitle: "REPRÉSENTATIONS",
+        description:
+          "Des milliers de moments musicaux qui ont fait sourire et rassembler.",
+        icon: "heart-handshake",
+      },
+    ],
   },
   rqraAdvantage:
     "Avantage membre RQRA : 5 % de rabais à la signature d'un contrat admissible, selon les modalités applicables.",
@@ -140,23 +171,16 @@ export const siteConfig = {
   },
   hero: {
     headline:
-      "Des spectacles et animations qui transforment vos événements en moments inoubliables",
+      "Des spectacles qui font sourire, chanter et rassembler vos résidents.",
     subtitle:
       "Pour les RPA, CHSLD et résidences, l’Agence Distinction vous aide à planifier des spectacles chaleureux, thématiques et adaptés à vos résidents.",
-    reassurance:
-      "Partenaire de programmation pour les milieux de vie, spectacles fiables, thématiques clés en main et accompagnement humain.",
-    badges: [
-      "Bientôt 10 ans d'expérience",
-      "Partenaire du RQRA",
-      "Plus de 10 000 représentations",
-    ],
     video: "/images/agence-distinction/agence-distinction-promo-01-ed.mp4",
     image: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Melane_Et_Michel_2400x1350_9.jpg",
   },
   services: {
-    title: "Des expériences pensées pour votre public",
+    title: "Services",
     subtitle:
-      "L'Agence Distinction aide les responsables loisirs à planifier leur agenda de spectacles, choisir les bonnes thématiques et trouver les artistes adaptés à leur public.",
+      "L'Agence Distinction aide les responsables loisirs à planifier leur agenda de spectacles, choisir les bonnes thématiques et trouver les artistes adaptés. Décrivez votre occasion, on vous guide vers la bonne expérience.",
     items: [
       {
         title: "Spectacles pour RPA et résidences",
@@ -172,34 +196,43 @@ export const siteConfig = {
         icon: "heart",
       },
       {
-        title: "Soirées dansantes",
+        title: "Soirées dansantes et animations musicales",
         description:
-          "Des prestations énergiques qui font bouger, sourire et rassembler vos résidents.",
+          "Soirées dansantes, country, rétro… Des prestations énergiques qui font bouger, sourire et rassembler vos résidents.",
         icon: "music",
+        links: [{ label: "Découvrir", href: "/thematiques" }],
       },
       {
         title: "Spectacles thématiques",
         description:
-          "Fêtes, saisons et ambiances, des activités prêtes à réserver ou à personnaliser.",
+          "Fêtes, saisons et ambiances nostalgiques : Noël, St-Jean, cabane à sucre, chansons d'autrefois… Des activités prêtes à réserver ou à personnaliser.",
         icon: "sparkles",
+        links: [
+          { label: "Voir les fêtes", href: "/thematiques" },
+          { label: "Explorer les saisons", href: "/thematiques" },
+          { label: "Trouver l'ambiance", href: "/thematiques" },
+        ],
       },
       {
-        title: "Cérémonies commémoratives",
+        title: "Cérémonies, hommages et commémorations",
         description:
-          "Représentation d'artistes avec respect et sensibilité pour des moments importants.",
+          "Représentation d'artistes avec respect et sensibilité pour les moments importants, les hommages musicaux et les cérémonies commémoratives.",
         icon: "flower",
-      },
-      {
-        title: "Spectacles corporatifs",
-        description:
-          "Pour entreprises, villes et organisations qui souhaitent créer un moment humain et mémorable.",
-        icon: "building",
+        links: [{ label: "Découvrir", href: "/services" }],
       },
       {
         title: "Programmation annuelle ou mensuelle",
         description:
-          "Bâtissez votre calendrier de spectacles avec un accompagnement simple et structuré.",
+          "Bâtissez votre calendrier de spectacles pour l'année entière avec un accompagnement simple, structuré et adapté à votre établissement.",
         icon: "calendar",
+        links: [{ label: "Bâtir ma programmation", href: "/rpa-chsld" }],
+      },
+      {
+        title: "Spectacles corporatifs et événements sur mesure",
+        description:
+          "Pour entreprises, villes et organisations : un événement unique, une surprise ou un moment humain et mémorable, adapté à votre vision.",
+        icon: "building",
+        links: [{ label: "En parler", href: "/soumission" }],
       },
     ] satisfies Service[],
   },
@@ -226,6 +259,62 @@ export const siteConfig = {
     title: "Une agence qui comprend autant les artistes que les milieux de vie",
     subtitle:
       "Techniciennes et responsables loisirs, on connaît votre réalité : remplir un calendrier, trouver des idées fiables et offrir des moments stimulants à vos résidents.",
+    ctaLabel: "Découvrir notre approche",
+    ctaHref: "/soumission",
+    flipCards: [
+      {
+        title: "Une agence humaine et accessible",
+        subtitle: "Un accompagnement attentif à chaque étape",
+        description:
+          "Marie-Josée et son équipe prennent le temps de comprendre votre établissement, votre public et vos besoins avant de vous recommander une formule.",
+        features: [
+          "Écoute personnalisée",
+          "Réponses rapides",
+          "Conseils adaptés",
+          "Suivi humain",
+        ],
+        variant: "rose",
+      },
+      {
+        title: "Une expertise adaptée aux aînés",
+        subtitle: "Des prestations pensées pour les milieux de vie",
+        description:
+          "Les artistes et les formules sont choisis selon le niveau d'autonomie, l'ambiance recherchée et la réalité de vos résidents.",
+        features: [
+          "RPA et CHSLD",
+          "Unités de soins",
+          "Artistes expérimentés",
+          "Formats adaptés",
+        ],
+        variant: "burgundy",
+      },
+      {
+        title: "Une planification simplifiée",
+        subtitle: "Moins de recherche, plus de tranquillité",
+        description:
+          "L'agence vous aide à choisir les thématiques, coordonne les artistes et prend en charge les détails essentiels de la prestation.",
+        features: [
+          "Recommandations",
+          "Contrats",
+          "Confirmations",
+          "Coordination",
+        ],
+        variant: "cream",
+      },
+      {
+        title: "Des moments qui font du bien",
+        subtitle: "Joie, souvenirs et participation",
+        description:
+          "Chaque événement est pensé pour créer une expérience chaleureuse qui fait sourire, chanter et rassembler les résidents.",
+        features: [
+          "Participation",
+          "Bien-être",
+          "Souvenirs",
+          "Moments humains",
+        ],
+        variant: "gold",
+      },
+    ],
   },
   promo: {
     title: "Planifiez votre programmation de spectacles, un mois à la fois.",
@@ -255,7 +344,7 @@ export const siteConfig = {
       "Nous sommes bien plus qu'une simple agence de spectacles, nous sommes les artisans de moments inoubliables, les créateurs de souvenirs chaleureux, et les partenaires de confiance des responsables des loisirs à travers le pays.",
       "Derrière chaque prestation, il y a du travail invisible : comprendre vos besoins, cerner l'ambiance, choisir le bon artiste, coordonner les détails. Notre rôle, c'est de faire en sorte que tout semble simple, fluide et agréable le jour de l'événement.",
     ],
-    image: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Melane_Et_Michel_2400x1350_3.jpg",
+    image: mediaAssets.about.agency,
   },
   process: {
     title: "Organiser votre prochain spectacle devient simple",

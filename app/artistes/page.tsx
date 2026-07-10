@@ -6,10 +6,12 @@ import { PageHero } from "@/components/page-hero"
 import { SiteLayout } from "@/components/site-layout"
 import { Button } from "@/components/ui/button"
 import { SectionWrapper } from "@/components/section-wrapper"
-import { artistIntentions, artists } from "@/lib/agence-data"
+import { getAllArtistProfiles } from "@/lib/data/artists"
 import { siteConfig } from "@/lib/site-config"
 
 export default function ArtistesPage() {
+  const artists = getAllArtistProfiles()
+
   return (
     <SiteLayout>
       <PageHero
@@ -18,16 +20,10 @@ export default function ArtistesPage() {
       />
 
       <SectionWrapper>
-        <div className="mb-10 flex flex-wrap justify-center gap-2">
-          {artistIntentions.map((intention) => (
-            <span
-              key={intention}
-              className="rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-sm text-primary"
-            >
-              {intention}
-            </span>
-          ))}
-        </div>
+        <p className="mb-8 text-center text-muted-foreground">
+          {artists.length} artistes répertoriés sur le site actuel de l&apos;Agence
+          Distinction.
+        </p>
 
         <div className="grid gap-8 md:grid-cols-2">
           {artists.map((artist) => (

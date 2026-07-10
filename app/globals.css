@@ -145,4 +145,26 @@
   .gradient-soft {
     background: linear-gradient(180deg, #FEF9F6 0%, #F5EDE8 100%);
   }
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+  .artist-hero-video::-webkit-media-controls,
+  .artist-hero-video::-webkit-media-controls-enclosure,
+  .artist-hero-video::-webkit-media-controls-panel,
+  .artist-hero-video::-webkit-media-controls-play-button,
+  .artist-hero-video::-webkit-media-controls-start-playback-button {
+    display: none !important;
+    -webkit-appearance: none;
+    opacity: 0;
+    pointer-events: none;
+  }
 }

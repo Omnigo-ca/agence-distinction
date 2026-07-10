@@ -37,19 +37,6 @@ export function HeroSection() {
             {hero.subtitle}
           </p>
 
-          {hero.badges.length > 0 ? (
-            <ul className="mt-8 flex flex-wrap items-center justify-center gap-3">
-              {hero.badges.map((badge) => (
-                <li
-                  key={badge}
-                  className="rounded-full border border-primary-foreground/25 bg-primary-foreground/10 px-4 py-1.5 text-sm backdrop-blur-sm"
-                >
-                  {badge}
-                </li>
-              ))}
-            </ul>
-          ) : null}
-
           <p className="mt-6 text-sm text-primary-foreground/75">
             {hero.reassurance}
           </p>

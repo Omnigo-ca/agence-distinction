@@ -8,8 +8,9 @@ type ImagePlaceholderProps = {
   src?: string
   alt?: string
   className?: string
-  aspect?: "video" | "square" | "portrait" | "wide"
+  aspect?: "video" | "square" | "portrait" | "wide" | "auto"
   objectPosition?: string
+  objectFit?: "cover" | "contain"
   /** Remplit entièrement un conteneur parent positionné en relative */
   fill?: boolean
 }
@@ -28,6 +29,7 @@ export function ImagePlaceholder({
   className,
   aspect = "video",
   objectPosition = "center",
+  objectFit = "cover",
   fill = false,
 }: ImagePlaceholderProps) {
   const [hasError, setHasError] = useState(false)
@@ -58,8 +60,8 @@ export function ImagePlaceholder({
         <img
           src={src}
           alt={alt ?? label}
-          className="block size-full object-cover"
-          style={{ objectPosition }}
+          className="block size-full"
+          style={{ objectFit, objectPosition }}
           onError={() => setHasError(true)}
         />
       </div>
@@ -85,7 +87,7 @@ export function ImagePlaceholder({
     <div
       className={cn(
         "relative overflow-hidden rounded-2xl bg-muted",
-        aspectClasses[aspect],
+        aspect !== "auto" && aspectClasses[aspect],
         className
       )}
     >
@@ -93,8 +95,8 @@ export function ImagePlaceholder({
       <img
         src={src}
         alt={alt ?? label}
-        className="size-full object-cover"
-        style={{ objectPosition }}
+        className={aspect === "auto" ? "block h-auto w-full" : "size-full"}
+        style={aspect === "auto" ? undefined : { objectFit, objectPosition }}
         onError={() => setHasError(true)}
       />
     </div>

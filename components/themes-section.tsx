@@ -1,12 +1,13 @@
 import Link from "next/link"
 import { ArrowRightIcon } from "lucide-react"
 
+import { InteractiveBentoGallery } from "@/components/ui/interactive-bento-gallery"
 import { Button } from "@/components/ui/button"
-import { ThemeCard } from "@/components/theme-card"
 import { SectionHeading } from "@/components/section-heading"
 import { SectionWrapper } from "@/components/section-wrapper"
 import { themes } from "@/lib/agence-data"
 import { siteConfig } from "@/lib/site-config"
+import { getBentoItemsBySlugs } from "@/lib/thematiques-bento"
 
 type ThemesSectionProps = {
   limit?: number
@@ -14,7 +15,9 @@ type ThemesSectionProps = {
 }
 
 export function ThemesSection({ limit = 6, showViewAll = true }: ThemesSectionProps) {
-  const displayedThemes = themes.slice(0, limit)
+  const bentoItems = getBentoItemsBySlugs(
+    themes.slice(0, limit).map((theme) => theme.slug)
+  )
 
   return (
     <SectionWrapper id="thematiques">
@@ -23,11 +26,11 @@ export function ThemesSection({ limit = 6, showViewAll = true }: ThemesSectionPr
         subtitle={siteConfig.themes.subtitle}
       />
 
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {displayedThemes.map((theme) => (
-          <ThemeCard key={theme.slug} theme={theme} />
-        ))}
-      </div>
+      <InteractiveBentoGallery
+        items={bentoItems}
+        submissionHref={siteConfig.cta.href}
+        layout="grid"
+      />
 
       {showViewAll ? (
         <div className="mt-10 text-center">

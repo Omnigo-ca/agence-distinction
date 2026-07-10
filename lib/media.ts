@@ -20,6 +20,7 @@ export const themeImages = {
   carnavalRio: media("carnaval-rio.jpg"),
   chansonsAutrefois: media("chanson-autrefois.jpg"),
   anniversairesMois: media("anniversaire-mois.jpg"),
+  intergenerationnel: media("intergenerationnel.jpg"),
 } as const
 
 export const mediaAssets = {
@@ -32,7 +33,7 @@ export const mediaAssets = {
     poster: media("Mélane et Michel", "Melane_Et_Michel_2400x1350_9.jpg"),
   },
   about: {
-    agency: media("Mélane et Michel", "Melane_Et_Michel_2400x1350_3.jpg"),
+    agency: media("Landry, Marie-Josée", "Marjo_2400x1350_3.jpg"),
     performance: media("Mélane et Michel", "IMG_20230126_194117[7853].jpg"),
   },
   rpa: media("Mélane et Michel", "IMG_20230126_194117[7853].jpg"),

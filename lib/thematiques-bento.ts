@@ -77,9 +77,7 @@ export const thematiquesBentoItems: BentoThemeItem[] = [
     title: "Noël",
     desc: "Un moment musical doux, lumineux et rassembleur pour célébrer la magie des Fêtes avec chaleur et émotion.",
     url: themeImages.noel,
-    imagePosition: "left center",
-    imageFit: "contain",
-    imageScale: 1.1,
+    imagePosition: "55% center",
     category: "Fêtes et célébrations",
     filters: ["Fêtes et célébrations"],
     mood: "Magique · Chaleureuse · Réconfortante",
@@ -352,7 +350,7 @@ export const thematiquesBentoItems: BentoThemeItem[] = [
     type: "image",
     title: "Événements intergénérationnels",
     desc: "Des spectacles qui rapprochent les générations et créent des liens chaleureux entre résidents, familles et invités.",
-    url: media("Mélane et Michel", "Melane_Et_Michel_2400x1350_3.jpg"),
+    url: themeImages.intergenerationnel,
     category: "Expériences sur mesure",
     filters: ["Expériences sur mesure", "Programmation RPA / CHSLD"],
     mood: "Humaine · Chaleureuse · Inclusive",
@@ -370,4 +368,10 @@ export function filterBentoItems(
 ): BentoThemeItem[] {
   if (filter === "Toutes") return items
   return items.filter((item) => item.filters.includes(filter))
+}
+
+export function getBentoItemsBySlugs(slugs: string[]): BentoThemeItem[] {
+  return slugs
+    .map((slug) => thematiquesBentoItems.find((item) => item.slug === slug))
+    .filter((item): item is BentoThemeItem => item != null)
 }

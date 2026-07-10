@@ -12,6 +12,7 @@ import { cn } from "@/lib/utils"
 type InteractiveBentoGalleryProps = {
   items: BentoThemeItem[]
   submissionHref?: string
+  layout?: "bento" | "grid"
 }
 
 function BentoMedia({
@@ -278,10 +279,16 @@ function GalleryModal({
 export function InteractiveBentoGallery({
   items,
   submissionHref = "/soumission",
+  layout = "bento",
 }: InteractiveBentoGalleryProps) {
   const [selected, setSelected] = useState<BentoThemeItem | null>(null)
 
   const handleClose = useCallback(() => setSelected(null), [])
+
+  const displayItems =
+    layout === "grid"
+      ? items.map((item) => ({ ...item, span: "col-span-1 row-span-1" }))
+      : items
 
   if (items.length === 0) {
     return (
@@ -295,10 +302,15 @@ export function InteractiveBentoGallery({
     <>
       <motion.div
         layout
-        className="grid grid-flow-dense grid-cols-1 gap-3 sm:grid-cols-2 sm:auto-rows-[minmax(220px,auto)] lg:grid-cols-4 lg:auto-rows-[minmax(200px,1fr)] lg:gap-4"
+        className={cn(
+          "grid gap-3",
+          layout === "grid"
+            ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6"
+            : "grid-flow-dense grid-cols-1 sm:grid-cols-2 sm:auto-rows-[minmax(220px,auto)] lg:grid-cols-4 lg:auto-rows-[minmax(200px,1fr)] lg:gap-4"
+        )}
       >
         <AnimatePresence mode="popLayout">
-          {items.map((item) => (
+          {displayItems.map((item) => (
             <BentoCard key={item.id} item={item} onSelect={setSelected} />
           ))}
         </AnimatePresence>

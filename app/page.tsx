@@ -5,7 +5,6 @@ import { BenefitsSection } from "@/components/benefits-section"
 import { FaqSection } from "@/components/faq-section"
 import { FinalCtaSection } from "@/components/final-cta-section"
 import { HeroSection } from "@/components/hero-section"
-import { MomentsSection } from "@/components/moments-section"
 import { MusicofolieSection } from "@/components/musicofolie-section"
 import { ProcessSection } from "@/components/process-section"
 import { PromoSection } from "@/components/promo-section"
@@ -20,21 +19,16 @@ export default function Page() {
   return (
     <SiteLayout>
       <HeroSection />
+      <StatsSection />
       {isSectionEnabled("services") ? <ServicesSection /> : null}
       {isSectionEnabled("promo") ? <PromoSection /> : null}
-      <MomentsSection />
       <ThemesSection limit={6} />
       <ArtistsSection />
       <GallerySection />
       <ExperienceVideoSection />
       <BenefitsSection />
       {isSectionEnabled("process") ? <ProcessSection /> : null}
-      {isSectionEnabled("testimonials") ? (
-        <>
-          <TestimonialsSection />
-          <StatsSection />
-        </>
-      ) : null}
+      {isSectionEnabled("testimonials") ? <TestimonialsSection /> : null}
       <FinalCtaSection />
       <MusicofolieSection />
       {isSectionEnabled("faq") ? <FaqSection /> : null}

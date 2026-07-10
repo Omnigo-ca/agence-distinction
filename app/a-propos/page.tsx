@@ -50,10 +50,11 @@ export default function AProposPage() {
             ))}
           </div>
           <ImagePlaceholder
-            label="L'Agence Distinction en prestation"
+            label="Marie-Josée Landry"
             src={siteConfig.about.image}
-            alt="Prestation Agence Distinction"
-            aspect="portrait"
+            alt="Marie-Josée Landry, fondatrice de l'Agence Distinction"
+            aspect="auto"
+            className="mx-auto w-full max-w-md"
           />
         </div>
       </SectionWrapper>
