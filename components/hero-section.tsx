@@ -2,6 +2,7 @@ import Link from "next/link"
 import { ArrowRightIcon } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
+import { HERO_MEDIA_CLASS, HERO_OBJECT_POSITION } from "@/lib/media"
 import { siteConfig } from "@/lib/site-config"
 
 export function HeroSection() {
@@ -16,7 +17,8 @@ export function HeroSection() {
           loop
           playsInline
           poster={hero.image}
-          className="absolute inset-0 size-full object-cover"
+          className={HERO_MEDIA_CLASS}
+          style={{ objectPosition: HERO_OBJECT_POSITION }}
           aria-hidden="true"
         >
           <source src={hero.video} type="video/mp4" />

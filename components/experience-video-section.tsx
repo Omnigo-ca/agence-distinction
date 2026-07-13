@@ -1,6 +1,7 @@
 import { SectionHeading } from "@/components/section-heading"
 import { SectionWrapper } from "@/components/section-wrapper"
 import { agencyVideos } from "@/lib/agence-data"
+import { FACE_OBJECT_POSITION } from "@/lib/media"
 
 export function ExperienceVideoSection() {
   return (
@@ -21,7 +22,8 @@ export function ExperienceVideoSection() {
               playsInline
               preload="metadata"
               poster={video.poster}
-              className="aspect-video w-full bg-dark object-cover"
+              className="aspect-video w-full bg-dark object-cover object-face"
+              style={{ objectPosition: FACE_OBJECT_POSITION }}
             >
               <source src={video.src} type="video/mp4" />
               Votre navigateur ne supporte pas la lecture vidéo.

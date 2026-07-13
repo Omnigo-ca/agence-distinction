@@ -7,9 +7,15 @@ const root = path.join(__dirname, "..")
 
 const LOCAL_IMAGE_OVERRIDES = {
   "andre-lahaie": ["Lahaie, André", "André_Lahaie_Agence_Distinction_570x570.jpg"],
-  "melane-et-michel-desjardins": ["Mélane et Michel", "Melane_Et_Michel_570x570_1.jpg"],
-  "trio-java": ["Trio Java", "Agence_Distinction_Trio_Java_570x570.jpg"],
-  "melanie-hache": ["Haché, Mélanie", "Agence_Distinction_Melanie_Hache_570x570.jpg"],
+  "melane-et-michel-desjardins": [
+    "Mélane et Michel",
+    "Duo_Chanteuse_Mélane_et_Pianiste_Michel_Desjardins_570x570.jpg",
+  ],
+  "trio-java": ["Trio Java", "Agence_Distinction_Trio_Java_570x570.JPG"],
+  "melanie-hache": [
+    "Haché, Mélanie",
+    "Chanteuse_Mélanie_Haché_2_570x570_Agence_Distinction.jpg",
+  ],
   "stephanie-roy": ["Roy, Stéphanie", "Agence_Distinction_Chanteuse_Stéphanie_Roy_570x570.jpg"],
   "clement-courtois": [
     "Courtois, Clément",
@@ -26,14 +32,11 @@ const LOCAL_IMAGE_OVERRIDES = {
     "Agence_Distinction_Chanteuse_France_Bernard_2400x1350_3.jpg",
   ],
   "caroline-noel": ["Noel, Caroline", "Chanteuse_Caroline_Noel_570x570.jpg"],
-  "myriam-reid": ["Reid, Myriam", "Agence_Distinction_Harpiste_Myriam_Reid_570x570.jpg"],
+  "myriam-reid": ["Reid, Myriam", "Agence_Distinction_Myriam_Reid_Harpiste-570x570.jpg"],
   "samba-jeri": ["Samba Jeri", "Agence_Distinction_Samba_Jeri_570x570.jpg"],
-  "samaya-baladi": [
-    "Danse Orientale Samaya Baladi",
-    "Agence_Distinction_Danse_Orientale_Samaya_Baladi_570x570.jpg",
-  ],
-  "steve-barry": ["Barry, Steve", "Agence_Distinction_Steve_Barry_570x570.jpg"],
-  "robby-bolduc": ["Bolduc, Robby", "Agence_Distinction_Robby_Bolduc_570x570.jpg"],
+  "samaya-baladi": ["Danse Orientale Samaya Baladi", "Samaya_Baladi_570x570.jpeg"],
+  "steve-barry": ["Barry, Steve", "Chanteur_Steve_Barry_Agence_Distinction_570x570.jpg"],
+  "robby-bolduc": ["Bolduc, Robby", "Agence_Distinction_Chansonnier_Robby_Bolduc_570x570.jpg"],
   "anthony-lovison": [
     "Lovison, Anthony",
     "Agence_Distinction_Chanteur_Anthony_Lovison_570x570_2.jpg",
@@ -106,9 +109,47 @@ function dedupeStrings(items) {
   })
 }
 
+function findBestImageInFolder(folder) {
+  const dir = path.join(root, "public", "images", "agence-distinction", folder)
+  if (!fs.existsSync(dir)) return null
+
+  const files = fs
+    .readdirSync(dir)
+    .filter((file) => /\.(jpe?g|png|webp)$/i.test(file))
+    .sort((a, b) => scoreImage(b) - scoreImage(a))
+
+  return files[0] ?? null
+}
+
+function scoreImage(filename) {
+  const lower = filename.toLowerCase()
+  if (lower.includes("570x570")) return 100
+  if (lower.includes("avatar")) return 90
+  if (lower.includes("220x500")) return 70
+  if (lower.includes("2400x1350")) return 60
+  if (lower.includes("370x370")) return 50
+  return 10
+}
+
+function resolveArtistImage(slug, scrapedImage) {
+  const override = LOCAL_IMAGE_OVERRIDES[slug]
+  if (override) {
+    const [folder, file] = override
+    if (localAssetExists(folder, file)) {
+      return mediaPath(folder, file)
+    }
+
+    const best = findBestImageInFolder(folder)
+    if (best) {
+      return mediaPath(folder, best)
+    }
+  }
+
+  return scrapedImage
+}
+
 function cleanProfile(p) {
-  const local = LOCAL_IMAGE_OVERRIDES[p.slug]
-  const image = local ? mediaPath(local[0], local[1]) : p.image
+  const image = resolveArtistImage(p.slug, p.image)
   const biography = normalizeBiography(p.biography)
   const categories = dedupeStrings(p.categories ?? [])
   const primaryCategory = p.primaryCategory || categories[0] || undefined

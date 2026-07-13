@@ -157,6 +157,9 @@
   .rotate-y-180 {
     transform: rotateY(180deg);
   }
+  .object-face {
+    object-position: center top;
+  }
   .artist-hero-video::-webkit-media-controls,
   .artist-hero-video::-webkit-media-controls-enclosure,
   .artist-hero-video::-webkit-media-controls-panel,

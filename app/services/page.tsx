@@ -1,12 +1,13 @@
 import Link from "next/link"
 import { ArrowRightIcon } from "lucide-react"
 
-import { ImagePlaceholder } from "@/components/image-placeholder"
 import { PageHero } from "@/components/page-hero"
+import { ServicesImageReveal } from "@/components/services-image-reveal"
 import { SiteLayout } from "@/components/site-layout"
 import { Button } from "@/components/ui/button"
 import { SectionWrapper } from "@/components/section-wrapper"
 import { detailedServices } from "@/lib/agence-data"
+import { mediaAssets } from "@/lib/media"
 import { siteConfig } from "@/lib/site-config"
 
 export default function ServicesPage() {
@@ -15,9 +16,10 @@ export default function ServicesPage() {
       <PageHero
         title={siteConfig.pages.services.title}
         subtitle={siteConfig.pages.services.subtitle}
+        backgroundImage={mediaAssets.servicesHero}
       />
 
-      <SectionWrapper>
+      <SectionWrapper className="overflow-x-hidden">
         <div className="grid gap-8">
           {detailedServices.map((service, index) => (
             <article
@@ -26,11 +28,11 @@ export default function ServicesPage() {
                 index % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""
               }`}
             >
-              <ImagePlaceholder
+              <ServicesImageReveal
+                direction={index % 2 === 0 ? "left" : "right"}
                 label={`Visuel, ${service.title}`}
                 src={service.image}
                 alt={service.title}
-                aspect="video"
               />
               <div>
                 <h2 className="font-heading text-2xl font-semibold md:text-3xl">

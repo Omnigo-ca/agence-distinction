@@ -22,6 +22,7 @@ export function GallerySection() {
               src={item.image}
               alt={item.title}
               aspect="square"
+              objectPosition={item.objectPosition}
               className="rounded-none border-0 transition-transform duration-500 group-hover:scale-105"
             />
             <figcaption className="p-4">

@@ -1,6 +1,6 @@
 /**
  * Données artistes extraites de https://agencedistinction.ca/les-artistes/
- * Généré le 2026-07-10 — ne pas éditer à la main.
+ * Généré le 2026-07-13 — ne pas éditer à la main.
  * Regénérer : node scripts/scrape-all-artists.mjs && node scripts/generate-artists-ts.mjs
  */
 
@@ -70,38 +70,6 @@ export const artistProfiles: ArtistProfile[] = [
       }
     ],
     gallery: [
-      {
-        url: "/images/agence-distinction/Lahaie%2C%20Andr%C3%A9/Agence_Distinction_Andre_Lahaie_1.jpg",
-        alt: "Lahaie, André"
-      },
-      {
-        url: "/images/agence-distinction/Lahaie%2C%20Andr%C3%A9/Agence_Distinction_Andre_Lahaie_2.jpg",
-        alt: "Lahaie, André"
-      },
-      {
-        url: "/images/agence-distinction/Lahaie%2C%20Andr%C3%A9/Agence_Distinction_Andre_Lahaie_220x500_1.jpg",
-        alt: "Lahaie, André"
-      },
-      {
-        url: "/images/agence-distinction/Lahaie%2C%20Andr%C3%A9/Agence_Distinction_Andre_Lahaie_220x500_2.jpg",
-        alt: "Lahaie, André"
-      },
-      {
-        url: "/images/agence-distinction/Lahaie%2C%20Andr%C3%A9/Agence_Distinction_Andre_Lahaie_2400x1350_1.jpg",
-        alt: "Lahaie, André"
-      },
-      {
-        url: "/images/agence-distinction/Lahaie%2C%20Andr%C3%A9/Agence_Distinction_Andre_Lahaie_2400x1350_2.jpg",
-        alt: "Lahaie, André"
-      },
-      {
-        url: "/images/agence-distinction/Lahaie%2C%20Andr%C3%A9/Agence_Distinction_Andr%C3%A9_Lahaie_Agence_Distinction_370x370_2.jpg",
-        alt: "Lahaie, André"
-      },
-      {
-        url: "/images/agence-distinction/Lahaie%2C%20Andr%C3%A9/Andr%C3%A9_Lahaie_Agence_Distinction_370x370.jpg",
-        alt: "Lahaie, André"
-      },
       {
         url: "https://gestion.agencedistinction.ca//resources/profile_uploads/imgs/Andre_Lahaie_2400x1350_2.jpg",
         alt: "André Lahaie"
@@ -287,38 +255,6 @@ export const artistProfiles: ArtistProfile[] = [
       }
     ],
     gallery: [
-      {
-        url: "/images/agence-distinction/Lovison%2C%20Anthony/Agence_Distinction_Anthony_Lovison_220x500_1.jpg",
-        alt: "Lovison, Anthony"
-      },
-      {
-        url: "/images/agence-distinction/Lovison%2C%20Anthony/Agence_Distinction_Anthony_Lovison_220x500_2.png",
-        alt: "Lovison, Anthony"
-      },
-      {
-        url: "/images/agence-distinction/Lovison%2C%20Anthony/Agence_Distinction_Anthony_Lovison_Banniere_2400x1350_1.jpg",
-        alt: "Lovison, Anthony"
-      },
-      {
-        url: "/images/agence-distinction/Lovison%2C%20Anthony/Agence_Distinction_Chanteur_Anthony_Lovison_370x370.jpg",
-        alt: "Lovison, Anthony"
-      },
-      {
-        url: "/images/agence-distinction/Lovison%2C%20Anthony/Agence_Distinction_Chanteur_Anthony_Lovison_370x370_2.jpg",
-        alt: "Lovison, Anthony"
-      },
-      {
-        url: "/images/agence-distinction/Lovison%2C%20Anthony/Agence_Distinction_Chanteur_Anthony_Lovison_570x570.jpg",
-        alt: "Lovison, Anthony"
-      },
-      {
-        url: "/images/agence-distinction/Lovison%2C%20Anthony/Anthony%20Lovison.jpg",
-        alt: "Lovison, Anthony"
-      },
-      {
-        url: "/images/agence-distinction/Lovison%2C%20Anthony/Anthony%20Lovison.png",
-        alt: "Lovison, Anthony"
-      },
       {
         url: "https://gestion.agencedistinction.ca//resources/profile_uploads/imgs/Agence_Distinction_Anthony_Lovison_Banniere_2400x1350_1.jpg",
         alt: "Anthony Lovison"
@@ -714,14 +650,6 @@ export const artistProfiles: ArtistProfile[] = [
     ],
     gallery: [
       {
-        url: "/images/agence-distinction/Noel%2C%20Caroline/Agence_Distinction_Caroline_Noel_220x500_1.jpg",
-        alt: "Noel, Caroline"
-      },
-      {
-        url: "/images/agence-distinction/Noel%2C%20Caroline/Agence_Distinction_Caroline_Noel_2400x1350_1.jpg",
-        alt: "Noel, Caroline"
-      },
-      {
         url: "https://gestion.agencedistinction.ca//resources/profile_uploads/imgs/Caroline_Noel_2400x1350_1.jpg",
         alt: "Caroline Noel"
       },
@@ -792,98 +720,6 @@ export const artistProfiles: ArtistProfile[] = [
       }
     ],
     gallery: [
-      {
-        url: "/images/agence-distinction/Courtois%2C%20Cl%C3%A9ment/Agence_Distinction_Clement_Courtois_orig_1.JPG",
-        alt: "Courtois, Clément"
-      },
-      {
-        url: "/images/agence-distinction/Courtois%2C%20Cl%C3%A9ment/Agence_Distinction_Clement_Courtois_orig_2.jpg",
-        alt: "Courtois, Clément"
-      },
-      {
-        url: "/images/agence-distinction/Courtois%2C%20Cl%C3%A9ment/Agence_Distinction_Clement_Courtois_orig_3.jpg",
-        alt: "Courtois, Clément"
-      },
-      {
-        url: "/images/agence-distinction/Courtois%2C%20Cl%C3%A9ment/Agence_Distinction_Clement_Courtois_orig_4.jpg",
-        alt: "Courtois, Clément"
-      },
-      {
-        url: "/images/agence-distinction/Courtois%2C%20Cl%C3%A9ment/Agence_Distinction_Clement_Courtois_orig_5.jpg",
-        alt: "Courtois, Clément"
-      },
-      {
-        url: "/images/agence-distinction/Courtois%2C%20Cl%C3%A9ment/Agence_Distinction_Cl%C3%A9ment_Courtois_220x500_1.jpg",
-        alt: "Courtois, Clément"
-      },
-      {
-        url: "/images/agence-distinction/Courtois%2C%20Cl%C3%A9ment/Agence_Distinction_Cl%C3%A9ment_Courtois_220x500_2.jpg",
-        alt: "Courtois, Clément"
-      },
-      {
-        url: "/images/agence-distinction/Courtois%2C%20Cl%C3%A9ment/Agence_Distinction_Cl%C3%A9ment_Courtois_220x500_3.jpg",
-        alt: "Courtois, Clément"
-      },
-      {
-        url: "/images/agence-distinction/Courtois%2C%20Cl%C3%A9ment/Agence_Distinction_Cl%C3%A9ment_Courtois_220x500_4.png",
-        alt: "Courtois, Clément"
-      },
-      {
-        url: "/images/agence-distinction/Courtois%2C%20Cl%C3%A9ment/Agence_Distinction_Cl%C3%A9ment_Courtois_220x500_5.jpg",
-        alt: "Courtois, Clément"
-      },
-      {
-        url: "/images/agence-distinction/Courtois%2C%20Cl%C3%A9ment/Agence_Distinction_Cl%C3%A9ment_Courtois_220x500_6.jpg",
-        alt: "Courtois, Clément"
-      },
-      {
-        url: "/images/agence-distinction/Courtois%2C%20Cl%C3%A9ment/Agence_Distinction_Cl%C3%A9ment_Courtois_220x500_7.jpg",
-        alt: "Courtois, Clément"
-      },
-      {
-        url: "/images/agence-distinction/Courtois%2C%20Cl%C3%A9ment/Agence_Distinction_Cl%C3%A9ment_Courtois_220x500_8.jpg",
-        alt: "Courtois, Clément"
-      },
-      {
-        url: "/images/agence-distinction/Courtois%2C%20Cl%C3%A9ment/Agence_Distinction_Cl%C3%A9ment_Courtois_2400x1350_1.jpg",
-        alt: "Courtois, Clément"
-      },
-      {
-        url: "/images/agence-distinction/Courtois%2C%20Cl%C3%A9ment/Agence_Distinction_Cl%C3%A9ment_Courtois_2400x1350_2.jpg",
-        alt: "Courtois, Clément"
-      },
-      {
-        url: "/images/agence-distinction/Courtois%2C%20Cl%C3%A9ment/Agence_Distinction_Cl%C3%A9ment_Courtois_2400x1350_3.jpg",
-        alt: "Courtois, Clément"
-      },
-      {
-        url: "/images/agence-distinction/Courtois%2C%20Cl%C3%A9ment/Agence_Distinction_Cl%C3%A9ment_Courtois_2400x1350_4.png",
-        alt: "Courtois, Clément"
-      },
-      {
-        url: "/images/agence-distinction/Courtois%2C%20Cl%C3%A9ment/Agence_Distinction_Cl%C3%A9ment_Courtois_2400x1350_5.jpg",
-        alt: "Courtois, Clément"
-      },
-      {
-        url: "/images/agence-distinction/Courtois%2C%20Cl%C3%A9ment/Agence_Distinction_Cl%C3%A9ment_Courtois_2400x1350_6.jpg",
-        alt: "Courtois, Clément"
-      },
-      {
-        url: "/images/agence-distinction/Courtois%2C%20Cl%C3%A9ment/Agence_Distinction_Cl%C3%A9ment_Courtois_2400x1350_7.jpg",
-        alt: "Courtois, Clément"
-      },
-      {
-        url: "/images/agence-distinction/Courtois%2C%20Cl%C3%A9ment/Agence_Distinction_Cl%C3%A9ment_Courtois_2400x1350_8.jpg",
-        alt: "Courtois, Clément"
-      },
-      {
-        url: "/images/agence-distinction/Courtois%2C%20Cl%C3%A9ment/DSC_4365.jpg",
-        alt: "Courtois, Clément"
-      },
-      {
-        url: "/images/agence-distinction/Courtois%2C%20Cl%C3%A9ment/clem%20st%20jean.jpg",
-        alt: "Courtois, Clément"
-      },
       {
         url: "https://gestion.agencedistinction.ca//resources/profile_uploads/imgs/Chanteur_Clément_Courtois_Agence_Distinction_370x370.jpg",
         alt: "Clément Courtois"
@@ -1111,62 +947,6 @@ export const artistProfiles: ArtistProfile[] = [
       }
     ],
     gallery: [
-      {
-        url: "/images/agence-distinction/Bernard%2C%20France/1924373_480584758710752_5409631523486294528_n.jpg",
-        alt: "Bernard, France"
-      },
-      {
-        url: "/images/agence-distinction/Bernard%2C%20France/33624358_1229360283833192_9181155420322922496_n.jpg",
-        alt: "Bernard, France"
-      },
-      {
-        url: "/images/agence-distinction/Bernard%2C%20France/33677581_1229360883833132_2492425897609527296_n.jpg",
-        alt: "Bernard, France"
-      },
-      {
-        url: "/images/agence-distinction/Bernard%2C%20France/33757407_1229360493833171_5456115003008483328_n.jpg",
-        alt: "Bernard, France"
-      },
-      {
-        url: "/images/agence-distinction/Bernard%2C%20France/33822789_1229360593833161_651010904841781248_n.jpg",
-        alt: "Bernard, France"
-      },
-      {
-        url: "/images/agence-distinction/Bernard%2C%20France/422151006_876455047818255_2395421351445082686_n.jpg",
-        alt: "Bernard, France"
-      },
-      {
-        url: "/images/agence-distinction/Bernard%2C%20France/426174905_886367540160339_3674754330805364986_n.jpg",
-        alt: "Bernard, France"
-      },
-      {
-        url: "/images/agence-distinction/Bernard%2C%20France/Agence_Distinction_Chanteuse_France_Bernard_220x500.jpg",
-        alt: "Bernard, France"
-      },
-      {
-        url: "/images/agence-distinction/Bernard%2C%20France/Agence_Distinction_Chanteuse_France_Bernard_220x500_2.jpg",
-        alt: "Bernard, France"
-      },
-      {
-        url: "/images/agence-distinction/Bernard%2C%20France/Agence_Distinction_Chanteuse_France_Bernard_220x500_3.jpg",
-        alt: "Bernard, France"
-      },
-      {
-        url: "/images/agence-distinction/Bernard%2C%20France/Agence_Distinction_Chanteuse_France_Bernard_2400x1350.jpg",
-        alt: "Bernard, France"
-      },
-      {
-        url: "/images/agence-distinction/Bernard%2C%20France/Agence_Distinction_Chanteuse_France_Bernard_2400x1350_2.jpg",
-        alt: "Bernard, France"
-      },
-      {
-        url: "/images/agence-distinction/Bernard%2C%20France/Agence_Distinction_Chanteuse_France_Bernard_370x370.jpg",
-        alt: "Bernard, France"
-      },
-      {
-        url: "/images/agence-distinction/Bernard%2C%20France/Agence_Distinction_Chanteuse_France_Bernard_370x370_2.jpg",
-        alt: "Bernard, France"
-      },
       {
         url: "https://gestion.agencedistinction.ca//resources/profile_uploads/imgs/Agence_Distinction_Chanteuse_France_Bernard_2400x1350_3.jpg",
         alt: "France Bernard"
@@ -1531,90 +1311,6 @@ export const artistProfiles: ArtistProfile[] = [
       }
     ],
     gallery: [
-      {
-        url: "/images/agence-distinction/Levac%2C%20Julie/1.png",
-        alt: "Levac, Julie"
-      },
-      {
-        url: "/images/agence-distinction/Levac%2C%20Julie/2.png",
-        alt: "Levac, Julie"
-      },
-      {
-        url: "/images/agence-distinction/Levac%2C%20Julie/3.png",
-        alt: "Levac, Julie"
-      },
-      {
-        url: "/images/agence-distinction/Levac%2C%20Julie/4.png",
-        alt: "Levac, Julie"
-      },
-      {
-        url: "/images/agence-distinction/Levac%2C%20Julie/Band_340%20Bannie%CC%80re.jpeg",
-        alt: "Levac, Julie"
-      },
-      {
-        url: "/images/agence-distinction/Levac%2C%20Julie/Band_340%20copie.jpg",
-        alt: "Levac, Julie"
-      },
-      {
-        url: "/images/agence-distinction/Levac%2C%20Julie/Band_406.jpg",
-        alt: "Levac, Julie"
-      },
-      {
-        url: "/images/agence-distinction/Levac%2C%20Julie/Band_438.jpg",
-        alt: "Levac, Julie"
-      },
-      {
-        url: "/images/agence-distinction/Levac%2C%20Julie/Band_459.jpg",
-        alt: "Levac, Julie"
-      },
-      {
-        url: "/images/agence-distinction/Levac%2C%20Julie/Band_521.jpg",
-        alt: "Levac, Julie"
-      },
-      {
-        url: "/images/agence-distinction/Levac%2C%20Julie/Band_700.jpg",
-        alt: "Levac, Julie"
-      },
-      {
-        url: "/images/agence-distinction/Levac%2C%20Julie/Heaven%202_10-Modifier.jpg",
-        alt: "Levac, Julie"
-      },
-      {
-        url: "/images/agence-distinction/Levac%2C%20Julie/Heaven%202_21-Modifier.jpg",
-        alt: "Levac, Julie"
-      },
-      {
-        url: "/images/agence-distinction/Levac%2C%20Julie/Heaven%20DUO%20poster%202019.jpg",
-        alt: "Levac, Julie"
-      },
-      {
-        url: "/images/agence-distinction/Levac%2C%20Julie/Julie%20Levac%20500%20x%20220%201.jpeg",
-        alt: "Levac, Julie"
-      },
-      {
-        url: "/images/agence-distinction/Levac%2C%20Julie/Julie%20Levac%20500%20x%20220%202.jpeg",
-        alt: "Levac, Julie"
-      },
-      {
-        url: "/images/agence-distinction/Levac%2C%20Julie/Julie%20Levac%20500%20x%20220%203.jpeg",
-        alt: "Levac, Julie"
-      },
-      {
-        url: "/images/agence-distinction/Levac%2C%20Julie/Julie_249.jpg",
-        alt: "Levac, Julie"
-      },
-      {
-        url: "/images/agence-distinction/Levac%2C%20Julie/Poster%20Accent%20Bleu%20(8%2C5%20x%2014%20po)).jpg",
-        alt: "Levac, Julie"
-      },
-      {
-        url: "/images/agence-distinction/Levac%2C%20Julie/Poster%20Ju.No.%20BAND.jpg",
-        alt: "Levac, Julie"
-      },
-      {
-        url: "/images/agence-distinction/Levac%2C%20Julie/Poster%20Juno%20DUO.png",
-        alt: "Levac, Julie"
-      },
       {
         url: "https://gestion.agencedistinction.ca//resources/profile_uploads/imgs/Band_340copie.jpeg",
         alt: "Julie Levac"
@@ -2347,7 +2043,7 @@ export const artistProfiles: ArtistProfile[] = [
     id: "44",
     slug: "melane-et-michel-desjardins",
     name: "Mélane et Michel Desjardins",
-    image: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Melane_Et_Michel_570x570_1.jpg",
+    image: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Duo_Chanteuse_M%C3%A9lane_et_Pianiste_Michel_Desjardins_570x570.jpg",
     biography: "Mélane se distingue par sa voix envoûtante, son animation chaleureuse, et son authenticité sur scène. Avec un spectacle modulable en français ou en anglais selon vos préférences, ses interprétations touchantes captivent et rappellent ses débuts dans les bars western de son Abitibi natale. Au programme : répertoire québécois, folk, country, jazz, chansons françaises et classiques internationaux. Chaque morceau est sublimé par des interventions captivantes et des interprétations magistrales, suscitant tour à tour émotion et bonheur.\n\nElle est accompagnée de son complice de longue date, le talentueux pianiste Michel Desjardins, connu pour ses collaborations avec Marie Carmen, Bruno Pelletier, Luc Plamondon, et bien d’autres. Ensemble, ils forment un duo attachant et passionné, capable de créer une véritable magie sonore. Forts de plus de 2000 spectacles au Québec et à l’international, quatre albums pour la chanteuse, et un répertoire impressionnant de 675 chansons, ce duo, en activité depuis 22 ans, ne cesse de conquérir les cœurs. Coup de cœur garanti !\n\nTRIO JAVA: C'est la rencontre d'harmonies vocales et des personnalités attachantes de trois chanteuses d'exception. Maniant les accords musicaux de façon sublime, elles vous feront voyager en vous amenant dans les anciennes mélodies de la chanson française au swing des Andrew Sisters. Ce trio vintage revisite également des succès récents avec leur touche originale. Un spectacle 100% francophone à la demande, aussi disponible avec un répertoire international.\n\nUn spectacle de Noël avec Trio Java! Goûtez à la magie des fêtes en ajoutant la douce présence de nos trois chanteuses à votre fête privée, marché de Noël, devant votre commerce, etc. Toujours bien agencées avec leurs costumes flamboyants, elles sauront vous rappeler l'esprit des fêtes des années 50 en vous faisant chanter à votre tour! Pour vos évènements intérieurs et extérieurs.",
     primaryCategory: "duo",
     categories: [
@@ -2427,254 +2123,6 @@ export const artistProfiles: ArtistProfile[] = [
     ],
     gallery: [
       {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/ANY22594.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Agence_Distinction_Duo_Chanteuse_M%C3%A9lane_et_Michel_370x370.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Agence_Distinction_Duo_Chanteuse_M%C3%A9lane_et_Michel_370x370_2.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Banner%2021%20sans.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Chanteuse_M%C3%A9lane_370x370.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Duo_Chanteuse_M%C3%A9lane_et_Pianiste_Michel_Desjardins_370x370(2).jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Duo_Chanteuse_M%C3%A9lane_et_Pianiste_Michel_Desjardins_370x370.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Duo_Chanteuse_M%C3%A9lane_et_Pianiste_Michel_Desjardins_370x370_2.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Duo_Chanteuse_M%C3%A9lane_et_Pianiste_Michel_Desjardins_570x570.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Duo_Chanteuse_M%C3%A9lane_et_Pianiste_Michel_Desjardins_570x570_2.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/IMG_20230125_184616.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/IMG_20230126_194117%5B7853%5D.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/IMG_2151.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/IMG_74271675359447361.jpeg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/IMG_74281675359447362.jpeg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/IMG_74291675359447362.jpeg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/IMG_74301675359447363.jpeg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/IMG_74311675359447363.jpeg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/IMG_74321675359447363.jpeg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/IMG_74381675359447364.jpeg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/IMG_74391675359447364.jpeg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Melane_Et_Michel_220x500_1.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Melane_Et_Michel_220x500_10.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Melane_Et_Michel_220x500_11.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Melane_Et_Michel_220x500_12.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Melane_Et_Michel_220x500_13.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Melane_Et_Michel_220x500_14.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Melane_Et_Michel_220x500_15.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Melane_Et_Michel_220x500_2.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Melane_Et_Michel_220x500_3.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Melane_Et_Michel_220x500_4.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Melane_Et_Michel_220x500_5.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Melane_Et_Michel_220x500_6.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Melane_Et_Michel_220x500_7.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Melane_Et_Michel_220x500_8.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Melane_Et_Michel_220x500_9.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Melane_Et_Michel_2400x1350_1.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Melane_Et_Michel_2400x1350_10.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Melane_Et_Michel_2400x1350_11.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Melane_Et_Michel_2400x1350_12.png",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Melane_Et_Michel_2400x1350_13.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Melane_Et_Michel_2400x1350_14.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Melane_Et_Michel_2400x1350_15.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Melane_Et_Michel_2400x1350_16.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Melane_Et_Michel_2400x1350_17.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Melane_Et_Michel_2400x1350_2.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Melane_Et_Michel_2400x1350_3.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Melane_Et_Michel_2400x1350_4.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Melane_Et_Michel_2400x1350_5.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Melane_Et_Michel_2400x1350_6.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Melane_Et_Michel_2400x1350_7.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Melane_Et_Michel_2400x1350_8.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Melane_Et_Michel_2400x1350_9.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Pianiste_Michel_Desjardins_370x370.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/RPA%20Affiche%20concert%20M%26M.png",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/RPA%20Affiche%20concert%20MM%20(002).png",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Session%20Sans%20Titre10011-Modifier.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Session%20Sans%20Titre10055-Modifier.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Session%20Sans%20Titre10066.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Session%20Sans%20Titre9350-Modifier.jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/Session%20Sans%20Titre9527-Modifier%20(1).jpg",
-        alt: "Mélane et Michel"
-      },
-      {
-        url: "/images/agence-distinction/M%C3%A9lane%20et%20Michel/tmp_ae1b00b0-c533-4777-8436-dd2243f90dd4.jpeg",
-        alt: "Mélane et Michel"
-      },
-      {
         url: "https://gestion.agencedistinction.ca//resources/profile_uploads/imgs/Agence_Distinction_Melane_et_Michel_Desjardins_2400x1350.jpg",
         alt: "Mélane et Michel Desjardins"
       },
@@ -2715,7 +2163,7 @@ export const artistProfiles: ArtistProfile[] = [
     id: "67",
     slug: "melanie-hache",
     name: "Mélanie Haché",
-    image: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Agence_Distinction_Melanie_Hache_570x570.jpg",
+    image: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Chanteuse_M%C3%A9lanie_Hach%C3%A9_2_570x570_Agence_Distinction.jpg",
     biography: "Originaire de la petite île de Lamèque au Nouveau-Brunswick, Mélanie Haché réside au Québec depuis plus de 30 ans. Créatrice de spectacles alliant passion, voix chaleureuse et émotion profonde, elle s'est faite connaître à travers diverses formations musicales, explorant le country, le jazz, le disco, le rock, le québecois, la chanson française et le top 40. Sa présence chaleureuse sur scène captive le public à chaque performance.\n\nSon dernier album, \"Country \", en collaboration avec l'honorable Paul Daraîche a marqué son parcours musical. En 2023, elle a brillé jusqu'au quart de finale de l'émission \"La Voix\", démontrant sa fougue, sa passion, son originalité et surtout, son amour pour la musique. Ces éléments sont ceux qui forgent l'unicité de son art.",
     primaryCategory: "chanteur(se)",
     categories: [
@@ -2784,226 +2232,6 @@ export const artistProfiles: ArtistProfile[] = [
       }
     ],
     gallery: [
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Agence_Distinction_Melanie_Hache_220x500_1.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Agence_Distinction_Melanie_Hache_220x500_10.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Agence_Distinction_Melanie_Hache_220x500_11.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Agence_Distinction_Melanie_Hache_220x500_12.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Agence_Distinction_Melanie_Hache_220x500_13.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Agence_Distinction_Melanie_Hache_220x500_14.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Agence_Distinction_Melanie_Hache_220x500_15.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Agence_Distinction_Melanie_Hache_220x500_16.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Agence_Distinction_Melanie_Hache_220x500_17.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Agence_Distinction_Melanie_Hache_220x500_2.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Agence_Distinction_Melanie_Hache_220x500_3.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Agence_Distinction_Melanie_Hache_220x500_4.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Agence_Distinction_Melanie_Hache_220x500_5.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Agence_Distinction_Melanie_Hache_220x500_6.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Agence_Distinction_Melanie_Hache_220x500_7.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Agence_Distinction_Melanie_Hache_220x500_8.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Agence_Distinction_Melanie_Hache_220x500_9.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Agence_Distinction_Melanie_Hache_2400x1350_1.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Agence_Distinction_Melanie_Hache_2400x1350_10.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Agence_Distinction_Melanie_Hache_2400x1350_11.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Agence_Distinction_Melanie_Hache_2400x1350_12.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Agence_Distinction_Melanie_Hache_2400x1350_13.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Agence_Distinction_Melanie_Hache_2400x1350_14.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Agence_Distinction_Melanie_Hache_2400x1350_15.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Agence_Distinction_Melanie_Hache_2400x1350_16.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Agence_Distinction_Melanie_Hache_2400x1350_17.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Agence_Distinction_Melanie_Hache_2400x1350_2.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Agence_Distinction_Melanie_Hache_2400x1350_3.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Agence_Distinction_Melanie_Hache_2400x1350_4.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Agence_Distinction_Melanie_Hache_2400x1350_5.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Agence_Distinction_Melanie_Hache_2400x1350_6.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Agence_Distinction_Melanie_Hache_2400x1350_7.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Agence_Distinction_Melanie_Hache_2400x1350_8.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Agence_Distinction_Melanie_Hache_2400x1350_9.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Chanteuse_M%C3%A9lanie_Hach%C3%A9_2_570x570_Agence_Distinction.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Chanteuse_M%C3%A9lanie_Hach%C3%A9__570x570_Agence_Distinction.jpeg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Mel1.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Mel10.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Mel11.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Mel12.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Mel13.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Mel2.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Mel3.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Mel4.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Mel5.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Mel6.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Mel7.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Mel8.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/Mel9.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/mel%20final%206-2.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/mel%20final%206-3.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/mel%20final%206-4.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/mel%20final%206-5.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/mel%20final%206-6.jpg",
-        alt: "Haché, Mélanie"
-      },
-      {
-        url: "/images/agence-distinction/Hach%C3%A9%2C%20M%C3%A9lanie/mel%20final%206.jpg",
-        alt: "Haché, Mélanie"
-      },
       {
         url: "https://gestion.agencedistinction.ca//resources/profile_uploads/imgs/Melanie_Hache_2400x1350_16.jpg",
         alt: "Mélanie Haché"
@@ -3196,130 +2424,6 @@ export const artistProfiles: ArtistProfile[] = [
     ],
     gallery: [
       {
-        url: "/images/agence-distinction/Miz%20Mia/258189167_10165816868585076_2707354340195483361_n.jpg",
-        alt: "Miz Mia"
-      },
-      {
-        url: "/images/agence-distinction/Miz%20Mia/Agence_Distinction_Chanteuse_Miz_Mia_220x500_1.jpg",
-        alt: "Miz Mia"
-      },
-      {
-        url: "/images/agence-distinction/Miz%20Mia/Agence_Distinction_Chanteuse_Miz_Mia_220x500_2.jpg",
-        alt: "Miz Mia"
-      },
-      {
-        url: "/images/agence-distinction/Miz%20Mia/Agence_Distinction_Chanteuse_Miz_Mia_220x500_3.jpg",
-        alt: "Miz Mia"
-      },
-      {
-        url: "/images/agence-distinction/Miz%20Mia/Agence_Distinction_Chanteuse_Miz_Mia_370x370_2.jpg",
-        alt: "Miz Mia"
-      },
-      {
-        url: "/images/agence-distinction/Miz%20Mia/Agence_Distinction_Chanteuse_Miz_Mia_570x570_2.jpg",
-        alt: "Miz Mia"
-      },
-      {
-        url: "/images/agence-distinction/Miz%20Mia/Miz%20Mia%2011.jpg",
-        alt: "Miz Mia"
-      },
-      {
-        url: "/images/agence-distinction/Miz%20Mia/Miz%20Mia%202.jpg",
-        alt: "Miz Mia"
-      },
-      {
-        url: "/images/agence-distinction/Miz%20Mia/Miz%20Mia%203.jpg",
-        alt: "Miz Mia"
-      },
-      {
-        url: "/images/agence-distinction/Miz%20Mia/Miz%20Mia%204.jpg",
-        alt: "Miz Mia"
-      },
-      {
-        url: "/images/agence-distinction/Miz%20Mia/Miz%20Mia%205.jpg",
-        alt: "Miz Mia"
-      },
-      {
-        url: "/images/agence-distinction/Miz%20Mia/Miz%20Mia%206.jpg",
-        alt: "Miz Mia"
-      },
-      {
-        url: "/images/agence-distinction/Miz%20Mia/Miz%20Mia%207.jpg",
-        alt: "Miz Mia"
-      },
-      {
-        url: "/images/agence-distinction/Miz%20Mia/Miz%20Mia%208.jpg",
-        alt: "Miz Mia"
-      },
-      {
-        url: "/images/agence-distinction/Miz%20Mia/Miz%20Mia.jpg",
-        alt: "Miz Mia"
-      },
-      {
-        url: "/images/agence-distinction/Miz%20Mia/Miz_Mia_220x500_1.jpg",
-        alt: "Miz Mia"
-      },
-      {
-        url: "/images/agence-distinction/Miz%20Mia/Miz_Mia_220x500_2.jpg",
-        alt: "Miz Mia"
-      },
-      {
-        url: "/images/agence-distinction/Miz%20Mia/Miz_Mia_220x500_3.jpg",
-        alt: "Miz Mia"
-      },
-      {
-        url: "/images/agence-distinction/Miz%20Mia/Miz_Mia_220x500_4.jpg",
-        alt: "Miz Mia"
-      },
-      {
-        url: "/images/agence-distinction/Miz%20Mia/Miz_Mia_220x500_5.jpg",
-        alt: "Miz Mia"
-      },
-      {
-        url: "/images/agence-distinction/Miz%20Mia/Miz_Mia_220x500_6.jpg",
-        alt: "Miz Mia"
-      },
-      {
-        url: "/images/agence-distinction/Miz%20Mia/Miz_Mia_220x500_7.jpg",
-        alt: "Miz Mia"
-      },
-      {
-        url: "/images/agence-distinction/Miz%20Mia/Miz_Mia_220x500_8.jpg",
-        alt: "Miz Mia"
-      },
-      {
-        url: "/images/agence-distinction/Miz%20Mia/Miz_Mia_2400x1350_1.jpg",
-        alt: "Miz Mia"
-      },
-      {
-        url: "/images/agence-distinction/Miz%20Mia/Miz_Mia_2400x1350_2.jpg",
-        alt: "Miz Mia"
-      },
-      {
-        url: "/images/agence-distinction/Miz%20Mia/Miz_Mia_2400x1350_3.jpg",
-        alt: "Miz Mia"
-      },
-      {
-        url: "/images/agence-distinction/Miz%20Mia/Miz_Mia_2400x1350_4.jpg",
-        alt: "Miz Mia"
-      },
-      {
-        url: "/images/agence-distinction/Miz%20Mia/Miz_Mia_2400x1350_5.jpg",
-        alt: "Miz Mia"
-      },
-      {
-        url: "/images/agence-distinction/Miz%20Mia/Miz_Mia_2400x1350_6.jpg",
-        alt: "Miz Mia"
-      },
-      {
-        url: "/images/agence-distinction/Miz%20Mia/Miz_Mia_2400x1350_7.jpg",
-        alt: "Miz Mia"
-      },
-      {
-        url: "/images/agence-distinction/Miz%20Mia/Miz_Mia_2400x1350_8.jpg",
-        alt: "Miz Mia"
-      },
-      {
         url: "https://gestion.agencedistinction.ca//resources/profile_uploads/imgs/Miz_Mia_2400x1350_6.jpg",
         alt: "Miz Mia"
       },
@@ -3378,7 +2482,7 @@ export const artistProfiles: ArtistProfile[] = [
     id: "15",
     slug: "myriam-reid",
     name: "Myriam Reid",
-    image: "/images/agence-distinction/Reid%2C%20Myriam/Agence_Distinction_Harpiste_Myriam_Reid_570x570.jpg",
+    image: "/images/agence-distinction/Reid%2C%20Myriam/Agence_Distinction_Myriam_Reid_Harpiste-570x570.jpg",
     biography: "Myriam Reid est diplômée de la faculté de musique de l'Université de Montréal. Après avoir étudié le piano, la guitare et le chant, c'est vers la harpe que son amour de la musique l'a menée. Cet instrument mythique au son incomparable est rapidement devenu sa passion.\n\nDepuis plusieurs années, Myriam Reid se produit régulièrement lors d'événements divers (corporatifs ou privés), tant dans la grande région de Montréal qu'ailleurs au Québec. Elle utilise autant la harpe traditionnelle que la harpe électrique moderne. Son répertoire, un amalgame de musique classique, populaire, électro-lounge et celtique, inclut également plusieurs de ses propres compositions. La richesse et l'originalité de celles-ci lui ont d'ailleurs valu un prix international au concours d'écriture et d'arrangement New Century Harp Competition.\n\nSes cinq albums: Brumes (2007), Feux Follets (2010), Neige Folle (2011), La Nuit des Temps (2015) et L'Automne (2018) se sont attirés de nombreuses critiques élogieuses, tant au niveau de la qualité des mélodies que de la finesse de l'interprétation.\n\nHarpiste polyvalente, Myriam Reid a participé à des projets de toutes sortes : enregistrement en studio avec des groupes pop/rock ainsi qu'avec des interprètes classiques, enregistrement de musique de film (Love and Savagery, en nomination dans la catégorie « meilleure musique » aux prix Jutras et aux prix Génies 2010) et nombreux spectacles en compagnie d'artistes de la scène culturelle. Suite à l'obtention d'une bourse du Conseil des Arts du Canada, elle a également été accueillie en résidence d'artiste au Centre international des Arts de Banff.\n\nParallèlement à sa carrière solo, Myriam Reid est aussi harpiste au sein de la formation folk francophone Helium.\n\nHarpe acoustique (harpe traditionnelle) Musique de harpe solo, mélange de pièces populaires, classique et/ou celtiques. Ambiance feutrée et look raffiné. Convient à une cérémonie et/ou un cocktail. La harpe peut être amplifiée au besoin.\n\nHarpe électrique Musique électro-lounge accompagnée de trames sonores jouées par un système audio. Ambiance et look moderne. Convient à un cocktail privé ou corporatif.",
     primaryCategory: "harpiste",
     categories: [
@@ -3422,30 +2526,6 @@ export const artistProfiles: ArtistProfile[] = [
       }
     ],
     gallery: [
-      {
-        url: "/images/agence-distinction/Reid%2C%20Myriam/Agence_Distinction_Myriam_Reid_Harpiste-570x570.jpg",
-        alt: "Reid, Myriam"
-      },
-      {
-        url: "/images/agence-distinction/Reid%2C%20Myriam/Agence_Distinction_Myriam_Reid_Harpiste.jpg",
-        alt: "Reid, Myriam"
-      },
-      {
-        url: "/images/agence-distinction/Reid%2C%20Myriam/Myriam_Reid_220x500_1.jpg",
-        alt: "Reid, Myriam"
-      },
-      {
-        url: "/images/agence-distinction/Reid%2C%20Myriam/Myriam_Reid_220x500_2.jpg",
-        alt: "Reid, Myriam"
-      },
-      {
-        url: "/images/agence-distinction/Reid%2C%20Myriam/Myriam_Reid_2400x1350_1.jpg",
-        alt: "Reid, Myriam"
-      },
-      {
-        url: "/images/agence-distinction/Reid%2C%20Myriam/Myriam_Reid_2400x1350_2.jpg",
-        alt: "Reid, Myriam"
-      },
       {
         url: "https://gestion.agencedistinction.ca//resources/profile_uploads/imgs/Myriam_Reid_2400x1350_1.jpg",
         alt: "Myriam Reid"
@@ -3586,38 +2666,6 @@ export const artistProfiles: ArtistProfile[] = [
       }
     ],
     gallery: [
-      {
-        url: "/images/agence-distinction/Morissette%2C%20Olivier/Agence_Distinction_Chansonnier_Olivier_Oli_Morissette_220x500_7.jpg",
-        alt: "Morissette, Olivier"
-      },
-      {
-        url: "/images/agence-distinction/Morissette%2C%20Olivier/Agence_Distinction_Chansonnier_Olivier_Oli_Morissette_220x500_8.jpg",
-        alt: "Morissette, Olivier"
-      },
-      {
-        url: "/images/agence-distinction/Morissette%2C%20Olivier/Agence_Distinction_Chansonnier_Olivier_Oli_Morissette_220x500_9.jpg",
-        alt: "Morissette, Olivier"
-      },
-      {
-        url: "/images/agence-distinction/Morissette%2C%20Olivier/Agence_Distinction_Chansonnier_Olivier_Oli_Morissette_370x370.jpg",
-        alt: "Morissette, Olivier"
-      },
-      {
-        url: "/images/agence-distinction/Morissette%2C%20Olivier/Agence_Distinction_Chansonnier_Olivier_Oli_Morissette_370x370_2.jpg",
-        alt: "Morissette, Olivier"
-      },
-      {
-        url: "/images/agence-distinction/Morissette%2C%20Olivier/Agence_Distinction_Chansonnier_Olivier_Oli_Morissette_370x370_3.jpg",
-        alt: "Morissette, Olivier"
-      },
-      {
-        url: "/images/agence-distinction/Morissette%2C%20Olivier/Agence_Distinction_Chansonnier_Olivier_Oli_Morissette_570x570_2.jpg",
-        alt: "Morissette, Olivier"
-      },
-      {
-        url: "/images/agence-distinction/Morissette%2C%20Olivier/Oli%20Morissette%20blanc.jpg",
-        alt: "Morissette, Olivier"
-      },
       {
         url: "https://gestion.agencedistinction.ca//resources/profile_uploads/imgs/1760998668_21592368e5c895dd1e17.jpg",
         alt: "Olivier Morissette"
@@ -3885,7 +2933,7 @@ export const artistProfiles: ArtistProfile[] = [
     id: "236",
     slug: "robby-bolduc",
     name: "Robby Bolduc",
-    image: "/images/agence-distinction/Bolduc%2C%20Robby/Agence_Distinction_Robby_Bolduc_570x570.jpg",
+    image: "/images/agence-distinction/Bolduc%2C%20Robby/Agence_Distinction_Chansonnier_Robby_Bolduc_570x570.jpg",
     biography: "Originaire de la Beauce, Robby Bolduc a commencé à jouer de la guitare à 7 ans. À 15 ans, il sillonnait déjà le circuit des bars de l'est du Québec. À 19 ans, il accompagnait la chanteuse Claire Vezina alors sous contrat avec Sony Music.\n\nPendant ses études en musique classique et jazz, il se produit une centaine de fois par année avec le groupe country Canyon.\n\nIl se retrouve par la suite à Singapour et au Maroc en tant que band leader dans différentes formations. Riche de l'expérience, il part en haute mer pendant plus d'un an comme musicien pour les compagnies RCCL et Holland America. C'est dans la ville de Los Angels qu'il s'établit alors et travail comme pigiste avec différents artistes tels Raquel Zonte, Kesha et Trishia O'Keefe.\n\nDe retour au Québec, il accompagnera sur scène et/ou en studio une pléiade d'artistes dont: Mario Pelchat, Nicola Ciccone, Gabrielle Destroismaisons, Dany Bedar, Tuesday 5, In Motion, Audrey Demontigny, René Lajoie, Bruno Labrie, Valérie Boivin, Marc-André Niquet et bien d'autres.\n\nAlors qu'il est sonorisateur à Montréal, il décide d'autoproduire un disque Country original. Aidé par Samuel Busque et Magali Bergeron, il réussit a tourner sur les radios du Québec. Le single 'Danser' atteint le top des palmarès Country pour y rester plusieurs semaines. D'autres titres dont 'La gare' et 'Les heures qui restent' tournent encore sur les ondes country.\n\nEn 2007, il joint le groupe légendaire OFFENBACH. Il s'en suivra plusieurs tournées au Québec, en Ontario et au Nouveau-Brunswick.\n\nPour ce qui est de la partie purement Country, Robby a été chef d'orchestre, musicien ou réalisateur pour divers artistes dont, notamment, Robby Johnson, Dave Roussy, Nanou Linteau, Marie-Chantal Cartier et Ovila Landry.\n\nIl partage maintenant son temps entre ses 3 enfants, ses nombreuses guitares et Le Cowboy Studio.\n\nRobby Bolduc est disponible en prestation solo avec sa guitare pour une soirée spéciale chansonnier. Réservez vos dates le plus tôt possible!",
     primaryCategory: "bassiste",
     categories: [
@@ -3934,18 +2982,6 @@ export const artistProfiles: ArtistProfile[] = [
     ],
     gallery: [
       {
-        url: "/images/agence-distinction/Bolduc%2C%20Robby/Agence_Distinction_Chansonnier_Robby_Bolduc_570x570.jpg",
-        alt: "Bolduc, Robby"
-      },
-      {
-        url: "/images/agence-distinction/Bolduc%2C%20Robby/Agence_Distinction_Robby_Bolduc_220x500_1.jpg",
-        alt: "Bolduc, Robby"
-      },
-      {
-        url: "/images/agence-distinction/Bolduc%2C%20Robby/Agence_Distinction_Robby_Bolduc_2400x1350_1.jpg",
-        alt: "Bolduc, Robby"
-      },
-      {
         url: "https://gestion.agencedistinction.ca//resources/profile_uploads/imgs/1770163530_1ab146eb782bc5eed67f.jpg",
         alt: "Robby Bolduc"
       },
@@ -3980,7 +3016,7 @@ export const artistProfiles: ArtistProfile[] = [
     id: "128",
     slug: "samaya-baladi",
     name: "Samaya Baladi",
-    image: "/images/agence-distinction/Danse%20Orientale%20Samaya%20Baladi/Agence_Distinction_Danse_Orientale_Samaya_Baladi_570x570.jpg",
+    image: "/images/agence-distinction/Danse%20Orientale%20Samaya%20Baladi/Samaya_Baladi_570x570.jpeg",
     biography: "Description\nPour une ambiance orientale digne des mille et unes nuits, un spectacle de danse baladi avec Samaya fera de votre événement un moment inoubliable. Elle enchantera l'audience avec des accessoires spectaculaires tels que costumes scintillants, voiles de soie ou éventails. Sa grâce et son élégance sont toujours grandement appréciées lors des spectacles. Elle se déplace avec aisance en dansant entre les tables pour que tous puissent profiter du spectacle. Plusieurs styles de danse orientale ainsi que des rythmes différents captivent le public et offrent un spectacle varié. Plusieurs formules sont disponibles telles que courte prestation surprise, plusieurs apparitions, changements de costumes. À l'occasion, Samaya est accompagnée d'autres danseuses expérimentées. Il est possible de faire participer le publique et\\ou les employés. Une séance de photos avec les résidents termine agréablement l'événement. Il est également possible de présenter un spectacle de danses gitanes. Biographie\nSamaya est une danseuse accomplie qui pratique la danse orientale avec passion. Elle a dirigé sa propre école de danse dans les Laurentides pendant plusieurs années. Elle est également organisatrice d'événements rassembleurs tels que soirées cabaret en restaurant et spectacles pour causes humanitaires. Elle a remporté plusieurs prix lors de compétitions d'envergure internationale, notamment la première place dans la catégorie Folklore au Festival of The Nile en Floride en 2024. Elle est la directrice et chorégraphe principale de la troupe de danse orientale Les Étincelles, plusieurs fois primée également depuis sa création en 2015.",
     categories: [],
     themes: [],
@@ -3995,54 +3031,6 @@ export const artistProfiles: ArtistProfile[] = [
     ],
     gallery: [
       {
-        url: "/images/agence-distinction/Danse%20Orientale%20Samaya%20Baladi/315714733_10210063301616089_4108373403903397502_n.jpg",
-        alt: "Danse Orientale Samaya Baladi"
-      },
-      {
-        url: "/images/agence-distinction/Danse%20Orientale%20Samaya%20Baladi/325598523_1585460038572660_634146768531520005_n.jpg",
-        alt: "Danse Orientale Samaya Baladi"
-      },
-      {
-        url: "/images/agence-distinction/Danse%20Orientale%20Samaya%20Baladi/326821680_957135455288548_6303398223670306254_n.jpg",
-        alt: "Danse Orientale Samaya Baladi"
-      },
-      {
-        url: "/images/agence-distinction/Danse%20Orientale%20Samaya%20Baladi/349599476_254689047147717_7902949667687795746_n.jpg",
-        alt: "Danse Orientale Samaya Baladi"
-      },
-      {
-        url: "/images/agence-distinction/Danse%20Orientale%20Samaya%20Baladi/349682753_771747784324668_4150172736308488904_n.jpg",
-        alt: "Danse Orientale Samaya Baladi"
-      },
-      {
-        url: "/images/agence-distinction/Danse%20Orientale%20Samaya%20Baladi/350498552_600745995357218_7637077191731797117_n.jpg",
-        alt: "Danse Orientale Samaya Baladi"
-      },
-      {
-        url: "/images/agence-distinction/Danse%20Orientale%20Samaya%20Baladi/DonyaDanse05272023181_.jpg",
-        alt: "Danse Orientale Samaya Baladi"
-      },
-      {
-        url: "/images/agence-distinction/Danse%20Orientale%20Samaya%20Baladi/IMG_3914-2.jpg",
-        alt: "Danse Orientale Samaya Baladi"
-      },
-      {
-        url: "/images/agence-distinction/Danse%20Orientale%20Samaya%20Baladi/Samaya%20baladi%20500x220%201.jpeg",
-        alt: "Danse Orientale Samaya Baladi"
-      },
-      {
-        url: "/images/agence-distinction/Danse%20Orientale%20Samaya%20Baladi/Samaya%20baladi%20500x220%202.jpeg",
-        alt: "Danse Orientale Samaya Baladi"
-      },
-      {
-        url: "/images/agence-distinction/Danse%20Orientale%20Samaya%20Baladi/Samaya%20baladi%20500x220%203.jpeg",
-        alt: "Danse Orientale Samaya Baladi"
-      },
-      {
-        url: "/images/agence-distinction/Danse%20Orientale%20Samaya%20Baladi/Samaya_Baladi_570x570.jpeg",
-        alt: "Danse Orientale Samaya Baladi"
-      },
-      {
         url: "https://gestion.agencedistinction.ca//resources/profile_uploads/imgs/Samaya_Baladi_570x570.jpeg",
         alt: "Samaya Baladi"
       }
@@ -4053,7 +3041,7 @@ export const artistProfiles: ArtistProfile[] = [
     id: "146",
     slug: "samba-jeri",
     name: "Samba Jeri",
-    image: "/images/agence-distinction/Samba%20Jeri/Agence_Distinction_Samba_Jeri_570x570.jpg",
+    image: "/images/agence-distinction/Samba%20Jeri/430962312_1356782161655710_3526931209767677816_n.jpg",
     biography: "Vous désirez passer un bon moment avec des gens sympathiques, danser et faire la fête comme les Brésiliens en plein Carnaval ? Alors, Choisissez la Troupe Samba Jeri ! En effet, Mel et son groupe vous propose une immersion totale au Brésil avec ses danses et ses rythmes dynamiques et animés. Mel est la directrice du groupe Samba Jeri. Tous ses spectacles sont personnalisés et interactifs. Samba Jeri a été fondée au Brésil en 2009, dans une ville qui s'appelle Jericoacoara ; d'où le nom Samba JERI. Mel danse depuis son plus jeune âge, ayant fait son premier spectacle à l'âge de 5 ans, la danse fait partie intégrale de sa vie. Elle a su communiquer sa passion et avec ce projet et plus de 20 ans d'expérience, elle nous propose un retour à ses racines tout en couleurs et en rythmes. Choisissez la Troupe SAMBA JERI du Brésil.",
     categories: [],
     themes: [],
@@ -4071,18 +3059,6 @@ export const artistProfiles: ArtistProfile[] = [
       }
     ],
     gallery: [
-      {
-        url: "/images/agence-distinction/Samba%20Jeri/430962312_1356782161655710_3526931209767677816_n.jpg",
-        alt: "Samba Jeri"
-      },
-      {
-        url: "/images/agence-distinction/Samba%20Jeri/65181786_10216332958188270_3869710034128601088_o.jpg",
-        alt: "Samba Jeri"
-      },
-      {
-        url: "/images/agence-distinction/Samba%20Jeri/Screenshot_20230810_172722_Facebook.jpg",
-        alt: "Samba Jeri"
-      },
       {
         url: "https://gestion.agencedistinction.ca//resources/profile_uploads/imgs/65181786_10216332958188270_3869710034128601088_o.jpg",
         alt: "Samba Jeri"
@@ -4158,42 +3134,6 @@ export const artistProfiles: ArtistProfile[] = [
     ],
     gallery: [
       {
-        url: "/images/agence-distinction/Roy%2C%20St%C3%A9phanie/Agence_Distinction_Chanteuse_St%C3%A9phanie_Roy_1.jpg",
-        alt: "Roy, Stéphanie"
-      },
-      {
-        url: "/images/agence-distinction/Roy%2C%20St%C3%A9phanie/Agence_Distinction_Chanteuse_St%C3%A9phanie_Roy_2.jpg",
-        alt: "Roy, Stéphanie"
-      },
-      {
-        url: "/images/agence-distinction/Roy%2C%20St%C3%A9phanie/Agence_Distinction_Chanteuse_St%C3%A9phanie_Roy_220x500_1.jpg",
-        alt: "Roy, Stéphanie"
-      },
-      {
-        url: "/images/agence-distinction/Roy%2C%20St%C3%A9phanie/Agence_Distinction_Chanteuse_St%C3%A9phanie_Roy_220x500_2.jpg",
-        alt: "Roy, Stéphanie"
-      },
-      {
-        url: "/images/agence-distinction/Roy%2C%20St%C3%A9phanie/Agence_Distinction_Chanteuse_St%C3%A9phanie_Roy_2400x1350_1.jpg",
-        alt: "Roy, Stéphanie"
-      },
-      {
-        url: "/images/agence-distinction/Roy%2C%20St%C3%A9phanie/Agence_Distinction_Chanteuse_St%C3%A9phanie_Roy_2400x1350_2.jpg",
-        alt: "Roy, Stéphanie"
-      },
-      {
-        url: "/images/agence-distinction/Roy%2C%20St%C3%A9phanie/Agence_Distinction_Chanteuse_St%C3%A9phanie_Roy_370x370.jpg",
-        alt: "Roy, Stéphanie"
-      },
-      {
-        url: "/images/agence-distinction/Roy%2C%20St%C3%A9phanie/Agence_Distinction_Chanteuse_St%C3%A9phanie_Roy_370x370_2.jpg",
-        alt: "Roy, Stéphanie"
-      },
-      {
-        url: "/images/agence-distinction/Roy%2C%20St%C3%A9phanie/Agence_Distinction_Chanteuse_St%C3%A9phanie_Roy_570x570_2.jpg",
-        alt: "Roy, Stéphanie"
-      },
-      {
         url: "https://gestion.agencedistinction.ca//resources/profile_uploads/imgs/Agence_Distinction_Chanteuse_Stephanie_Roy_2400x1350_2.jpg",
         alt: "Stéphanie Roy"
       },
@@ -4212,7 +3152,7 @@ export const artistProfiles: ArtistProfile[] = [
     id: "94",
     slug: "steve-barry",
     name: "Steve Barry",
-    image: "/images/agence-distinction/Barry%2C%20Steve/Agence_Distinction_Steve_Barry_570x570.jpg",
+    image: "/images/agence-distinction/Barry%2C%20Steve/Chanteur_Steve_Barry_Agence_Distinction_570x570.jpg",
     biography: "BIOGRAPHIENé le 30 janvier 1965 et fils unique, Sylvain-Steve grandit à Marieville dans un environnement musical riche où résonnent constamment les grandes voix d’Elvis Presley, de Tom Jones et de plusieurs autres artistes marquants. En 1977, il découvre les harmonies uniques des frères Gibb, du groupe Bee Gees, qui deviennent rapidement ses frères d’âme et sa plus grande source d’inspiration musicale. Cette influence le pousse vers la composition dès 1980, lorsqu’il acquiert sa première guitare.\n\nÀ l’âge de 16 ans, Steve monte sur scène pour la première fois avec sa formation musicale Heaven’s Shadows, lors du Carnaval de Richelieu, puis au spectacle de fin d’année de son école, l’école Mgr Euclide-Théberge à Marieville. C’est à ce moment qu’il attire l’attention du groupe progressif local Olocus Satyre, avec qui il chante de 1981 à 1983. Cette expérience lui permet de découvrir la scène des bars et d’apprendre la discipline et l’endurance qu’exige la vie d’artiste.\n\nCROONEREn 2019, Steve lance son deuxième album solo, « Saveur Crooner », qui met en lumière son côté charmeur et son talent d’interprète. Il devient également chanteur au sein du Tuxedo Big Band.\n\nDurant la période de confinement liée à la pandémie de COVID-19, Steve publie une courte vidéo sur les réseaux sociaux où il interprète Stayin’ Alive des Bee Gees a cappella. La vidéo connaît un vif succès et dépasse les 100 000 visionnements.\n\nMalgré les défis de la pandémie, Steve poursuit sa route musicale avec la sortie des chansons « Noël en confinement » et « De Marieville à Ville-Marie », cette dernière étant un hommage à sa ville natale. Il collabore également avec le réseau FADOQ, pour lequel il compose une chanson thème en compagnie de son fils Samuel.\n\nRÉTROPassionné par la musique des décennies passées, Steve fait partie de plusieurs formations spécialisées dans le répertoire rétro des années 50, 60 et 70, notamment The Wonders Band, Around the Beatles et Rétro en tête et du Duo Harmonie Rétro avec Diane Lavoie.\n\nCOUNTRYArtiste polyvalent, Steve explore aussi l’univers de la musique country. En 2017, il fonde sa propre maison de disques, AKBCO Productions, et lance son premier album solo country intitulé « Saveur Country ».\n\nL’album comprend la chanson « La p’tite fille de papa », qui obtient des rotations sur plusieurs radios country du Québec et lui vaut des invitations à se produire notamment aux Festivals Country de Longueuil et de Saint-Amable. La chanson, écrite par Barry Gibb du groupe Bee Gees, a été adaptée en français par Steve avec l’approbation officielle de l’auteur. Une vidéo de la chanson est également lancée.\n\nLa chanson est disponible sur les principales plateformes de téléchargement et d’écoute, dont i\nTunes et Google Play.",
     categories: [],
     themes: [],
@@ -4238,30 +3178,6 @@ export const artistProfiles: ArtistProfile[] = [
       }
     ],
     gallery: [
-      {
-        url: "/images/agence-distinction/Barry%2C%20Steve/Agence_Distinction_Steve_Barry_220x500_1.jpg",
-        alt: "Barry, Steve"
-      },
-      {
-        url: "/images/agence-distinction/Barry%2C%20Steve/Agence_Distinction_Steve_Barry_2400x1350_1.jpg",
-        alt: "Barry, Steve"
-      },
-      {
-        url: "/images/agence-distinction/Barry%2C%20Steve/Chanteur_Steve_Barry_Agence_Distinction_370x370.jpg",
-        alt: "Barry, Steve"
-      },
-      {
-        url: "/images/agence-distinction/Barry%2C%20Steve/Chanteur_Steve_Barry_Agence_Distinction_570x570.jpg",
-        alt: "Barry, Steve"
-      },
-      {
-        url: "/images/agence-distinction/Barry%2C%20Steve/FB_IMG_1720563160941.jpg",
-        alt: "Barry, Steve"
-      },
-      {
-        url: "/images/agence-distinction/Barry%2C%20Steve/exported__20230118_120108_476_37.jpg",
-        alt: "Barry, Steve"
-      },
       {
         url: "https://gestion.agencedistinction.ca//resources/profile_uploads/imgs/Steve_Barry_2400x1350_1.jpg",
         alt: "Steve Barry"

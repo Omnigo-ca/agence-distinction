@@ -7,6 +7,7 @@ import { ArrowRightIcon, PlayIcon, XIcon } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import type { BentoThemeItem } from "@/lib/thematiques-bento"
+import { FACE_OBJECT_POSITION } from "@/lib/media"
 import { cn } from "@/lib/utils"
 
 type InteractiveBentoGalleryProps = {
@@ -35,8 +36,8 @@ function BentoMedia({
         playsInline
         loop
         autoPlay={priority}
-        className={cn("size-full object-cover", className)}
-        style={{ objectPosition: item.imagePosition ?? "center" }}
+        className={cn("size-full object-cover object-face", className)}
+        style={{ objectPosition: item.imagePosition ?? FACE_OBJECT_POSITION }}
         onError={() => setHasError(true)}
       />
     )
@@ -66,9 +67,9 @@ function BentoMedia({
       alt={`Thématique ${item.title}`}
       className={cn(
         "absolute max-w-none",
-        useCustomZoom ? "object-cover" : "inset-0 size-full",
+        useCustomZoom ? "object-cover object-face" : "inset-0 size-full",
         !useCustomZoom &&
-          (objectFit === "contain" ? "object-contain" : "object-cover"),
+          (objectFit === "contain" ? "object-contain" : "object-cover object-face"),
         className
       )}
       style={
@@ -78,10 +79,10 @@ function BentoMedia({
               height: `${item.imageZoom! * 100}%`,
               left: `${((1 - item.imageZoom!) / 2) * 100}%`,
               top: `${((1 - item.imageZoom!) / 2) * 100}%`,
-              objectPosition: item.imagePosition ?? "center",
+              objectPosition: item.imagePosition ?? FACE_OBJECT_POSITION,
             }
           : {
-              objectPosition: item.imagePosition ?? "center",
+              objectPosition: item.imagePosition ?? FACE_OBJECT_POSITION,
               ...(item.imageScale
                 ? {
                     transform: `scale(${item.imageScale})`,
@@ -152,7 +153,9 @@ function BentoCard({
       aria-label={`Voir la thématique ${item.title}`}
     >
       <div className="absolute inset-0 overflow-hidden bg-[#1a0c10]">
-        <BentoMedia item={item} />
+        <div className="size-full transition-transform duration-500 ease-out will-change-transform group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100">
+          <BentoMedia item={item} />
+        </div>
       </div>
 
       {item.type === "video" ? (

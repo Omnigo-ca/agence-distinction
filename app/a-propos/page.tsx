@@ -1,34 +1,55 @@
 import Link from "next/link"
-import { ArrowRightIcon } from "lucide-react"
+import {
+  ArrowRightIcon,
+  AwardIcon,
+  HandshakeIcon,
+  HeartIcon,
+  UsersIcon,
+  type LucideIcon,
+} from "lucide-react"
 
 import { ImagePlaceholder } from "@/components/image-placeholder"
 import { PageHero } from "@/components/page-hero"
 import { SiteLayout } from "@/components/site-layout"
 import { Button } from "@/components/ui/button"
 import { SectionWrapper } from "@/components/section-wrapper"
+import { ValuesCard } from "@/components/values-card"
 import { mediaAssets } from "@/lib/media"
 import { siteConfig } from "@/lib/site-config"
 
-const values = [
+const values: {
+  title: string
+  subtitle: string
+  description: string
+  icon: LucideIcon
+}[] = [
   {
     title: "Bienveillance",
+    subtitle: "VALEUR FONDAMENTALE",
     description:
       "Chaque interaction, chaque prestation est guidée par le respect et l'écoute.",
+    icon: HeartIcon,
   },
   {
     title: "Excellence artistique",
+    subtitle: "ENGAGEMENT QUALITÉ",
     description:
       "Des artistes professionnels, fiables et passionnés par leur art.",
+    icon: AwardIcon,
   },
   {
     title: "Impact humain",
+    subtitle: "NOTRE MISSION",
     description:
       "La musique et le spectacle comme vecteurs de joie et de bien-être.",
+    icon: UsersIcon,
   },
   {
     title: "Accompagnement",
+    subtitle: "PARTENAIRE DE CONFIANCE",
     description:
       "Un partenaire de confiance, pas seulement un intermédiaire.",
+    icon: HandshakeIcon,
   },
 ]
 
@@ -38,6 +59,7 @@ export default function AProposPage() {
       <PageHero
         title={siteConfig.pages.aPropos.title}
         subtitle={siteConfig.pages.aPropos.subtitle}
+        backgroundImage={mediaAssets.about.hero}
       />
 
       <SectionWrapper>
@@ -53,8 +75,9 @@ export default function AProposPage() {
             label="Marie-Josée Landry"
             src={siteConfig.about.image}
             alt="Marie-Josée Landry, fondatrice de l'Agence Distinction"
-            aspect="auto"
-            className="mx-auto w-full max-w-md"
+            aspect="portrait"
+            objectPosition="center"
+            className="mx-auto aspect-[4/5] w-full max-w-lg"
           />
         </div>
       </SectionWrapper>
@@ -63,17 +86,15 @@ export default function AProposPage() {
         <h2 className="mb-8 text-center font-heading text-3xl font-semibold">
           Nos valeurs
         </h2>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4">
           {values.map((value) => (
-            <div
+            <ValuesCard
               key={value.title}
-              className="rounded-2xl border border-border bg-card p-6 text-center"
-            >
-              <h3 className="font-semibold">{value.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                {value.description}
-              </p>
-            </div>
+              icon={value.icon}
+              title={value.title}
+              subtitle={value.subtitle}
+              description={value.description}
+            />
           ))}
         </div>
       </SectionWrapper>

@@ -1,5 +1,19 @@
 const BASE = "/images/agence-distinction"
 
+/** Ancrage par défaut pour les portraits et photos de spectacles (visages visibles). */
+export const FACE_OBJECT_POSITION = "center top"
+
+/** Cadrage des images et vidéos hero plein écran — ancrage haut, sous la barre de navigation (h-16). */
+export const HERO_OBJECT_POSITION = "center top"
+
+/** Légèrement plus grand que le conteneur pour dézoomer ; démarre sous la barre h-16. */
+export const HERO_MEDIA_CLASS =
+  "absolute left-1/2 top-16 h-[calc(112%_-_4rem)] w-[112%] max-w-none -translate-x-1/2 object-cover"
+
+/** Cadrage des iframes vidéo hero (YouTube/Vimeo) — décalage vers le haut pour voir les visages. */
+export const HERO_EMBED_FRAME_CLASS =
+  "pointer-events-none absolute left-1/2 top-1/2 h-[140%] w-[140%] min-h-full min-w-full -translate-x-1/2 -translate-y-[15%] select-none border-0"
+
 /** Chemin URL-safe vers un asset dans public/images/agence-distinction/ */
 export function media(...segments: string[]): string {
   return `${BASE}/${segments.map((s) => encodeURIComponent(s)).join("/")}`
@@ -34,7 +48,12 @@ export const mediaAssets = {
   },
   about: {
     agency: media("Landry, Marie-Josée", "Marjo_2400x1350_3.jpg"),
-    performance: media("Mélane et Michel", "IMG_20230126_194117[7853].jpg"),
+    performance: media("Mélane et Michel", "Melane_Et_Michel_2400x1350_7.jpg"),
+    hero: media("a-propos-hero.png"),
   },
-  rpa: media("Mélane et Michel", "IMG_20230126_194117[7853].jpg"),
+  rpa: media("Mélane et Michel", "Melane_Et_Michel_2400x1350_7.jpg"),
+  rpaHero: media("rpa-chsld-hero.png"),
+  thematiquesHero: media("thematiques-hero.png"),
+  servicesHero: media("services-hero.png"),
+  artistesHero: media("artistes-hero.png"),
 } as const

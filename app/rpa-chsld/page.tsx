@@ -1,53 +1,14 @@
 import Link from "next/link"
-import {
-  ArrowRightIcon,
-  CalendarIcon,
-  HeartIcon,
-  MusicIcon,
-  SparklesIcon,
-  UsersIcon,
-} from "lucide-react"
+import { ArrowRightIcon } from "lucide-react"
 
 import { ImagePlaceholder } from "@/components/image-placeholder"
 import { PageHero } from "@/components/page-hero"
+import { RpaBenefitsZigzag } from "@/components/rpa-benefits-zigzag"
 import { SiteLayout } from "@/components/site-layout"
 import { Button } from "@/components/ui/button"
 import { SectionWrapper } from "@/components/section-wrapper"
 import { mediaAssets } from "@/lib/media"
 import { siteConfig } from "@/lib/site-config"
-
-const rpaBenefits = [
-  {
-    icon: HeartIcon,
-    title: "On comprend votre réalité",
-    description:
-      "Horaires, budgets, publics variés, nous connaissons les défis des responsables loisirs.",
-  },
-  {
-    icon: CalendarIcon,
-    title: "Réservation simplifiée",
-    description:
-      "Un seul contact pour planifier, coordonner et confirmer vos activités.",
-  },
-  {
-    icon: UsersIcon,
-    title: "Artistes habitués à ce public",
-    description:
-      "Des talents sélectionnés pour leur bienveillance et leur capacité à créer des liens.",
-  },
-  {
-    icon: MusicIcon,
-    title: "Activités adaptées",
-    description:
-      "Participation, nostalgie, danse, des prestations qui font du bien aux résidents.",
-  },
-  {
-    icon: SparklesIcon,
-    title: "Programmation annuelle",
-    description:
-      "Bâtissez votre calendrier d'activités pour l'année entière en toute simplicité.",
-  },
-]
 
 export default function RpaChsldPage() {
   return (
@@ -55,6 +16,7 @@ export default function RpaChsldPage() {
       <PageHero
         title={siteConfig.pages.rpaChsld.title}
         subtitle={siteConfig.pages.rpaChsld.subtitle}
+        backgroundImage={mediaAssets.rpaHero}
       >
         <Button
           asChild
@@ -95,23 +57,8 @@ export default function RpaChsldPage() {
         </div>
       </SectionWrapper>
 
-      <SectionWrapper variant="muted">
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {rpaBenefits.map((benefit) => (
-            <div
-              key={benefit.title}
-              className="rounded-2xl border border-border bg-card p-6"
-            >
-              <div className="mb-4 flex size-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                <benefit.icon className="size-5" aria-hidden="true" />
-              </div>
-              <h3 className="font-semibold">{benefit.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                {benefit.description}
-              </p>
-            </div>
-          ))}
-        </div>
+      <SectionWrapper variant="muted" className="pt-8 pb-16 md:pt-12 md:pb-24">
+        <RpaBenefitsZigzag />
       </SectionWrapper>
 
       <SectionWrapper>

@@ -1,4 +1,5 @@
 import type { ArtistProfile } from "@/lib/data/artists"
+import { HERO_EMBED_FRAME_CLASS, HERO_MEDIA_CLASS, HERO_OBJECT_POSITION } from "@/lib/media"
 import { resolveArtistHeroBackground } from "@/lib/artist-hero-media"
 
 type ArtistHeroProps = {
@@ -9,12 +10,26 @@ function HeroInteractionShield() {
   return <div className="pointer-events-none absolute inset-0" aria-hidden="true" />
 }
 
+function HeroPoster({ src }: { src: string }) {
+  return (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={src}
+      alt=""
+      aria-hidden="true"
+      className={`pointer-events-none ${HERO_MEDIA_CLASS} select-none`}
+      style={{ objectPosition: HERO_OBJECT_POSITION }}
+    />
+  )
+}
+
 function HeroBackground({ artist }: { artist: ArtistProfile }) {
   const background = resolveArtistHeroBackground(artist)
 
   if (background.kind === "video") {
     return (
       <div className="absolute inset-0 overflow-hidden">
+        <HeroPoster src={background.poster} />
         <video
           autoPlay
           muted
@@ -26,7 +41,8 @@ function HeroBackground({ artist }: { artist: ArtistProfile }) {
           poster={background.poster}
           tabIndex={-1}
           aria-hidden="true"
-          className="artist-hero-video pointer-events-none absolute inset-0 h-full w-full select-none object-cover"
+          className={`artist-hero-video pointer-events-none ${HERO_MEDIA_CLASS} h-full w-full select-none`}
+          style={{ objectPosition: HERO_OBJECT_POSITION }}
         >
           <source src={background.src} type="video/mp4" />
         </video>
@@ -52,10 +68,11 @@ function HeroBackground({ artist }: { artist: ArtistProfile }) {
 
     return (
       <div className="absolute inset-0 overflow-hidden">
+        <HeroPoster src={background.poster} />
         <iframe
           src={`https://www.youtube-nocookie.com/embed/${background.videoId}?${params.toString()}`}
           title={`Vidéo de fond — ${artist.name}`}
-          className="pointer-events-none absolute top-1/2 left-1/2 h-[120%] w-[120%] min-h-full min-w-full -translate-x-1/2 -translate-y-1/2 select-none border-0"
+          className={HERO_EMBED_FRAME_CLASS}
           allow="autoplay; encrypted-media"
           aria-hidden="true"
           tabIndex={-1}
@@ -79,10 +96,11 @@ function HeroBackground({ artist }: { artist: ArtistProfile }) {
 
     return (
       <div className="absolute inset-0 overflow-hidden">
+        <HeroPoster src={background.poster} />
         <iframe
           src={`https://player.vimeo.com/video/${background.videoId}?${params.toString()}`}
           title={`Vidéo de fond — ${artist.name}`}
-          className="pointer-events-none absolute top-1/2 left-1/2 h-[120%] w-[120%] min-h-full min-w-full -translate-x-1/2 -translate-y-1/2 select-none border-0"
+          className={HERO_EMBED_FRAME_CLASS}
           allow="autoplay"
           aria-hidden="true"
           tabIndex={-1}
@@ -97,7 +115,8 @@ function HeroBackground({ artist }: { artist: ArtistProfile }) {
     <img
       src={background.src}
       alt=""
-      className="pointer-events-none absolute inset-0 size-full select-none object-cover"
+      className={`pointer-events-none ${HERO_MEDIA_CLASS} select-none`}
+      style={{ objectPosition: HERO_OBJECT_POSITION }}
       aria-hidden="true"
     />
   )

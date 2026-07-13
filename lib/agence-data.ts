@@ -49,6 +49,7 @@ export type GalleryImage = {
   title: string
   category: string
   image: string
+  objectPosition?: string
 }
 
 export type AgencyVideo = {
@@ -645,7 +646,7 @@ export const galleryImages: GalleryImage[] = [
   {
     title: "Soirée années rétro",
     category: "Thématique",
-    image: media("Trio Java", "Trio_Java_2400x1350_7.jpg"),
+    image: media("Trio Java", "Agence_Distinction_années 20.jpg"),
   },
   {
     title: "La Corde Sensible",
@@ -676,12 +677,13 @@ export const galleryImages: GalleryImage[] = [
   {
     title: "Duo en prestation",
     category: "Spectacle musical",
-    image: media("Mélane et Michel", "Melane_Et_Michel_2400x1350_6.jpg"),
+    image: media("Levac, Julie", "Band_700.jpg"),
+    objectPosition: "center 72%",
   },
   {
     title: "Ambiance country",
     category: "Soirée dansante",
-    image: media("Levac, Julie", "Band_438.jpg"),
+    image: media("Ray, SV", "SV_Ray_2400x1350_6.jpg"),
   },
 ]
 
@@ -713,7 +715,7 @@ export const detailedServices = [
     title: "Troubadours en unités de soins",
     description:
       "Des animations musicales en chambre, adaptées aux résidents en perte d'autonomie.",
-    image: media("Mélane et Michel", "IMG_20230126_194117[7853].jpg"),
+    image: media("thematiques-hero.png"),
   },
   {
     title: "Soirées dansantes",
@@ -731,18 +733,15 @@ export const detailedServices = [
     title: "Cérémonies commémoratives",
     description:
       "Représentation d'artistes avec respect et sensibilité pour des moments importants.",
-    image: media(
-      "Reid, Myriam",
-      "Agence_Distinction_Myriam_Reid_Harpiste-570x570.jpg"
-    ),
+    image: media("Reid, Myriam", "Myriam_Reid_2400x1350_1.jpg"),
   },
   {
     title: "Spectacles corporatifs",
     description:
       "Pour entreprises, villes et organisations qui souhaitent créer un moment humain et mémorable.",
     image: media(
-      "Daouni, Aziz",
-      "Agence_Distinction_Aziz_Daouni_2400x1350_1.jpg"
+      "Bernard, France",
+      "Agence_Distinction_Chanteuse_France_Bernard_2400x1350.jpg"
     ),
   },
   {

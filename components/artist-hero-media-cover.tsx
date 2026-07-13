@@ -3,6 +3,7 @@
 import { useEffect, useState, type ReactNode } from "react"
 
 import { ARTIST_HERO_POSTER_HIDE_MS } from "@/lib/artist-hero-media"
+import { HERO_MEDIA_CLASS, HERO_OBJECT_POSITION } from "@/lib/media"
 
 type ArtistHeroMediaCoverProps = {
   poster: string
@@ -26,9 +27,10 @@ export function ArtistHeroMediaCover({ poster, children }: ArtistHeroMediaCoverP
         src={poster}
         alt=""
         aria-hidden="true"
-        className={`absolute inset-0 size-full object-cover transition-opacity duration-1000 ${
+        className={`${HERO_MEDIA_CLASS} transition-opacity duration-1000 ${
           posterVisible ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
+        style={{ objectPosition: HERO_OBJECT_POSITION }}
       />
     </>
   )

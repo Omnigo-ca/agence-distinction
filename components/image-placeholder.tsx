@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import { FACE_OBJECT_POSITION } from "@/lib/media"
 import { cn } from "@/lib/utils"
 
 type ImagePlaceholderProps = {
@@ -28,7 +29,7 @@ export function ImagePlaceholder({
   alt,
   className,
   aspect = "video",
-  objectPosition = "center",
+  objectPosition = FACE_OBJECT_POSITION,
   objectFit = "cover",
   fill = false,
 }: ImagePlaceholderProps) {

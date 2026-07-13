@@ -1,6 +1,7 @@
 "use client"
 
 import { ARTIST_HERO_VIDEO_START_SECONDS } from "@/lib/artist-hero-media"
+import { HERO_EMBED_FRAME_CLASS } from "@/lib/media"
 import { ArtistHeroMediaCover } from "@/components/artist-hero-media-cover"
 
 type ArtistHeroYoutubeProps = {
@@ -9,8 +10,7 @@ type ArtistHeroYoutubeProps = {
   title: string
 }
 
-const IFRAME_CLASS =
-  "pointer-events-none absolute top-1/2 left-1/2 h-[150%] w-[150%] min-h-full min-w-full -translate-x-1/2 -translate-y-1/2 border-0"
+const IFRAME_CLASS = HERO_EMBED_FRAME_CLASS
 
 export function ArtistHeroYoutube({ videoId, poster, title }: ArtistHeroYoutubeProps) {
   const params = new URLSearchParams({

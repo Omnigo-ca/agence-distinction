@@ -17,7 +17,7 @@ export function ArtistsSection() {
         subtitle={siteConfig.artists.subtitle}
       />
 
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {artists.slice(0, 6).map((artist) => (
           <Link
             key={artist.slug}
@@ -29,7 +29,7 @@ export function ArtistsSection() {
                 label={`Photo artiste, ${artist.name}`}
                 src={artist.image}
                 alt={artist.name}
-                aspect="video"
+                aspect="square"
                 className="rounded-none border-0 transition-transform duration-300 group-hover:scale-[1.02]"
               />
               <div className="p-6">

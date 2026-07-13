@@ -7,6 +7,7 @@ import { SiteLayout } from "@/components/site-layout"
 import { Button } from "@/components/ui/button"
 import { SectionWrapper } from "@/components/section-wrapper"
 import { getAllArtistProfiles } from "@/lib/data/artists"
+import { mediaAssets } from "@/lib/media"
 import { siteConfig } from "@/lib/site-config"
 
 export default function ArtistesPage() {
@@ -17,6 +18,7 @@ export default function ArtistesPage() {
       <PageHero
         title={siteConfig.pages.artistes.title}
         subtitle={siteConfig.pages.artistes.subtitle}
+        backgroundImage={mediaAssets.artistesHero}
       />
 
       <SectionWrapper>

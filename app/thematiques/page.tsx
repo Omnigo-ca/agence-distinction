@@ -6,6 +6,7 @@ import { PageHero } from "@/components/page-hero"
 import { SiteLayout } from "@/components/site-layout"
 import { ThematiquesPageContent } from "@/components/thematiques-page-content"
 import { Button } from "@/components/ui/button"
+import { mediaAssets } from "@/lib/media"
 import { siteConfig } from "@/lib/site-config"
 
 export const metadata: Metadata = {
@@ -20,6 +21,7 @@ export default function ThematiquesPage() {
       <PageHero
         title="Trouvez la thématique parfaite pour votre prochain spectacle"
         subtitle="Explorez des idées de spectacles, d'animations et d'expériences musicales pensées pour les résidences, les RPA, les CHSLD et les milieux de vie."
+        backgroundImage={mediaAssets.thematiquesHero}
       >
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Button
