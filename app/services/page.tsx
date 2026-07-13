@@ -9,6 +9,7 @@ import { SectionWrapper } from "@/components/section-wrapper"
 import { detailedServices } from "@/lib/agence-data"
 import { mediaAssets } from "@/lib/media"
 import { siteConfig } from "@/lib/site-config"
+import { cn } from "@/lib/utils"
 
 export default function ServicesPage() {
   return (
@@ -24,9 +25,12 @@ export default function ServicesPage() {
           {detailedServices.map((service, index) => (
             <article
               key={service.title}
-              className={`grid items-center gap-8 lg:grid-cols-2 ${
-                index % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""
-              }`}
+              className={cn(
+                "grid items-center gap-8 lg:grid-cols-2",
+                index % 2 === 1 && "lg:[&>*:first-child]:order-2",
+                service.comingSoon &&
+                  "rounded-2xl border border-dashed border-primary/25 bg-muted/30 p-6 md:p-8"
+              )}
             >
               <ServicesImageReveal
                 direction={index % 2 === 0 ? "left" : "right"}
@@ -35,15 +39,22 @@ export default function ServicesPage() {
                 alt={service.title}
               />
               <div>
+                {service.comingSoon ? (
+                  <span className="mb-3 inline-flex rounded-full border border-primary/20 bg-primary/10 px-2.5 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-primary">
+                    Bientôt disponible
+                  </span>
+                ) : null}
                 <h2 className="font-heading text-2xl font-semibold md:text-3xl">
                   {service.title}
                 </h2>
                 <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
                   {service.description}
                 </p>
-                <Button asChild className="mt-6">
-                  <Link href="/soumission">{siteConfig.cta.label}</Link>
-                </Button>
+                {!service.comingSoon ? (
+                  <Button asChild className="mt-6">
+                    <Link href="/soumission">{siteConfig.cta.label}</Link>
+                  </Button>
+                ) : null}
               </div>
             </article>
           ))}

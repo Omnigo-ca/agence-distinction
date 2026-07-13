@@ -57,6 +57,9 @@ export type AgencyVideo = {
   description: string
   src: string
   poster: string
+  /** Cadrage vidéo (ex. "center 80%") */
+  objectPosition?: string
+  objectFit?: "cover" | "contain"
 }
 
 export const themeCategories = [
@@ -699,8 +702,10 @@ export const agencyVideos: AgencyVideo[] = [
     title: "Mélane et Michel en prestation",
     description:
       "Un aperçu d'une animation musicale en milieu de vie, joie, participation et souvenirs.",
-    src: media("Mélane et Michel", "VID_20230126_194016.mp4"),
-    poster: media("Mélane et Michel", "IMG_20230126_194117[7853].jpg"),
+    src: media("Mélane et Michel", "VID_20230125_201115.mp4"),
+    poster: media("Mélane et Michel", "Melane_Et_Michel_2400x1350_7.jpg"),
+    objectFit: "contain",
+    objectPosition: "center center",
   },
 ]
 
@@ -734,6 +739,13 @@ export const detailedServices = [
     description:
       "Représentation d'artistes avec respect et sensibilité pour des moments importants.",
     image: media("Reid, Myriam", "Myriam_Reid_2400x1350_1.jpg"),
+  },
+  {
+    title: "Cérémonie funéraire",
+    description:
+      "Un accompagnement musical respectueux et sensible pour honorer la mémoire de vos proches.",
+    image: media("Lahaie, André", "Agence_Distinction_Andre_Lahaie_2400x1350_1.jpg"),
+    comingSoon: true,
   },
   {
     title: "Spectacles corporatifs",

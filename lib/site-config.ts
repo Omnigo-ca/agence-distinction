@@ -31,6 +31,7 @@ export type Service = {
   description: string
   price?: string
   featured?: boolean
+  comingSoon?: boolean
   icon?: string
   links?: ServiceLink[]
 }
@@ -44,6 +45,10 @@ export type ProcessStep = {
 export type Testimonial = {
   quote: string
   author: string
+  date?: string
+  avatar?: string
+  source?: string
+  rating?: number
   role?: string
   note?: string
 }
@@ -82,7 +87,7 @@ export const siteConfig = {
     href: "/thematiques",
   },
   calendly: {
-    label: "Prendre rendez-vous avec Marie-Josée",
+    label: "Prendre rendez-vous",
     href: "https://calendly.com/info-8d6k/rencontre-google-meet",
   },
   contact: {
@@ -107,9 +112,11 @@ export const siteConfig = {
     recipientEmail: process.env.CONTACT_RECIPIENT_EMAIL ?? "",
   },
   social: {
-    facebook: "https://www.facebook.com/agencedistinction",
-    instagram: "",
-    linkedin: "",
+    facebook: "https://www.facebook.com/agencedistinction.ca/",
+    instagram: "https://www.instagram.com/agencedistinction.ca/",
+    linkedin:
+      "https://www.linkedin.com/company/agence-de-spectacles-distinction/",
+    youtube: "https://www.youtube.com/@agencedistinction1108",
   },
   navigation: [
     { label: "Accueil", href: "/" },
@@ -219,6 +226,13 @@ export const siteConfig = {
           "Représentation d'artistes avec respect et sensibilité pour les moments importants, les hommages musicaux et les cérémonies commémoratives.",
         icon: "flower",
         links: [{ label: "Découvrir", href: "/services" }],
+      },
+      {
+        title: "Cérémonie funéraire",
+        description:
+          "Un accompagnement musical respectueux et sensible pour honorer la mémoire de vos proches.",
+        icon: "flower",
+        comingSoon: true,
       },
       {
         title: "Programmation annuelle ou mensuelle",
@@ -388,32 +402,8 @@ export const siteConfig = {
     ],
   },
   testimonials: {
-    title: "Ce que nos partenaires en disent",
-    subtitle:
-      "Des témoignages qui nous inspirent à offrir des prestations toujours plus mémorables.",
-    items: [
-      {
-        quote:
-          "[Témoignage à intégrer, commentaire d'une résidence partenaire]",
-        author: "[Nom à confirmer]",
-        role: "Responsable des loisirs",
-        note: "À VALIDER, ne pas publier sans autorisation",
-      },
-      {
-        quote:
-          "[Témoignage à intégrer, retour d'expérience client]",
-        author: "[Nom à confirmer]",
-        role: "Directrice générale, Résidence",
-        note: "À VALIDER, ne pas publier sans autorisation",
-      },
-      {
-        quote:
-          "[Témoignage à intégrer, commentaire partenaire]",
-        author: "[Nom à confirmer]",
-        role: "Coordonnatrice activités",
-        note: "À VALIDER, ne pas publier sans autorisation",
-      },
-    ] satisfies Testimonial[],
+    title: "Ce que l'on dit de nous",
+    subtitle: "Témoignages",
   },
   faq: {
     title: "Questions fréquentes",
@@ -458,7 +448,7 @@ export const siteConfig = {
       {
         question: "Comment fonctionne une demande de soumission?",
         answer:
-          "Remplissez le formulaire en ligne, décrivez votre besoin et on vous répond rapidement avec des recommandations adaptées. Vous pouvez aussi prendre rendez-vous avec Marie-Josée.",
+          "Remplissez le formulaire en ligne, décrivez votre besoin et on vous répond rapidement avec des recommandations adaptées. Vous pouvez aussi prendre rendez-vous.",
       },
       {
         question: "Quel budget prévoir pour un spectacle?",
@@ -478,7 +468,7 @@ export const siteConfig = {
       "Parlez-nous de votre établissement, de vos résidents ou de votre calendrier d'activités. On vous aidera à trouver les thématiques et les artistes qui conviennent.",
     primaryLabel: "Planifiez votre agenda de spectacles",
     primaryHref: "/soumission",
-    secondaryLabel: "Prendre rendez-vous avec Marie-Josée",
+    secondaryLabel: "Prendre rendez-vous",
     secondaryHref: "https://calendly.com/info-8d6k/rencontre-google-meet",
   },
   contactSection: {
@@ -509,6 +499,7 @@ export const siteConfig = {
       title: "Les visages et les voix qui donnent vie à vos expériences",
       subtitle:
         "Nos artistes ne sont pas un catalogue, ce sont les talents qui créent le bon moment pour votre public.",
+      listedCount: 63,
     },
     aPropos: {
       title: "Une agence née d'une passion pour les artistes, les gens et les moments qui rassemblent",
@@ -518,6 +509,10 @@ export const siteConfig = {
       title: "Planifiez votre agenda de spectacles",
       subtitle:
         "Décrivez votre besoin et on vous aide à trouver la thématique, l'artiste et la formule adaptées à vos résidents.",
+    },
+    temoignages: {
+      title: "Ce que l'on dit de nous",
+      subtitle: "Témoignages",
     },
   },
 } as const

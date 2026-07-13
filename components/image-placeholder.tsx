@@ -21,7 +21,8 @@ const aspectClasses = {
   square: "aspect-square",
   portrait: "aspect-[3/4]",
   wide: "aspect-[16/7]",
-}
+  auto: "",
+} as const
 
 export function ImagePlaceholder({
   label,

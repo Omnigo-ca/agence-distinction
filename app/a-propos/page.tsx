@@ -10,6 +10,8 @@ import {
 
 import { ImagePlaceholder } from "@/components/image-placeholder"
 import { PageHero } from "@/components/page-hero"
+import { PartnersSection } from "@/components/partners-section"
+import { RecentMomentsSection } from "@/components/recent-moments-section"
 import { SiteLayout } from "@/components/site-layout"
 import { Button } from "@/components/ui/button"
 import { SectionWrapper } from "@/components/section-wrapper"
@@ -75,9 +77,10 @@ export default function AProposPage() {
             label="Marie-Josée Landry"
             src={siteConfig.about.image}
             alt="Marie-Josée Landry, fondatrice de l'Agence Distinction"
-            aspect="portrait"
+            aspect="auto"
+            objectFit="contain"
             objectPosition="center"
-            className="mx-auto aspect-[4/5] w-full max-w-lg"
+            className="mx-auto w-full max-w-lg"
           />
         </div>
       </SectionWrapper>
@@ -98,6 +101,8 @@ export default function AProposPage() {
           ))}
         </div>
       </SectionWrapper>
+
+      <RecentMomentsSection />
 
       <SectionWrapper>
         <div className="grid items-center gap-10 lg:grid-cols-2">
@@ -134,6 +139,8 @@ export default function AProposPage() {
           </div>
         </div>
       </SectionWrapper>
+
+      <PartnersSection />
     </SiteLayout>
   )
 }

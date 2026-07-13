@@ -2,6 +2,7 @@ import { SectionHeading } from "@/components/section-heading"
 import { SectionWrapper } from "@/components/section-wrapper"
 import { agencyVideos } from "@/lib/agence-data"
 import { FACE_OBJECT_POSITION } from "@/lib/media"
+import { cn } from "@/lib/utils"
 
 export function ExperienceVideoSection() {
   return (
@@ -22,8 +23,13 @@ export function ExperienceVideoSection() {
               playsInline
               preload="metadata"
               poster={video.poster}
-              className="aspect-video w-full bg-dark object-cover object-face"
-              style={{ objectPosition: FACE_OBJECT_POSITION }}
+              className={cn(
+                "aspect-video w-full bg-dark",
+                video.objectFit === "contain" ? "object-contain" : "object-cover"
+              )}
+              style={{
+                objectPosition: video.objectPosition ?? FACE_OBJECT_POSITION,
+              }}
             >
               <source src={video.src} type="video/mp4" />
               Votre navigateur ne supporte pas la lecture vidéo.

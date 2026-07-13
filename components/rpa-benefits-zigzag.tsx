@@ -92,23 +92,21 @@ export function RpaBenefitsZigzag() {
 
   return (
     <div className="divide-y divide-border/60">
-      {rpaBenefits.map((benefit, index) => {
-        const reversed = index % 2 === 1
+      {rpaBenefits.map((benefit) => {
         const Icon = benefit.icon
-        const titleFromLeft = !reversed
 
         const titleInitial = prefersReducedMotion
           ? { opacity: 0 }
           : {
               opacity: 0,
-              x: titleFromLeft ? -REVEAL_OFFSET : REVEAL_OFFSET,
+              x: -REVEAL_OFFSET,
             }
 
         const descriptionInitial = prefersReducedMotion
           ? { opacity: 0 }
           : {
               opacity: 0,
-              x: titleFromLeft ? REVEAL_OFFSET : -REVEAL_OFFSET,
+              x: REVEAL_OFFSET,
             }
 
         const revealVisible = prefersReducedMotion
@@ -126,10 +124,7 @@ export function RpaBenefitsZigzag() {
             )}
           >
             <motion.div
-              className={cn(
-                "justify-self-start",
-                reversed && "md:order-2"
-              )}
+              className="justify-self-start"
               initial={titleInitial}
               whileInView={revealVisible}
               viewport={{ once: true, amount: 0.35 }}
@@ -146,10 +141,7 @@ export function RpaBenefitsZigzag() {
             </motion.div>
 
             <motion.p
-              className={cn(
-                "max-w-[520px] justify-self-start font-sans text-[clamp(1rem,1.3vw,1.25rem)] font-normal leading-[1.65] text-[rgba(101,55,65,0.78)]",
-                reversed && "md:order-1"
-              )}
+              className="max-w-[520px] justify-self-start font-sans text-[clamp(1rem,1.3vw,1.25rem)] font-normal leading-[1.65] text-[rgba(101,55,65,0.78)]"
               initial={descriptionInitial}
               whileInView={revealVisible}
               viewport={{ once: true, amount: 0.35 }}

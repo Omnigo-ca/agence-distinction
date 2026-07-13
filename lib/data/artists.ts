@@ -3449,7 +3449,13 @@ export function getArtistBySlug(slug: string): ArtistProfile | undefined {
 }
 
 export function getAllArtistProfiles(): ArtistProfile[] {
-  return artistProfiles
+  const featuredSlug = "marie-josee-landry"
+  const featured = artistProfiles.find((artist) => artist.slug === featuredSlug)
+  if (!featured) return artistProfiles
+  return [
+    featured,
+    ...artistProfiles.filter((artist) => artist.slug !== featuredSlug),
+  ]
 }
 
 export function getArtistById(id: string): ArtistProfile | undefined {
@@ -3459,11 +3465,24 @@ export function getArtistById(id: string): ArtistProfile | undefined {
 /** Aperçu court pour les cartes (dérivé de la biographie, jamais tronqué avec ...) */
 export function getArtistPreview(artist: ArtistProfile, maxLength = 180): string | undefined {
   if (!artist.biography) return undefined
-  const firstParagraph = artist.biography.split(/\n\n+/)[0]?.replace(/\s+/g, " ").trim()
+  const firstParagraph = artist.biography
+    .split(/\n\n+/)[0]
+    ?.replace(/\s+/g, " ")
+    .replace(/^à propos de l['']artiste\s*/i, "")
+    .trim()
   if (!firstParagraph) return undefined
   if (firstParagraph.length <= maxLength) return firstParagraph
   const cut = firstParagraph.slice(0, maxLength).replace(/\s+\S*$/, "")
   return cut + "…"
+}
+
+/** Thématiques mises en avant dans le hero (2 à 3 maximum) */
+export function getArtistFeaturedThemes(
+  artist: ArtistProfile,
+  limit = 3
+): string[] {
+  if (!artist.themes?.length) return []
+  return artist.themes.slice(0, limit)
 }
 
 /** Catégories sans doublons ni répétition de la catégorie principale */

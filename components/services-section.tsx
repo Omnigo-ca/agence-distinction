@@ -37,21 +37,29 @@ function ServiceCard({
       ? serviceIcons[service.icon as keyof typeof serviceIcons]
       : SparklesIcon
   const isFeatured = service.featured
+  const isComingSoon = service.comingSoon
 
   return (
     <article
       className={cn(
         "group flex flex-col rounded-2xl p-5 transition-all duration-300 sm:p-6",
         "shadow-[0_8px_24px_rgba(117,65,70,0.06)]",
-        "hover:-translate-y-0.5 hover:shadow-[0_14px_32px_rgba(117,65,70,0.1)]",
+        !isComingSoon &&
+          "hover:-translate-y-0.5 hover:shadow-[0_14px_32px_rgba(117,65,70,0.1)]",
         isFeatured
           ? "bg-gradient-to-br from-[#FDF8F6] via-card to-[#F5EDE8]/40 sm:col-span-2 lg:col-span-2"
           : tinted
             ? "bg-[#FDF5F3]/90"
             : "bg-card",
-        isFeatured && "lg:p-7"
+        isFeatured && "lg:p-7",
+        isComingSoon && "border border-dashed border-primary/25 bg-muted/30"
       )}
     >
+      {isComingSoon ? (
+        <span className="mb-3 inline-flex w-fit rounded-full border border-primary/20 bg-primary/10 px-2.5 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-primary">
+          Bientôt disponible
+        </span>
+      ) : null}
       <div
         className={cn(
           "mb-3 flex shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary",
@@ -77,7 +85,7 @@ function ServiceCard({
         {service.description}
       </p>
 
-      {service.links && service.links.length > 0 ? (
+      {service.links && service.links.length > 0 && !isComingSoon ? (
         <div className="mt-4 flex flex-wrap gap-x-4 gap-y-1">
           {service.links.map((link) => (
             <Link

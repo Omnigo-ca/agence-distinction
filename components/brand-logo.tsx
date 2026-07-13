@@ -7,6 +7,8 @@ type BrandLogoProps = {
   variant?: "official" | "signature"
   className?: string
   height?: "sm" | "md" | "lg"
+  /** Affichage lisible sur fond sombre (footer) — sans filtre CSS */
+  onDark?: boolean
   /** Afficher comme lien vers l'accueil */
   linked?: boolean
 }
@@ -21,6 +23,7 @@ export function BrandLogo({
   variant = "official",
   className,
   height = "md",
+  onDark = false,
   linked = true,
 }: BrandLogoProps) {
   const src =
@@ -33,12 +36,24 @@ export function BrandLogo({
     <img
       src={src}
       alt={siteConfig.logo.alt}
-      className={cn("w-auto object-contain", heightClasses[height], className)}
+      className={cn(
+        "w-auto max-w-none shrink-0 object-contain object-left",
+        heightClasses[height],
+        className
+      )}
     />
   )
 
+  const content = onDark ? (
+    <span className="inline-flex rounded-xl bg-cream p-2.5 shadow-sm ring-1 ring-black/5">
+      {image}
+    </span>
+  ) : (
+    image
+  )
+
   if (!linked) {
-    return <span className="inline-flex shrink-0 items-center">{image}</span>
+    return <span className="inline-flex shrink-0 items-center">{content}</span>
   }
 
   return (
@@ -47,7 +62,7 @@ export function BrandLogo({
       className="inline-flex shrink-0 items-center"
       aria-label={`${siteConfig.business.name}, accueil`}
     >
-      {image}
+      {content}
     </Link>
   )
 }

@@ -1,3 +1,4 @@
+import { HeroOverlay } from "@/components/hero-overlay"
 import { HERO_MEDIA_CLASS, HERO_OBJECT_POSITION } from "@/lib/media"
 
 type PageHeroProps = {
@@ -29,14 +30,7 @@ export function PageHero({
             style={{ objectPosition: HERO_OBJECT_POSITION }}
             aria-hidden="true"
           />
-          <div
-            className="absolute inset-0 gradient-warm opacity-80"
-            aria-hidden="true"
-          />
-          <div
-            className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/40 to-transparent"
-            aria-hidden="true"
-          />
+          <HeroOverlay />
         </>
       ) : null}
 

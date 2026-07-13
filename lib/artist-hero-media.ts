@@ -3,10 +3,13 @@ import type { ArtistProfile, ArtistVideo } from "@/lib/data/artists"
 export type ArtistVideoType = "local" | "youtube" | "vimeo"
 
 export type ArtistHeroBackground =
-  | { kind: "video"; src: string; poster: string }
-  | { kind: "youtube"; videoId: string; poster: string }
-  | { kind: "vimeo"; videoId: string; poster: string }
-  | { kind: "image"; src: string }
+  | { kind: "video"; src: string }
+  | { kind: "youtube"; videoId: string }
+  | { kind: "vimeo"; videoId: string }
+  | { kind: "none" }
+
+/** Point de départ des vidéos YouTube en arrière-plan (évite les intros) */
+export const ARTIST_HERO_VIDEO_START_SECONDS = 0
 
 export function detectVideoType(url: string): ArtistVideoType {
   if (/youtube\.com|youtu\.be/i.test(url)) return "youtube"
@@ -29,45 +32,38 @@ export function parseVimeoId(url: string): string | null {
 
 function resolveFromUrl(
   url: string,
-  type: ArtistVideoType | undefined,
-  poster: string
+  type: ArtistVideoType | undefined
 ): ArtistHeroBackground | null {
   const resolvedType = type ?? detectVideoType(url)
 
   if (resolvedType === "youtube") {
     const videoId = parseYoutubeId(url)
-    return videoId ? { kind: "youtube", videoId, poster } : null
+    return videoId ? { kind: "youtube", videoId } : null
   }
 
   if (resolvedType === "vimeo") {
     const videoId = parseVimeoId(url)
-    return videoId ? { kind: "vimeo", videoId, poster } : null
+    return videoId ? { kind: "vimeo", videoId } : null
   }
 
   if (/\.(mp4|webm|mov)(\?|$)/i.test(url) || url.startsWith("/")) {
-    return { kind: "video", src: url, poster }
+    return { kind: "video", src: url }
   }
 
   return null
 }
 
-function resolveFromVideo(
-  video: ArtistVideo,
-  poster: string
-): ArtistHeroBackground | null {
-  return resolveFromUrl(video.url, video.type, poster)
+function resolveFromVideo(video: ArtistVideo): ArtistHeroBackground | null {
+  return resolveFromUrl(video.url, video.type)
 }
 
 export function resolveArtistHeroBackground(
   artist: ArtistProfile
 ): ArtistHeroBackground {
-  const poster = artist.videoPoster ?? artist.image
-
   if (artist.videoHero) {
     const fromHero = resolveFromUrl(
       artist.videoHero,
-      detectVideoType(artist.videoHero),
-      poster
+      detectVideoType(artist.videoHero)
     )
     if (fromHero) return fromHero
   }
@@ -78,14 +74,14 @@ export function resolveArtistHeroBackground(
     (video) => (video.type ?? detectVideoType(video.url)) === "local"
   )
   if (localVideo) {
-    const fromLocal = resolveFromVideo(localVideo, poster)
+    const fromLocal = resolveFromVideo(localVideo)
     if (fromLocal) return fromLocal
   }
 
   for (const video of videos) {
-    const fromVideo = resolveFromVideo(video, poster)
+    const fromVideo = resolveFromVideo(video)
     if (fromVideo) return fromVideo
   }
 
-  return { kind: "image", src: poster }
+  return { kind: "none" }
 }

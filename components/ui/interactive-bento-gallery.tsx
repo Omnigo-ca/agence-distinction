@@ -1,6 +1,6 @@
 "use client"
 
-import { useCallback, useEffect, useState } from "react"
+import { useCallback, useEffect, useRef, useState } from "react"
 import Link from "next/link"
 import { AnimatePresence, motion } from "framer-motion"
 import { ArrowRightIcon, PlayIcon, XIcon } from "lucide-react"
@@ -178,6 +178,8 @@ function GalleryModal({
   onClose: () => void
   submissionHref: string
 }) {
+  const modalRef = useRef<HTMLDivElement>(null)
+
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") onClose()
@@ -189,6 +191,10 @@ function GalleryModal({
       window.removeEventListener("keydown", handleKeyDown)
     }
   }, [onClose])
+
+  useEffect(() => {
+    modalRef.current?.scrollTo(0, 0)
+  }, [item.id])
 
   return (
     <motion.div
@@ -206,35 +212,49 @@ function GalleryModal({
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 24 }}
         transition={{ type: "spring", damping: 28, stiffness: 320 }}
-        className="relative max-h-[92vh] w-full max-w-3xl overflow-y-auto rounded-t-3xl border border-border bg-card shadow-2xl sm:rounded-3xl"
+        className="relative h-[min(92dvh,92vh)] w-full max-w-3xl overflow-hidden rounded-t-3xl border border-border bg-card shadow-2xl sm:rounded-3xl"
         onClick={(event) => event.stopPropagation()}
       >
         <button
           type="button"
           onClick={onClose}
-          className="absolute right-4 top-4 z-10 flex size-10 items-center justify-center rounded-full bg-card/90 text-foreground shadow-md transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+          className="absolute right-4 top-4 z-20 flex size-10 items-center justify-center rounded-full bg-card/90 text-foreground shadow-md transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
           aria-label="Fermer la fenêtre"
         >
           <XIcon className="size-5" />
         </button>
 
-        <div className="relative aspect-[16/10] w-full overflow-hidden rounded-t-3xl bg-muted sm:rounded-t-3xl">
-          <BentoMedia item={item} priority />
-        </div>
+        <div
+          ref={modalRef}
+          className="h-full overflow-y-auto overscroll-contain scroll-smooth"
+        >
+          <section className="relative flex min-h-full w-full shrink-0 flex-col overflow-hidden bg-[#1a0c10]">
+            <div className="absolute inset-0">
+              <BentoMedia item={item} priority />
+            </div>
+            <div
+              className="pointer-events-none absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/30 to-dark/10"
+              aria-hidden="true"
+            />
 
-        <div className="space-y-5 p-6 sm:p-8">
-          <div>
-            <p className="text-sm font-medium text-primary">{item.category}</p>
-            <h2
-              id="bento-modal-title"
-              className="mt-1 font-heading text-2xl font-semibold sm:text-3xl"
-            >
-              {item.title}
-            </h2>
-            <p className="mt-3 text-base leading-relaxed text-muted-foreground">
-              {item.desc}
-            </p>
-          </div>
+            <div className="relative z-10 mt-auto px-6 pb-8 pt-20 sm:px-8 sm:pb-10">
+              <p className="text-sm font-medium text-accent">{item.category}</p>
+              <h2
+                id="bento-modal-title"
+                className="mt-2 font-heading text-3xl font-semibold text-white sm:text-4xl"
+              >
+                {item.title}
+              </h2>
+              <p className="mt-6 text-xs font-medium tracking-wide text-white/55 uppercase">
+                Défiler pour en savoir plus
+              </p>
+            </div>
+          </section>
+
+          <section className="space-y-5 bg-card p-6 sm:p-8">
+          <p className="text-base leading-relaxed text-muted-foreground">
+            {item.desc}
+          </p>
 
           <dl className="grid gap-4 rounded-2xl border border-border bg-muted/40 p-4 sm:grid-cols-2">
             <div>
@@ -273,6 +293,7 @@ function GalleryModal({
               <ArrowRightIcon className="size-4" />
             </Link>
           </Button>
+          </section>
         </div>
       </motion.div>
     </motion.div>
