@@ -12,15 +12,35 @@ import {
 } from "@/lib/media"
 
 function HeroInteractionShield() {
-  return <div className="pointer-events-none absolute inset-0" aria-hidden="true" />
-}
-
-function HeroEmbedTopMask() {
   return (
     <div
-      className="pointer-events-none absolute inset-x-0 top-0 z-[2] h-14 bg-gradient-to-b from-[#1a0c10] to-transparent"
+      className="absolute inset-0 z-[3] cursor-default"
       aria-hidden="true"
+      onContextMenu={(event) => event.preventDefault()}
     />
+  )
+}
+
+function HeroEmbedChromeMask() {
+  return (
+    <>
+      <div
+        className="pointer-events-none absolute inset-x-0 top-0 z-[2] h-16 bg-gradient-to-b from-[#1a0c10] to-transparent"
+        aria-hidden="true"
+      />
+      <div
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-24 bg-gradient-to-t from-[#1a0c10] to-transparent"
+        aria-hidden="true"
+      />
+      <div
+        className="pointer-events-none absolute inset-y-0 left-0 z-[2] w-10 bg-gradient-to-r from-[#1a0c10] to-transparent"
+        aria-hidden="true"
+      />
+      <div
+        className="pointer-events-none absolute inset-y-0 right-0 z-[2] w-10 bg-gradient-to-l from-[#1a0c10] to-transparent"
+        aria-hidden="true"
+      />
+    </>
   )
 }
 
@@ -64,8 +84,12 @@ function ArtistHeroVimeo({ videoId, title }: ArtistHeroVimeoProps) {
     loop: "1",
     autopause: "0",
     controls: "0",
+    keyboard: "0",
+    pip: "0",
     byline: "0",
     title: "0",
+    portrait: "0",
+    playsinline: "1",
   })
 
   return (
@@ -78,7 +102,6 @@ function ArtistHeroVimeo({ videoId, title }: ArtistHeroVimeoProps) {
         aria-hidden="true"
         tabIndex={-1}
       />
-      <HeroEmbedTopMask />
     </div>
   )
 }
@@ -135,6 +158,7 @@ export function ArtistHeroBackground({ artist }: ArtistHeroBackgroundProps) {
           videoId={background.videoId}
           title={`Vidéo de fond — ${artist.name}`}
         />
+        <HeroEmbedChromeMask />
         <HeroInteractionShield />
       </>
     )
@@ -146,6 +170,7 @@ export function ArtistHeroBackground({ artist }: ArtistHeroBackgroundProps) {
         videoId={background.videoId}
         title={`Vidéo de fond — ${artist.name}`}
       />
+      <HeroEmbedChromeMask />
       <HeroInteractionShield />
     </>
   )

@@ -164,10 +164,25 @@
   .artist-hero-video::-webkit-media-controls-enclosure,
   .artist-hero-video::-webkit-media-controls-panel,
   .artist-hero-video::-webkit-media-controls-play-button,
-  .artist-hero-video::-webkit-media-controls-start-playback-button {
+  .artist-hero-video::-webkit-media-controls-start-playback-button,
+  .artist-hero-video::-webkit-media-controls-timeline,
+  .artist-hero-video::-webkit-media-controls-current-time-display,
+  .artist-hero-video::-webkit-media-controls-time-remaining-display,
+  .artist-hero-video::-webkit-media-controls-mute-button,
+  .artist-hero-video::-webkit-media-controls-toggle-closed-captions-button,
+  .artist-hero-video::-webkit-media-controls-volume-slider,
+  .artist-hero-video::-webkit-media-controls-fullscreen-button,
+  .artist-hero-video::-webkit-media-controls-rewind-button,
+  .artist-hero-video::-webkit-media-controls-return-to-realtime-button,
+  .artist-hero-video::-webkit-media-controls-seek-back-button,
+  .artist-hero-video::-webkit-media-controls-seek-forward-button,
+  .artist-hero-video::-webkit-media-controls-overlay-play-button {
     display: none !important;
     -webkit-appearance: none;
     opacity: 0;
+    pointer-events: none;
+  }
+  .artist-hero-video {
     pointer-events: none;
   }
 }

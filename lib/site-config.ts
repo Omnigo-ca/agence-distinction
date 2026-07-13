@@ -1,4 +1,4 @@
-import { mediaAssets } from "./media"
+import { media, mediaAssets } from "./media"
 
 export type ContactGoal =
   | "appeler"
@@ -359,6 +359,29 @@ export const siteConfig = {
       "Derrière chaque prestation, il y a du travail invisible : comprendre vos besoins, cerner l'ambiance, choisir le bon artiste, coordonner les détails. Notre rôle, c'est de faire en sorte que tout semble simple, fluide et agréable le jour de l'événement.",
     ],
     image: mediaAssets.about.agency,
+    recruitment: {
+      label: "Devenez artiste partenaire",
+      title: "Votre talent peut illuminer le quotidien des résidents.",
+      description:
+        "Vous êtes un artiste passionné par le contact humain ? L'Agence Distinction recherche des talents capables de créer des moments authentiques, remplis de joie, d'émotion et de nostalgie auprès des résidents. Si vous aimez partager votre passion, tisser des liens sincères avec votre public et faire une réelle différence, nous aimerions vous rencontrer.",
+      qualities: [
+        { label: "Répertoire varié" },
+        { label: "Présence chaleureuse" },
+        { label: "Professionnalisme" },
+      ],
+      primaryCta: {
+        label: "Présenter ma candidature",
+        href: "/candidature",
+      },
+      secondaryCta: {
+        label: "Découvrir l'agence",
+        href: "/",
+      },
+      image: media("saint-jean-moment.png"),
+      imageAlt:
+        "Artiste en prestation devant des résidents qui applaudissent et sourient",
+      imagePosition: "32% center",
+    },
   },
   process: {
     title: "Organiser votre prochain spectacle devient simple",
@@ -509,6 +532,13 @@ export const siteConfig = {
       title: "Planifiez votre agenda de spectacles",
       subtitle:
         "Décrivez votre besoin et on vous aide à trouver la thématique, l'artiste et la formule adaptées à vos résidents.",
+    },
+    candidature: {
+      title: "Présentez votre candidature",
+      subtitle:
+        "Rejoignez une équipe d'artistes qui créent des moments authentiques auprès des résidents.",
+      intro:
+        "Complétez ce formulaire pour nous présenter votre talent, votre répertoire et votre expérience. Nous lisons chaque candidature avec attention.",
     },
     temoignages: {
       title: "Ce que l'on dit de nous",

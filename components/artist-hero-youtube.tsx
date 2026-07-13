@@ -17,15 +17,6 @@ async function isYoutubeVideoAvailable(videoId: string): Promise<boolean> {
   return data.available === true
 }
 
-function HeroEmbedTopMask() {
-  return (
-    <div
-      className="pointer-events-none absolute inset-x-0 top-0 z-[2] h-14 bg-gradient-to-b from-[#1a0c10] to-transparent"
-      aria-hidden="true"
-    />
-  )
-}
-
 export function ArtistHeroYoutube({ videoId, title }: ArtistHeroYoutubeProps) {
   const [isAvailable, setIsAvailable] = useState<boolean | null>(null)
 
@@ -61,6 +52,8 @@ export function ArtistHeroYoutube({ videoId, title }: ArtistHeroYoutubeProps) {
     disablekb: "1",
     fs: "0",
     cc_load_policy: "0",
+    enablejsapi: "0",
+    autohide: "1",
   })
 
   return (
@@ -69,11 +62,10 @@ export function ArtistHeroYoutube({ videoId, title }: ArtistHeroYoutubeProps) {
         src={`https://www.youtube-nocookie.com/embed/${videoId}?${params.toString()}`}
         title={title}
         className={ARTIST_HERO_EMBED_CLASS}
-        allow="autoplay; encrypted-media; picture-in-picture"
+        allow="autoplay; encrypted-media"
         aria-hidden="true"
         tabIndex={-1}
       />
-      <HeroEmbedTopMask />
     </div>
   )
 }

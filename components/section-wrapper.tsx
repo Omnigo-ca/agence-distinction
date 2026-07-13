@@ -5,6 +5,7 @@ type SectionWrapperProps = {
   children: React.ReactNode
   className?: string
   variant?: "default" | "muted" | "dark"
+  "aria-labelledby"?: string
 }
 
 export function SectionWrapper({
@@ -12,10 +13,12 @@ export function SectionWrapper({
   children,
   className,
   variant = "default",
+  "aria-labelledby": ariaLabelledby,
 }: SectionWrapperProps) {
   return (
     <section
       id={id}
+      aria-labelledby={ariaLabelledby}
       className={cn(
         "scroll-mt-20 px-4 py-16 md:px-6 md:py-24",
         variant === "muted" && "bg-muted/50",

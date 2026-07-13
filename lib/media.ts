@@ -14,9 +14,9 @@ export const HERO_MEDIA_CLASS =
 export const ARTIST_HERO_MEDIA_CLASS =
   "absolute inset-0 size-full max-w-none origin-center scale-[0.88] object-cover"
 
-/** Iframe YouTube/Vimeo fiche artiste — cover dézoomé, titre du lecteur masqué par overflow. */
+/** Iframe YouTube/Vimeo fiche artiste — zoom agressif pour rogner les contrôles du lecteur. */
 export const ARTIST_HERO_EMBED_CLASS =
-  "pointer-events-none absolute left-1/2 top-[52%] h-[120%] w-[120%] min-h-full min-w-full max-w-none -translate-x-1/2 -translate-y-1/2 border-0 select-none"
+  "pointer-events-none absolute left-1/2 top-1/2 h-[155%] w-[155%] min-h-full min-w-full max-w-none -translate-x-1/2 -translate-y-[22%] border-0 select-none"
 
 /** Cadrage des iframes vidéo hero (YouTube/Vimeo) — décalage vers le haut pour voir les visages. */
 export const HERO_EMBED_FRAME_CLASS =

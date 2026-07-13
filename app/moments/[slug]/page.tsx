@@ -47,6 +47,8 @@ export default async function MomentPage({ params }: MomentPageProps) {
     notFound()
   }
 
+  const hasGalleryVideo = moment.gallery.some((item) => item.type === "video")
+
   return (
     <SiteLayout>
       <MomentEventHero
@@ -68,7 +70,7 @@ export default async function MomentPage({ params }: MomentPageProps) {
         </Link>
 
         <h2 className="mb-6 font-heading text-3xl font-semibold tracking-tight md:mb-8">
-          En images
+          {hasGalleryVideo ? "Galerie" : "En images"}
         </h2>
         <MomentGallery images={moment.gallery} />
       </SectionWrapper>

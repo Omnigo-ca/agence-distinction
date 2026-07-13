@@ -8,6 +8,7 @@ import {
   type LucideIcon,
 } from "lucide-react"
 
+import { ArtistRecruitmentSection } from "@/components/artist-recruitment-section"
 import { ImagePlaceholder } from "@/components/image-placeholder"
 import { PageHero } from "@/components/page-hero"
 import { PartnersSection } from "@/components/partners-section"
@@ -139,6 +140,8 @@ export default function AProposPage() {
           </div>
         </div>
       </SectionWrapper>
+
+      <ArtistRecruitmentSection />
 
       <PartnersSection />
     </SiteLayout>

@@ -3,14 +3,20 @@
  * Remplacer facilement par du contenu client validé (photos réelles, citations autorisées).
  */
 
-import { media, themeImages } from "@/lib/media"
+import { media } from "@/lib/media"
 
-export type MomentGalleryImage = {
+export type MomentGalleryItem = {
+  type?: "image" | "video"
   src: string
   alt: string
+  /** Vignette pour les éléments vidéo */
+  poster?: string
   layout?: "wide" | "tall" | "hero"
   objectPosition?: string
 }
+
+/** @deprecated Utiliser MomentGalleryItem */
+export type MomentGalleryImage = MomentGalleryItem
 
 export type MomentTestimonial = {
   quote: string
@@ -32,7 +38,7 @@ export type MomentEvent = {
   date: string
   venue: string
   editorial: string[]
-  gallery: MomentGalleryImage[]
+  gallery: MomentGalleryItem[]
   testimonials: MomentTestimonial[]
 }
 
@@ -65,14 +71,23 @@ export const momentEvents: MomentEvent[] = [
     ],
     gallery: [
       {
-        src: media("saint-jean-moment.png"),
-        alt: "Célébration de la Saint-Jean en résidence, drapeau du Québec et résidents",
+        type: "video",
+        src: media("saint-jean-bonne-st-jean.mp4"),
+        poster: media("saint-jean-card-poster.png"),
+        alt: "Artiste qui chante une chanson sur le vif pour faire plaisir à un résident lors de la Saint-Jean",
         layout: "hero",
         objectPosition: "center center",
       },
       {
-        src: themeImages.stJean,
-        alt: "Ambiance festive aux couleurs du Québec",
+        type: "video",
+        src: media("saint-jean-moment.mp4"),
+        poster: media("saint-jean-moment-poster.png"),
+        alt: "Résidents qui célèbrent la Saint-Jean, mains levées en chanson",
+        objectPosition: "center center",
+      },
+      {
+        src: media("saint-jean-moment.png"),
+        alt: "Célébration de la Saint-Jean en résidence, drapeau du Québec et résidents",
         layout: "wide",
         objectPosition: "center center",
       },
@@ -126,26 +141,18 @@ export const momentEvents: MomentEvent[] = [
         objectPosition: "center center",
       },
       {
-        src: media("Mélane et Michel", "Melane_Et_Michel_2400x1350_7.jpg"),
-        alt: "Prestation musicale en résidence",
+        src: media("Larocque, Marie-Josée", "20231006_130634 principale.jpg"),
+        alt: "Musicienne en prestation en milieu de vie",
         objectPosition: "center center",
       },
       {
-        src: media("Mélane et Michel", "Melane_Et_Michel_2400x1350_8.jpg"),
-        alt: "Animation musicale devant les résidents",
-        objectPosition: "center center",
-      },
-      {
-        src: media("Mélane et Michel", "Melane_Et_Michel_2400x1350_9.jpg"),
-        alt: "Duo en prestation, résidents attentifs",
+        src: media(
+          "Larocque, Marie-Josée",
+          "Agence_Distinction_Marie-Josée_Larocque_2400x1350_3.jpg"
+        ),
+        alt: "Prestation live en salle commune, participation des résidents",
         layout: "wide",
         objectPosition: "center center",
-      },
-      {
-        src: media("Trio Java", "Agence_Distinction_années 20.jpg"),
-        alt: "Prestation aux couleurs des années rétro",
-        layout: "tall",
-        objectPosition: "center top",
       },
     ],
     testimonials: [
@@ -197,8 +204,8 @@ export const momentEvents: MomentEvent[] = [
         objectPosition: "center 35%",
       },
       {
-        src: themeImages.noel,
-        alt: "Ambiance chaleureuse du temps des Fêtes",
+        src: media("Larocque, Marie-Josée", "20231205_101614 chic 3.jpg"),
+        alt: "Spectacle des Fêtes devant un sapin décoré en résidence",
         layout: "wide",
         objectPosition: "center center",
       },
