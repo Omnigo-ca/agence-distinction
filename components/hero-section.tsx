@@ -59,8 +59,8 @@ export function HeroSection() {
           </Button>
           <Button
             asChild
-            size="lg"
             variant="outline"
+            size="lg"
             className="border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground hover:bg-primary-foreground/20"
           >
             <Link href={siteConfig.secondaryCta.href}>
