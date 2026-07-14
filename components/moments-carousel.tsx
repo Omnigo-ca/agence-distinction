@@ -90,6 +90,7 @@ export function MomentsCarousel({ items }: MomentsCarouselProps) {
   const trackRef = useRef<HTMLDivElement>(null)
 
   const maxIndex = Math.max(0, items.length - slidesPerView)
+  const visibleIndex = Math.min(activeIndex, maxIndex)
   const dotCount = maxIndex + 1
 
   const goTo = useCallback(
@@ -99,12 +100,8 @@ export function MomentsCarousel({ items }: MomentsCarouselProps) {
     [maxIndex]
   )
 
-  const goPrev = useCallback(() => goTo(activeIndex - 1), [activeIndex, goTo])
-  const goNext = useCallback(() => goTo(activeIndex + 1), [activeIndex, goTo])
-
-  useEffect(() => {
-    if (activeIndex > maxIndex) setActiveIndex(maxIndex)
-  }, [activeIndex, maxIndex])
+  const goPrev = useCallback(() => goTo(visibleIndex - 1), [visibleIndex, goTo])
+  const goNext = useCallback(() => goTo(visibleIndex + 1), [visibleIndex, goTo])
 
   useEffect(() => {
     const node = trackRef.current
@@ -126,8 +123,8 @@ export function MomentsCarousel({ items }: MomentsCarouselProps) {
   }, [goNext, goPrev])
 
   const slideOffset = useMemo(
-    () => (activeIndex * 100) / slidesPerView,
-    [activeIndex, slidesPerView]
+    () => (visibleIndex * 100) / slidesPerView,
+    [visibleIndex, slidesPerView]
   )
 
   return (
@@ -136,7 +133,7 @@ export function MomentsCarousel({ items }: MomentsCarouselProps) {
         <button
           type="button"
           onClick={goPrev}
-          disabled={activeIndex === 0}
+          disabled={visibleIndex === 0}
           className="flex size-10 shrink-0 items-center justify-center rounded-full border border-border bg-card text-foreground shadow-sm transition-colors hover:bg-muted disabled:pointer-events-none disabled:opacity-40"
           aria-label="Carte précédente"
         >
@@ -170,7 +167,7 @@ export function MomentsCarousel({ items }: MomentsCarouselProps) {
         <button
           type="button"
           onClick={goNext}
-          disabled={activeIndex >= maxIndex}
+          disabled={visibleIndex >= maxIndex}
           className="flex size-10 shrink-0 items-center justify-center rounded-full border border-border bg-card text-foreground shadow-sm transition-colors hover:bg-muted disabled:pointer-events-none disabled:opacity-40"
           aria-label="Carte suivante"
         >
@@ -188,12 +185,12 @@ export function MomentsCarousel({ items }: MomentsCarouselProps) {
             key={index}
             type="button"
             role="tab"
-            aria-selected={index === activeIndex}
+            aria-selected={index === visibleIndex}
             aria-label={`Aller à la position ${index + 1} sur ${dotCount}`}
             onClick={() => goTo(index)}
             className={cn(
               "h-2 rounded-full transition-all",
-              index === activeIndex
+              index === visibleIndex
                 ? "w-6 bg-primary"
                 : "w-2 bg-border hover:bg-primary/40"
             )}

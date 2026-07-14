@@ -1,6 +1,6 @@
 "use client"
 
-import { useRef, useState } from "react"
+import { useState } from "react"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Loader2Icon } from "lucide-react"
@@ -41,7 +41,8 @@ export function ArtistApplicationForm() {
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle")
   const [photoError, setPhotoError] = useState<string | null>(null)
   const [selectedFileName, setSelectedFileName] = useState<string | null>(null)
-  const photoInputRef = useRef<HTMLInputElement>(null)
+  const [photoFile, setPhotoFile] = useState<File | null>(null)
+  const [photoInputKey, setPhotoInputKey] = useState(0)
 
   const {
     register,
@@ -63,7 +64,6 @@ export function ArtistApplicationForm() {
   const handleFormSubmit = async (values: ArtistApplicationValues) => {
     setStatus("idle")
 
-    const photoFile = photoInputRef.current?.files?.[0] ?? null
     const photoValidationError = validateProfilePhoto(photoFile)
 
     if (photoValidationError) {
@@ -94,10 +94,9 @@ export function ArtistApplicationForm() {
 
       setStatus("success")
       reset()
+      setPhotoFile(null)
       setSelectedFileName(null)
-      if (photoInputRef.current) {
-        photoInputRef.current.value = ""
-      }
+      setPhotoInputKey((key) => key + 1)
     } catch {
       setStatus("error")
     }
@@ -221,7 +220,7 @@ export function ArtistApplicationForm() {
         </FieldLabel>
         <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
           <input
-            ref={photoInputRef}
+            key={photoInputKey}
             id="profilePhoto"
             type="file"
             accept=".jpg,.jpeg,.png,.gif,image/jpeg,image/png,image/gif"
@@ -233,7 +232,8 @@ export function ArtistApplicationForm() {
             )}
             aria-invalid={!!photoError}
             onChange={(event) => {
-              const file = event.target.files?.[0]
+              const file = event.target.files?.[0] ?? null
+              setPhotoFile(file)
               setSelectedFileName(file?.name ?? null)
               setPhotoError(
                 file
