@@ -52,9 +52,18 @@ function CredibilityStatCard({ card }: { card: CredibilityCard }) {
         />
       </div>
 
-      <p className="font-heading text-center text-4xl font-semibold tracking-tight text-primary transition-transform duration-500 group-hover:scale-[1.03] md:text-[2.5rem]">
-        {card.value}
-      </p>
+      {"logo" in card && card.logo ? (
+        /* eslint-disable-next-line @next/next/no-img-element */
+        <img
+          src={card.logo}
+          alt={card.logoAlt ?? card.subtitle}
+          className="mx-auto h-[4.5rem] w-auto max-w-full object-contain transition-transform duration-500 group-hover:scale-[1.03] md:h-20"
+        />
+      ) : (
+        <p className="font-heading text-center text-4xl font-semibold tracking-tight text-primary transition-transform duration-500 group-hover:scale-[1.03] md:text-[2.5rem]">
+          {"value" in card ? card.value : ""}
+        </p>
+      )}
 
       <p className="mt-3 text-center text-[11px] font-semibold uppercase tracking-[0.14em] text-primary/75">
         {card.subtitle}
@@ -76,7 +85,10 @@ export function StatsSection() {
 
       <div className="grid gap-6 md:grid-cols-3 md:gap-8">
         {siteConfig.credibility.cards.map((card) => (
-          <CredibilityStatCard key={card.value} card={card} />
+          <CredibilityStatCard
+            key={"value" in card ? card.value : card.subtitle}
+            card={card}
+          />
         ))}
       </div>
 

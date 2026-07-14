@@ -8,7 +8,7 @@ import { resolveArtistHeroBackground } from "@/lib/artist-hero-media"
 import {
   ARTIST_HERO_EMBED_CLASS,
   ARTIST_HERO_MEDIA_CLASS,
-  HERO_OBJECT_POSITION,
+  ARTIST_HERO_OBJECT_POSITION,
 } from "@/lib/media"
 
 function HeroInteractionShield() {
@@ -25,19 +25,11 @@ function HeroEmbedChromeMask() {
   return (
     <>
       <div
-        className="pointer-events-none absolute inset-x-0 top-0 z-[2] h-16 bg-gradient-to-b from-[#1a0c10] to-transparent"
+        className="pointer-events-none absolute inset-x-0 top-0 z-[2] h-12 bg-gradient-to-b from-[#1a0c10]/95 to-transparent"
         aria-hidden="true"
       />
       <div
-        className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-24 bg-gradient-to-t from-[#1a0c10] to-transparent"
-        aria-hidden="true"
-      />
-      <div
-        className="pointer-events-none absolute inset-y-0 left-0 z-[2] w-10 bg-gradient-to-r from-[#1a0c10] to-transparent"
-        aria-hidden="true"
-      />
-      <div
-        className="pointer-events-none absolute inset-y-0 right-0 z-[2] w-10 bg-gradient-to-l from-[#1a0c10] to-transparent"
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-24 bg-gradient-to-t from-[#1a0c10]/95 to-transparent"
         aria-hidden="true"
       />
     </>
@@ -125,7 +117,7 @@ function ArtistHeroLocalVideo({ src }: { src: string }) {
         aria-hidden="true"
         onError={() => setHasError(true)}
         className={`artist-hero-video pointer-events-none ${ARTIST_HERO_MEDIA_CLASS} select-none`}
-        style={{ objectPosition: HERO_OBJECT_POSITION }}
+        style={{ objectPosition: ARTIST_HERO_OBJECT_POSITION }}
       >
         <source src={src} type="video/mp4" />
       </video>

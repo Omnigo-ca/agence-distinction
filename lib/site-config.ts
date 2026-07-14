@@ -1,4 +1,5 @@
 import { media, mediaAssets } from "./media"
+import { rqraPartner } from "./partners-data"
 
 export type ContactGoal =
   | "appeler"
@@ -122,8 +123,9 @@ export const siteConfig = {
     { label: "Accueil", href: "/" },
     { label: "Thématiques", href: "/thematiques" },
     { label: "Services", href: "/services" },
-    { label: "RPA / CHSLD", href: "/rpa-chsld" },
     { label: "Artistes", href: "/artistes" },
+    { label: "RPA / CHSLD", href: "/rpa-chsld" },
+    { label: "Recrutement", href: "/recrutement" },
     { label: "À propos", href: "/a-propos" },
   ] satisfies NavLink[],
   enabledSections: [
@@ -147,7 +149,8 @@ export const siteConfig = {
         icon: "award",
       },
       {
-        value: "RQRA",
+        logo: rqraPartner.logoTransparent ?? rqraPartner.logo,
+        logoAlt: rqraPartner.alt,
         subtitle: "PARTENAIRE RECONNU",
         description:
           "Fier partenaire du Réseau québécois des résidences pour aînés.",
@@ -371,11 +374,11 @@ export const siteConfig = {
       ],
       primaryCta: {
         label: "Présenter ma candidature",
-        href: "/candidature",
+        href: "/recrutement#candidature",
       },
       secondaryCta: {
         label: "Découvrir l'agence",
-        href: "/",
+        href: "/a-propos",
       },
       image: media("saint-jean-moment.png"),
       imageAlt:
@@ -539,6 +542,28 @@ export const siteConfig = {
         "Rejoignez une équipe d'artistes qui créent des moments authentiques auprès des résidents.",
       intro:
         "Complétez ce formulaire pour nous présenter votre talent, votre répertoire et votre expérience. Nous lisons chaque candidature avec attention.",
+    },
+    recrutement: {
+      title: "Devenez artiste partenaire",
+      subtitle:
+        "Rejoignez une équipe qui crée des moments authentiques, remplis de joie et de nostalgie auprès des résidents.",
+      highlights: [
+        {
+          title: "Un public qui vous ressemble",
+          description:
+            "Nos artistes se produisent surtout en RPA, CHSLD et milieux de vie. Un public chaleureux, curieux et reconnaissant.",
+        },
+        {
+          title: "Un accompagnement professionnel",
+          description:
+            "Contrats clairs, horaires confirmés, coordination simple. Vous vous concentrez sur votre art, nous gérons le reste.",
+        },
+        {
+          title: "Des prestations variées",
+          description:
+            "Spectacles thématiques, animations intimistes, soirées dansantes, cérémonies… Des occasions pour exprimer votre répertoire.",
+        },
+      ],
     },
     temoignages: {
       title: "Ce que l'on dit de nous",

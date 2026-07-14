@@ -47,7 +47,11 @@ function Reveal({
   )
 }
 
-export function ArtistRecruitmentSection() {
+export function ArtistRecruitmentSection({
+  showCtas = true,
+}: {
+  showCtas?: boolean
+}) {
   const { recruitment } = siteConfig.about
   const prefersReducedMotion = useReducedMotion()
 
@@ -137,31 +141,33 @@ export function ArtistRecruitmentSection() {
             })}
           </ul>
 
-          <Reveal
-            prefersReducedMotion={prefersReducedMotion}
-            delay={0.38}
-            className="mt-10 flex w-full flex-col gap-3 sm:flex-row sm:items-center"
-          >
-            <Button
-              asChild
-              size="lg"
-              className="h-12 w-full rounded-full px-8 text-sm font-semibold shadow-md shadow-primary/15 transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/20 motion-reduce:hover:translate-y-0 sm:w-auto"
+          {showCtas ? (
+            <Reveal
+              prefersReducedMotion={prefersReducedMotion}
+              delay={0.38}
+              className="mt-10 flex w-full flex-col gap-3 sm:flex-row sm:items-center"
             >
-              <Link href={recruitment.primaryCta.href}>
-                {recruitment.primaryCta.label}
-              </Link>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="h-12 w-full rounded-full border-primary/25 bg-background/70 px-8 text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-background motion-reduce:hover:translate-y-0 sm:w-auto"
-            >
-              <Link href={recruitment.secondaryCta.href}>
-                {recruitment.secondaryCta.label}
-              </Link>
-            </Button>
-          </Reveal>
+              <Button
+                asChild
+                size="lg"
+                className="h-12 w-full rounded-full px-8 text-sm font-semibold shadow-md shadow-primary/15 transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/20 motion-reduce:hover:translate-y-0 sm:w-auto"
+              >
+                <Link href={recruitment.primaryCta.href}>
+                  {recruitment.primaryCta.label}
+                </Link>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="h-12 w-full rounded-full border-primary/25 bg-background/70 px-8 text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-background motion-reduce:hover:translate-y-0 sm:w-auto"
+              >
+                <Link href={recruitment.secondaryCta.href}>
+                  {recruitment.secondaryCta.label}
+                </Link>
+              </Button>
+            </Reveal>
+          ) : null}
         </div>
       </div>
     </SectionWrapper>

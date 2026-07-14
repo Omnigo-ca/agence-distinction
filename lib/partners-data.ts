@@ -2,6 +2,7 @@ export type Partner = {
   name: string
   href: string
   logo: string
+  logoTransparent?: string
   alt: string
 }
 
@@ -9,6 +10,7 @@ export const rqraPartner: Partner = {
   name: "RQRA",
   href: "https://www.rqra.qc.ca",
   logo: "/images/partners/rqra.png",
+  logoTransparent: "/images/partners/rqra-transparent.png",
   alt: "Regroupement québécois des résidences pour aînés",
 }
 
