@@ -1,2 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Vidéos — Git LFS (fichiers > 100 Mo compatibles GitHub)
+*.mp4 filter=lfs diff=lfs merge=lfs -text
