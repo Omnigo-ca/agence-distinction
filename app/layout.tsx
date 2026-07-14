@@ -18,6 +18,11 @@ const cormorant = Cormorant_Garamond({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : "https://agencedistinction.ca"
+  ),
   title: siteConfig.seo.title,
   description: siteConfig.seo.description,
   icons: {
