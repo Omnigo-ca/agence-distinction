@@ -1,8 +1,8 @@
 import Link from "next/link"
 import { ArrowRightIcon } from "lucide-react"
 
+import { HomeHeroMedia } from "@/components/home-hero-media"
 import { Button } from "@/components/ui/button"
-import { HERO_MEDIA_CLASS, HERO_OBJECT_POSITION } from "@/lib/media"
 import { siteConfig } from "@/lib/site-config"
 
 function HomeHeroOverlay() {
@@ -33,18 +33,7 @@ export function HeroSection() {
   return (
     <section className="relative -mt-16 flex min-h-svh items-center overflow-hidden text-primary-foreground">
       {hero.video ? (
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster={hero.image}
-          className={HERO_MEDIA_CLASS}
-          style={{ objectPosition: HERO_OBJECT_POSITION }}
-          aria-hidden="true"
-        >
-          <source src={hero.video} type="video/mp4" />
-        </video>
+        <HomeHeroMedia video={hero.video} poster={hero.image} />
       ) : null}
 
       <HomeHeroOverlay />
@@ -70,8 +59,8 @@ export function HeroSection() {
           </Button>
           <Button
             asChild
-            size="lg"
             variant="outline"
+            size="lg"
             className="border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground hover:bg-primary-foreground/20"
           >
             <Link href={siteConfig.secondaryCta.href}>
