@@ -71,9 +71,7 @@ export const momentEvents: MomentEvent[] = [
     ],
     gallery: [
       {
-        type: "video",
-        src: media("saint-jean-bonne-st-jean.mp4"),
-        poster: media("saint-jean-card-poster.png"),
+        src: media("saint-jean-card-poster.png"),
         alt: "Artiste qui chante une chanson sur le vif pour faire plaisir à un résident lors de la Saint-Jean",
         layout: "hero",
         objectPosition: "center center",

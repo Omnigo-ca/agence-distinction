@@ -414,7 +414,7 @@ export const artists: Artist[] = [
     audience: "Résidences actives, soirées dansantes",
     description:
       "Des classiques entraînants qui font lever les résidents et recréent l'énergie des grandes époques.",
-    image: media("Trio Java", "Agence_Distinction_Trio_Java_570x570.jpg"),
+    image: media("Trio Java", "Agence_Distinction_Trio_Java_570x570.JPG"),
     slug: "trio-java",
   },
   {

@@ -35,8 +35,3 @@ pnpm-debug.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
-
-*.wmv
-*.m4v
-*.mp4
